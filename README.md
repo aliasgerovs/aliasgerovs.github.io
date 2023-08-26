@@ -51,4 +51,4 @@ We're an open source movement that depends on your support to stay online and th
 END_SECTION:news -->
 
 # Personal web page
-[Check out](https://vjabrayilov.github.io)
+[Check out](https://aliasgerovs.github.io)
