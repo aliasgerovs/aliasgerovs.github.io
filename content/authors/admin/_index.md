@@ -56,7 +56,7 @@ social:
 education:
   courses:
     - course: Master of Science in Computer Science
-      institution: George Washington University University
+      institution: George Washington University
     - course: Master of Science in Data Analytics
       institution: ADA University
     - course: BSc in Process Automation Engineering
