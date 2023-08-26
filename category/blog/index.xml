@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>blog | Ali Asgerov</title><link>https://aliasgerovs.github.io/category/blog/</link><atom:link href="https://aliasgerovs.github.io/category/blog/index.xml" rel="self" type="application/rss+xml"/><description>blog</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 08 Sep 2022 00:00:00 +0000</lastBuildDate><image><url>https://aliasgerovs.github.io/media/icon_hufdc9ffe2c12a5bb5ad2cfdfce17ddfaa_56068_512x512_fill_lanczos_center_3.png</url><title>blog</title><link>https://aliasgerovs.github.io/category/blog/</link></image><item><title>GSoC Final Submission Thanos</title><link>https://aliasgerovs.github.io/post/gsoc/</link><pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate><guid>https://aliasgerovs.github.io/post/gsoc/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The main goal was to support on the fly compaction of TSDB blocks without using any disk space or constant amount of the disk space. As analyzing, I came across with the following challenges:&lt;/p>
+&lt;ul>
+&lt;li>TSDB blocks have a special structure and the main challenge stems from already big size of a single block.&lt;/li>
+&lt;li>&lt;code>compactor&lt;/code> module is written such that it operates on the already downloaded blocks, so nothing to be done here.&lt;/li>
+&lt;li>Initially, I had proposed to have a partial upload and download to accomodate a single download and upload problem, but I identified that downloading dependency (&lt;code>minio&lt;/code>) already employs it.&lt;/li>
+&lt;/ul>
+&lt;h2 id="analysis">Analysis&lt;/h2>
+&lt;p>I moved to analyze the whole codebase, and with the help of my supervisor we identified &lt;code>BucketReader&lt;/code> interface which is responsible for read access to an object storage bucket and all the other cloud provider support modules are implementing it. My supervisor suggested to imlement a new and scratch version of it which uses a streaming behavior. To be precise, it should bring chunks based on the read index and compact on chunk basis. Howevere, it is not a trivial thing and requires an in depth analysis of TSDB block structure and needs a planning mechanism wo bring which chunks and when to stop bringing. Since, the system is widely used in production, it should be well tested and shouldn;t result in data loss, hence increasing the complexity. So, we decided to take time to in depth analyze the above mentioned problems and come up with a strategy,&lt;/p>
+&lt;p>&lt;code>BucketReader&lt;/code> consists of &lt;code>Iter&lt;/code>, &lt;code>Get&lt;/code>, &lt;code>GetRange&lt;/code>, &lt;code>Exists&lt;/code> &lt;code>IsObjNotFoundErr&lt;/code> and &lt;code>Attributes&lt;/code> functions. In more detail,&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Iter&lt;/code> calls a given function in the bucket directory passing the entries to the function.&lt;/li>
+&lt;li>&lt;code>Get&lt;/code> provides a reader for the object&lt;/li>
+&lt;li>&lt;code>GetRange&lt;/code> provides a range reader similar to &lt;code>Get&lt;/code>&lt;/li>
+&lt;li>&lt;code>Exists&lt;/code> checks whether the object exists in the bucket or not&lt;/li>
+&lt;li>&lt;code>IsObjNotFoundErr&lt;/code> returns true if object is not found in the bucket&lt;/li>
+&lt;li>&lt;code>Attributes&lt;/code> gives information about the specified object&lt;/li>
+&lt;/ul>
+&lt;p>TSDB blocks consists of the head block and following N blocks. Each incoming time-series data point comes to the Head block and stays there, when all of them get old enough they are persisted in the disk as a separate block. WAL and mmap coordinates this process, but only the head and 1&amp;hellip;N blocks are interested in case of compaction, since onlythey are resided in the object storage.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="./tsdb.png" alt="tsdb-block" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Every block has a unique identifier, called a &lt;code>Universally Unique Lexicographically Sortable Identifier(ULID)&lt;/code>. A block has 4 constituent parts:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>meta.json&lt;/code> &amp;ndash;&amp;gt; the medatadata about the block&lt;/li>
+&lt;li>&lt;code>chunks&lt;/code> &amp;ndash;&amp;gt; raw chunks&lt;/li>
+&lt;li>&lt;code>index&lt;/code> &amp;ndash;&amp;gt; index of the block&lt;/li>
+&lt;li>&lt;code>tombstones&lt;/code> &amp;ndash;&amp;gt; marker holding info whether the samples are deleted or not&lt;/li>
+&lt;/ul>
+&lt;p>Only chunks is directory, other three are regular files.&lt;/p>
+&lt;p>&lt;code>meta.json&lt;/code> has the following structure:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;ulid&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;01EM6Q6A1YPX4G9TEB20J22B2R&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;minTime&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1602237600000&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;maxTime&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1602244800000&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;stats&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;numSamples&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">553673232&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;numSeries&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1346066&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;numChunks&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">4440437&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;compaction&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;level&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;sources&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;01EM65SHSX4VARXBBHBF0M0FDS&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;01EM6GAJSYWSQQRDY782EA5ZPN&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;version&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>chunks&lt;/code> directory has numbered files each representing a separate chunk and has a size of &lt;code>512 MiB&lt;/code>.&lt;/p>
+&lt;p>Planning phase of the compaction decides which blocks to compact. In our case, we should read the relevant block metadata and do planning based upon them. Since, metadata files are small in size reading several of them will not incur that much cost. With the new modified planning phase, we can decid upon which blocks are of interest for the current compaction stage and stream the chunks of those blocks in parallel. Reading those streams, one can compact and create new chunks in memory(it may also be mmap-ed file in disk). When the newly created chunks of the block reach some size it can be uploaded to object storage.&lt;/p>
+&lt;p>Unfortunately, regarding time constraints and implementation complextiy, the result of above analysis is not completely ready. I plan to incremenetally implement by learning best practices. By analyizng the &lt;code>Thanos&lt;/code> code base I get the good grasp of best practices of &lt;code>Go&lt;/code> programming language and learned lots of unknown features to me. I believe those will help me to implement the result of analysis.&lt;/p>
+&lt;h2 id="acknowledgements">Acknowledgements&lt;/h2>
+&lt;p>To sum up, GSoC was a good experience to learn, develop and be a part of larger open source community. Despite the fact that project was challenging, I learned a lot about time series databases, cloud object storage, and &lt;code>Go&lt;/code> programming language. I would like to especially thank &lt;code>Ben Ye&lt;/code> for his constant support and inspiration, and all &lt;code>Thanos&lt;/code> community. Moreover, I would like to express my gratitude to all the folks in &lt;code>Google&lt;/code> making the &lt;code>Google Summer of Code&lt;/code> and inspiring newbies in the open source.&lt;/p></description></item><item><title>How to Read a Paper</title><link>https://aliasgerovs.github.io/post/howtoreadapaper/</link><pubDate>Tue, 19 Jul 2022 00:00:00 +0000</pubDate><guid>https://aliasgerovs.github.io/post/howtoreadapaper/</guid><description>&lt;ul>
+&lt;li>&lt;strong>Key idea:&lt;/strong> read the paper in up to &lt;em>3 passes&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>1st pass gives the general idea
+&lt;ul>
+&lt;li>5-10 mins&lt;/li>
+&lt;li>get a bird&amp;rsquo;s-eye view and decide whether to do any more passes or not&lt;/li>
+&lt;li>&lt;strong>Do the following&lt;/strong>
+&lt;ol>
+&lt;li>carefully read the &lt;em>title, abstract and introduction&lt;/em>&lt;/li>
+&lt;li>read the &lt;em>section and sub-section headings&lt;/em>, but ignore everything else&lt;/li>
+&lt;li>read the &lt;em>conclusions&lt;/em>&lt;/li>
+&lt;li>glance over the &lt;em>references&lt;/em>, mentally ticking off the already read ones&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>at the end of this pass, &lt;em>five Cs&lt;/em> should be answered
+&lt;ol>
+&lt;li>&lt;em>Category&lt;/em>: What type of paper is this? A measurement paper? An analysis of an existing system? A description of a research prototype?&lt;/li>
+&lt;li>&lt;em>Context&lt;/em>: Which other paper is it related to? Which theoretical bases were used to analyze the problem?&lt;/li>
+&lt;li>&lt;em>Correctness&lt;/em>: Do the assumptions appear to be valid?&lt;/li>
+&lt;li>&lt;em>Contributions&lt;/em>: What are the paper&amp;rsquo;s main contributions?&lt;/li>
+&lt;li>&lt;em>Clarity&lt;/em>: Is the paper well written?&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>this pass is adequate for papers that aren&amp;rsquo;t in the research area, but someday prove relevant&lt;/li>
+&lt;li>&lt;strong>Most reviewers make only one pass, take care to choose &lt;em>coherent section and sub-section titles&lt;/em> and write &lt;em>concise and comprehensive abstracts&lt;/em>.&lt;/strong> If a reviewer cannot understand the gist after one pass, most probably will be rejected; if a reader cannot understand the higlights of the paper after &lt;em>5 mins&lt;/em>, the paper will likely never be read.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>2nd pass helps to grasp the paper&amp;rsquo;s content, not the details
+&lt;ul>
+&lt;li>read the paper with greater care, but ignore details such as proofs&lt;/li>
+&lt;li>&lt;strong>Do the following&lt;/strong>
+&lt;ol>
+&lt;li>Look carefully at the figures, diagrams and other illustrations in the paper. Pay special attention to graphs. Are the axes properly labeled? Are results shown with error bars, so that conclusions are statistically significant?&lt;/li>
+&lt;li>Remember to mark relevant unread references for further reading&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>up to &lt;em>1 hour&lt;/em>&lt;/li>
+&lt;li>should be able to &lt;em>summarize the main thrust&lt;/em> of the paper&lt;/li>
+&lt;li>if not understood at this point, choose:
+&lt;ul>
+&lt;li>set the paper aside&lt;/li>
+&lt;li>return to the paper later, perhaps after reading the background material&lt;/li>
+&lt;li>persevere and go on to the 3rd pass&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>3rd pass helps to understand the paper in depth
+&lt;ul>
+&lt;li>attempt to &lt;em>virtually re-implement&lt;/em> the paper&lt;/li>
+&lt;li>identify and challenge every assumption in every statement&lt;/li>
+&lt;li>jot down ideas for future work&lt;/li>
+&lt;li>&lt;em>4 or 5 hours&lt;/em> for beginners, &lt;em>an hour&lt;/em> for an experienced reader&lt;/li>
+&lt;li>should be able to reconstruct the entire structure of the paper from memory, identify the strong and weak points.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="http://ccr.sigcomm.org/online/files/p83-keshavA.pdf" target="_blank" rel="noopener">http://ccr.sigcomm.org/online/files/p83-keshavA.pdf&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Kafka vs RabbitMQ</title><link>https://aliasgerovs.github.io/post/kafkavsrabbit/</link><pubDate>Mon, 18 Jul 2022 00:00:00 +0000</pubDate><guid>https://aliasgerovs.github.io/post/kafkavsrabbit/</guid><description>&lt;ul>
+&lt;li>&lt;a href="#rabbitmq">RabbitMQ&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#kafka">Kafka&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#rabbitmq-architecture">RabbitMQ Architecture&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#kafka-architecture">Kafka Architecture&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#use-cases">Use cases&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#references">References&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="rabbitmq">RabbitMQ&lt;/h2>
+&lt;ul>
+&lt;li>supports :
+&lt;ul>
+&lt;li>AMQP : Advanced Message Queuing Protocol&lt;/li>
+&lt;li>MQTT : MQ Telemetry Protocol&lt;/li>
+&lt;li>STOMP : Streaming Text Oriented Messaging Protocol&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>is known as a &lt;em>hybrid&lt;/em> broker&lt;/li>
+&lt;li>uses &lt;em>smart broker/dumb consumer&lt;/em> model&lt;/li>
+&lt;/ul>
+&lt;h2 id="kafka">Kafka&lt;/h2>
+&lt;ul>
+&lt;li>provides higher throughput, &lt;em>built-in partitioning, replication, and inherent fault-tolerance&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>There are 2 &lt;em>async&lt;/em> messagin patterns :&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Message Queue&lt;/p>
+&lt;ul>
+&lt;li>a creating app sends a msg to queue. When the consuming app is ready, it just connects to the queue and retrieves the msg, removing it from the queue.&lt;/li>
+&lt;li>several consuming apps can exist, &lt;strong>each message is only consumed by one&lt;/strong>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Publish/Subscribe (pub/sub)&lt;/p>
+&lt;ul>
+&lt;li>allows producers to publish msg&amp;rsquo;s which can be consumed by multiple consumer.&lt;/li>
+&lt;li>if consuming apps are interested, they just subscribe to a channel&lt;/li>
+&lt;li>used when a msg or event must trigger several actions&lt;/li>
+&lt;li>unlike the message queue, pub/sub &lt;em>assures&lt;/em> that consuming apps rcv msg&amp;rsquo;s in the &lt;em>same order&lt;/em> as messaging system received them.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h2 id="rabbitmq-architecture">RabbitMQ Architecture&lt;/h2>
+&lt;ul>
+&lt;li>consists of
+&lt;ul>
+&lt;li>producers&lt;/li>
+&lt;li>exchanges&lt;/li>
+&lt;li>queues&lt;/li>
+&lt;li>consumers&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> queues
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> msg |----&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> producer -----&amp;gt; exchange --|----&amp;gt; consumers
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |----&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> or other
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> exchanges
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;em>queue&lt;/em> is a sequential data structure:
+&lt;ul>
+&lt;li>producers add to the end&lt;/li>
+&lt;li>consumers get data from the top&lt;/li>
+&lt;li>FIFO&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;em>msg exchange&lt;/em> determines routing
+&lt;ul>
+&lt;li>4 exchange types:
+&lt;ul>
+&lt;li>direct
+&lt;ul>
+&lt;li>can directly target msg&amp;rsquo;s to a particular queue
+&lt;figure id="figure-direct-exchange">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://miro.medium.com/max/1400/1*_Jzl2o13xBPn3CsdATBaxw.png" alt="direct exchange" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+direct exchange
+&lt;/figcaption>&lt;/figure>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>fanout
+&lt;ul>
+&lt;li>route msg&amp;rsquo;s to all available queues
+&lt;figure id="figure-fanout-exchange">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://miro.medium.com/max/1400/1*Hn3SaZuE1o3C1-IayaU9AQ.png" alt="fanout exchange" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+fanout exchange
+&lt;/figcaption>&lt;/figure>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>topic&lt;/li>
+&lt;li>header&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="kafka-architecture">Kafka Architecture&lt;/h2>
+&lt;ul>
+&lt;li>consists of
+&lt;ul>
+&lt;li>producers&lt;/li>
+&lt;li>consumers&lt;/li>
+&lt;li>clusters&lt;/li>
+&lt;li>brokers&lt;/li>
+&lt;li>topics&lt;/li>
+&lt;li>partitions&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">producer --------&amp;gt; cluster -------&amp;gt; consumer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://miro.medium.com/max/1376/1*TIKFG4HHYx4W6RbE1BWblA.png" alt="kafka architecture" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;hr>
+&lt;h2 id="use-cases">Use cases&lt;/h2>
+&lt;ul>
+&lt;li>Rabbit MQ
+&lt;ul>
+&lt;li>complex routing - route msg&amp;rsquo;s among miltiple consuming apps, such as in a microservice architecture&lt;/li>
+&lt;li>legacy applications&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://miro.medium.com/max/1400/1*Kyps08v9VSh5QwETNOVuHw.png" alt="rabbit use cases" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;ul>
+&lt;li>Kafka
+&lt;ul>
+&lt;li>high-troughput activity tracking&lt;/li>
+&lt;li>stream processing&lt;/li>
+&lt;li>event sourcing&lt;/li>
+&lt;li>log aggregation
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://miro.medium.com/max/1400/1*001aX2FBDS4qz8nPLNiXAg.png" alt="kafka use cases" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="references">References&lt;/h2>
+&lt;p>&lt;a href="https://medium.com/@mbhanuka/kafka-vs-rabitmq-3ae75abe9c80" target="_blank" rel="noopener">https://medium.com/@mbhanuka/kafka-vs-rabitmq-3ae75abe9c80&lt;/a>&lt;/p></description></item><item><title>Levels Of Techie Enlightenment</title><link>https://aliasgerovs.github.io/post/lstechieenlightenment/</link><pubDate>Mon, 18 Jul 2022 00:00:00 +0000</pubDate><guid>https://aliasgerovs.github.io/post/lstechieenlightenment/</guid><description>&lt;p>3 levels of enlightenment:&lt;/p>
+&lt;ul>
+&lt;li>Level 0: The Newcomer
+&lt;ul>
+&lt;li>a ton of materials to master&lt;/li>
+&lt;li>reaction: &lt;em>Overwhelmed&lt;/em>&lt;/li>
+&lt;li>problem: lack of breadth&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Level 1: The Half-Expert
+&lt;ul>
+&lt;li>weakness finding machines&lt;/li>
+&lt;li>reaction: &lt;em>dismissal and destruction&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Level 2: Chaotic times &amp;hellip;&lt;/li>
+&lt;li>Level 3: Nirvana
+&lt;ul>
+&lt;li>people are able to provide and receive criticism without making it personal&lt;/li>
+&lt;li>far more productive&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://hackingdistributed.com/2017/05/04/stages-of-enlightenment/" target="_blank" rel="noopener">https://hackingdistributed.com/2017/05/04/stages-of-enlightenment/&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>
