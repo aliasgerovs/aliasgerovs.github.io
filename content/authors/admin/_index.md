@@ -71,7 +71,7 @@ last_name: Asgarov
 email: ali.asgarov@gwu.edu
 ---
 
-I am a final-year MSc. candidate in Computer Science at [George Washington University](gwu.edu), with a profound focus on the realms of machine learning, distributed systems, and advanced large language models.
+I am a final-year MSc. candidate in Computer Science at [George Washington University](gwu.edu), with a profound focus on the realms of machine learning, distributed systems, and large language models.
 
 You can reach me at ```  ali [dot] asgarov [at] gw [dot] edu```.
 {style="text-align: justify;"}
