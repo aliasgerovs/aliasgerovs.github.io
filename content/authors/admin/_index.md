@@ -14,7 +14,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: CS Msc Student
+role: CS MSc Student
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -22,33 +22,32 @@ organizations:
     url: https://www.gwu.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include operating systems and cloud computing.
-
+bio: My research interests include machine learning, optimization, distributed systems, and large language models.
 # Interests to show in About widget
 interests:
+  - Machine Learning
   - Distributed Systems
-  - Operating Systems
-  - Cloud Computing
+  - Large Language Models
 
 social:
   - icon: envelope
     icon_pack: fas
-    link: mailto:jabrayilov.vahab@gmail.com
+    link: mailto:aliasgerov07@gmail.com
   - icon: twitter
     icon_pack: fab
-    link: https://twitter.com/vjabrayilov7
+    link: https://twitter.com/aliasgerovs
     label: Follow me on Twitter
     display:
       header: true
   - icon: google-scholar
     icon_pack: fas
-    link: https://scholar.google.com/citations?hl=en&user=txBX3mIAAAAJ
+    link: https://scholar.google.com/citations?user=IwsCoQwAAAAJ&hl
   - icon: github
     icon_pack: fab
-    link: https://github.com/vjabrayilov
+    link: https://github.com/aliasgerovs
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com/in/vjabrayilov/
+    link: https://www.linkedin.com/in/ali-asgarov/
   - icon: cv
     icon_pack: ai
     link: uploads/resume.pdf
@@ -61,24 +60,27 @@ education:
     # - course: MEng in Artificial Intelligence
     #   institution: Massachusetts Institute of Technology
     #   year: 2009
-    - course: PhD in Computer Science
-      institution: Columbia University
-    - course: BSc in Computer Engineering
-      institution: Middle East Technical University
-      # year: 2023
+    - course: Master of Science in Computer Science
+      institution: George Washington University University
+      year: 2024
+    - course: Master of Science in Data Analytics
+      institution: ADA University
+      year: 2023
+    - course: BSc in Process Automation Engineering
+      institution: Baku Higher Oil School
+      year: 2022
 
 superuser: true
 status:
   icon: ☕️
 highlight_name: true
-first_name: Vahab
-last_name: Jabrayilov
-email: vahab.jabrayilov@epfl.ch
+first_name: Ali
+last_name: Asgarov
+email: ali.asgarov@gwu.edu
 ---
 
-I am a first-year Ph.D. student in Computer Science at [Columbia University](https://columbia.edu) advised by [Kostis Kaffes](https://stanford.edu/~kkaffes/).
-I am broadly interested in computer systems, especially cloud computing. I am looking for ways to implement and deploy systems for microsecond-scale tail latency across different layers of the stack.
+I am a senior-year MSc. student in Computer Science at [George Washington University](https://gwu.edu).
+I am broadly interested in machine learning, distributed systems, large language models.
 
-I received my bachelor's degree at [Middle East Technical University](https://metu.edu.tr). 
-You can reach me at ``` vj2267 [at] columbia [dot] edu```.
+You can reach me at ``` ali [dot] asgarov [at] gw [dot] edu```.
 {style="text-align: justify;"}
