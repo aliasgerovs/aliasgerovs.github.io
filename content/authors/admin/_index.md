@@ -18,7 +18,7 @@ role: CS MSc Student
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: GWU University
+  - name: George Washington University
     url: https://www.gwu.edu/
 
 # Short bio (displayed in user profile at end of posts)
