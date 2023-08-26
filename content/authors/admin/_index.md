@@ -1,10 +1,10 @@
 ---
 # Display name
-title: Vahab Jabrayilov
+title: Ali Asgarov
 
 # Full name (for SEO)
-first_name: Vahab
-last_name: Jabrayilov
+first_name: Ali
+last_name: Asgarov
 
 # Status emoji
 status:
@@ -14,12 +14,12 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: CS PhD Student
+role: CS Msc Student
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Columbia University
-    url: https://www.columbia.edu/
+  - name: GWU University
+    url: https://www.gwu.edu/
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include operating systems and cloud computing.
