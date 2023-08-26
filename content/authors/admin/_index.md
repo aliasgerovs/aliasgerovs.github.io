@@ -14,7 +14,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: CS MSc Student
+role: MSc Computer Science Student
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -27,6 +27,7 @@ bio: My research interests include machine learning, optimization, distributed s
 interests:
   - Machine Learning
   - Distributed Systems
+  - Federated Learning
   - Large Language Models
 
 social:
@@ -54,21 +55,12 @@ social:
 # Education to show in About widget
 education:
   courses:
-    # - course: PhD in Artificial Intelligence
-    #   institution: Stanford University
-    #   year: 2012
-    # - course: MEng in Artificial Intelligence
-    #   institution: Massachusetts Institute of Technology
-    #   year: 2009
     - course: Master of Science in Computer Science
       institution: George Washington University University
-      year: 2024
     - course: Master of Science in Data Analytics
       institution: ADA University
-      year: 2023
     - course: BSc in Process Automation Engineering
       institution: Baku Higher Oil School
-      year: 2022
 
 superuser: true
 status:
@@ -79,8 +71,7 @@ last_name: Asgarov
 email: ali.asgarov@gwu.edu
 ---
 
-I am a senior-year MSc. student in Computer Science at [George Washington University](https://gwu.edu).
-I am broadly interested in machine learning, distributed systems, large language models.
+I am a final-year MSc. candidate in Computer Science at [George Washington University](gwu.edu), with a profound focus on the realms of machine learning, distributed systems, and advanced large language models.
 
-You can reach me at ``` ali [dot] asgarov [at] gw [dot] edu```.
+You can reach me at ```  ali [dot] asgarov [at] gw [dot] edu```.
 {style="text-align: justify;"}
