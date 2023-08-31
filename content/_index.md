@@ -70,74 +70,64 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Student Researcher
-          company: EPFL
-          company_url: 'https://www.epfl.ch/en/'
-          company_logo: epfl
-          location: Lausanne, Switzerland
-          date_start: '2023-06-19'
-          date_end: '2023-08-19'
+        - title: Senior Data Scientist
+          company: Revenue.ai
+          company_url: 'https://www.revenue.ai'
+          company_logo: rai
+          location: Remote, Amsterdam, Noord-Holland, The Netherlands
+          date_start: '03-2022'
+          date_end:   '07-2023'
           description: |2-
-              - Worked on "Detecting Metastable Failures in Distributed Systems" as a part of [RS3LAB](https://rs3lab.github.io/) under the supervision of [Sanidhya Kashyap](https://sanidhya.github.io/).
-              - Developed benchmarks for exhibiting metastability.
-              - Modeleted distributed systems as Petri Net models.
-        - title: Software Development Engineer Intern
-          company: Google, Summer of Code
-          company_url: 'https://summerofcode.withgoogle.com/'
-          company_logo: GSoC_logo
+          - Musigma Project ( mu-sigma.com ) (01.2023 - 04.2023) (USA) As a Data Science expert at the MuSigma project, I've skillfully designed and implemented anomaly detection alerting pipelines on Azure using PySpark, Python, and PostgreSQL, enhancing monthly newsletters with data-driven insights and ensuring timely detection of irregularities. 
+          - PepsiCo Brazil Project ( pepsico.com.br ) (08.2022 - 01.2023)(Brazil) Data Engineering Expert at Pepsico Brazil, proficient in Python, PySpark, and Azure Data Factory, adept at building ML models and ETL pipelines. Expert in data processing and visualization with tools like Plotly, driving data-driven decision-making and business impact. Anicura Project ( anicuragroup.com ) (05.2022 - 08.2022) (Italy, Sweden, Germany ) 
+          - Data Scientist on the AniCura project, I've leveraged tools like Scikit-learn, TensorFlow, and Pandas to excel in data science and ML deployment, driving impactful results across Italy, Sweden, and Germany, and enhancing operations in multiple markets
+          - Data Science Expert at Louis Dreyfus Company Project ( ldc.com ) (03.2022 - 05.2022 ) ( France ) At LDC, I've adeptly used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions and business value. My expertise in price analytics and validation ensures accurate pricing strategies
+
+        - title: Middle Data Scientist
+          company: Koaila
+          company_url: 'https://koaila.com/'
+          company_logo: koaila
           location: Remote, Mountain View, CA, USA
-          date_start: '2022-05-01'
-          date_end: '2022-09-01'
+          date_start: '04-2023'
+          date_end:   '07-2023'
           description: |2-
-              - Contributed to [Thanos](https://thanos.io/) project under the [Cloud Native Computing Foundation](https://cncf.io).
-              - Optimized compaction/downsampling algorithm of the existing system to run on the fly without using disk
-              - Wrote unit and integration tests
-              - Devised and implemented a new block reader/writer interface and documented the process.
-        - title: Student Researcher
-          company: Penn State University
-          company_url: 'https://psu.edu'
-          company_logo: psu
-          location: Remote, University Park, PA, USA
-          date_start: '2021-10-01'
-          date_end: '2022-05-01'
+              - Leveraging AI and granular product usage data to gain profound insights into user behaviors, feature adoption patterns, and customer preferences. 
+              - Applying advanced machine learning techniques, including state-of-the-art algorithms and statistical modeling, to analyze extensive customer and product data.
+              - Identifying and prioritize high-potential users for targeted upsell opportunities by harnessing the transformative power of data-driven insight
+        - title: Data Scientist
+          company: Voiceloft
+          company_url: 'voiceloft.com'
+          company_logo: voiceloft
+          location: Remote, Middletown, Delaware, United States
+          date_start: '03-2021'
+          date_end:   '04-2022'
           description: |2-
-              - Worked at [Computer Systems Lab](https://csl.cse.psu.edu/) under the supervision of [Abutalib Aghayev](https://agayev.github.io/).
-              - Implemented a high performance key value store with MultiPaxos consensus algorithm in Go, Java, C++ and Rust. 
-        - title: Student Researcher
-          company: Middle East Technical University
-          company_url: 'https://metu.edu.tr'
-          company_logo: metu
-          location: Ankara, Turkey
-          date_start: '2022-01-01'
-          date_end: '2022-06-01'
-          description: |2-
-              - Worked at [WINS Lab](https://wins.ceng.metu.edu.tr/) under the supervision of [Pelin Angin](https://user.ceng.metu.edu.tr/~pangin/).
-              - Deploy a Kubernetes cluster with vulnerable Docker application images. Simulated attacks and collected ML training data. 
-        - title: Software Development Engineer
-          company: KibritTech
-          company_url: 'https://kibrit.tech'
-          company_logo: kibrit
+              - Neural Space Project (neuralspace.ai) (11.2021 - 03.2022) (UK) Senior Machine Learning engineer, worked on design, development, testing , tuning of ASR - speech recognition models for 11 languages.
+              - Imla Project (imla.az) (07.2021 - 11.2021) (Azerbaijan) Deep Learning Engineer, designed, developed, tested, and fine-tuned cutting-edge ASR speech recognition models for the Azerbaijani language employing frameworks such as PyTorch and Kaldi.
+              - Vooice Project ( voooice.com ) (03.2021 - 07.2021) Data Engineer, audio dataset collection, and creating multilingual speech recognition technologies.
+        - title: Data Scientist
+          company: Data Science Academy
+          company_url: 'https://dsa.az'
+          company_logo: dsa
           location: Baku, Azerbaijan
-          date_start: '2021-02-01'
-          date_end: '2021-10-01'
+          date_start: '01-2020'
+          date_end:   '07-2020'
           description: |2-
-              - Reduced response time of real-time monitoring service for call center management solution implementing caching layer.
-              - Integrated several third party chat applications to the solution.
-              - Acted on-call engineer to solve production problems.
-        - title: Student Teaching Assistant
-          company: Middle East Technical Univesity
-          date_url: 'https://metu.edu.tr'
-          company_logo: metu
-          date_start: '2021-03-01'
-          date_end: '2021-07-01'
-          description: Conducted lab sessions and office hours for 100+ students at [CENG240-Python Programming for Engineers](https://ceng240.github.io/).
+              - As a dedicated data science instructor, I've guided students in mastering Data Science methodologies using R, Python, Spark, Spark SQL and various machine learning and deep learning methodologies. 
+              - Support and trainings to researchers relating to research methods
         - title: Student Researcher
-          company: eiLink
-          company_url: 'https://eilink.az/home'
-          company_logo: eilink
-          date_start: '2019-02-01' 
-          date_end: '2019-08-01'
-          description: Preprocessed Distributed Acoustic Sensing(DAS) data, made statistical analysis and visualizations.             
+          company: Baku Higher Oil School
+          company_url: 'https://bhos.edu.az'
+          company_logo: bhos
+          location: Baku, Azerbaijan
+          date_start: '03-2018'
+          date_end:   '12-2029'
+          description: |2-
+              - Worked on the optimizing traffic light timing for vehicles with using Open CV. 
+              - I've adeptly used Python (OpenCV), and build object detection models. 
+              - Participated in cutting edge research in computer vision.
+              - Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project titled Optimizing Road Networks for Automated Vehicles with using Open CV. 
+                    
     design:
       columns: '2'
   # - block: accomplishments
@@ -255,7 +245,7 @@ sections:
       title: Service
       subtitle: ''
       text: |-
-         - Student Volunteer at [PLDI'22](https://pldi22.sigplan.org/) 
+         - Participant at [III World Robot Olympiad](https://wro-association.org/) 
     design:
       columns: '1'
   # - block: collection

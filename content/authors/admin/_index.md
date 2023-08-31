@@ -22,13 +22,14 @@ organizations:
     url: https://www.gwu.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include machine learning, optimization, distributed systems, and large language models.
+bio: My research interests include machine learning, optimization, natural language processing,distributed systems.
 # Interests to show in About widget
 interests:
   - Machine Learning
+  - Optimization
+  - Natural Language Processing
   - Distributed Systems
-  - Federated Learning
-  - Large Language Models
+  - Decentralized Learning
 
 social:
   - icon: envelope
@@ -52,6 +53,7 @@ social:
   - icon: cv
     icon_pack: ai
     link: uploads/resume.pdf
+
 # Education to show in About widget
 education:
   courses:
@@ -71,7 +73,7 @@ last_name: Asgarov
 email: ali.asgarov@gwu.edu
 ---
 
-I am a final-year MSc. candidate in Computer Science at [George Washington University](gwu.edu), with a profound focus on the realms of machine learning, distributed systems, and large language models.
+I am a final-year MSc. candidate in Computer Science at [George Washington University](gwu.edu), with a profound focus on the realms of machine learning, optimization, distributed systems, natural language processing and decentralized learning.
 
 You can reach me at ```  ali [dot] asgarov [at] gw [dot] edu```.
 {style="text-align: justify;"}
