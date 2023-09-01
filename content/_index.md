@@ -73,7 +73,7 @@ sections:
         - title: Senior Data Scientist
           company: Revenue.ai
           company_url: 'https://www.revenue.ai'
-          company_logo: rai
+          # company_logo: rai
           location: Remote, Amsterdam, Noord-Holland, The Netherlands
           date_start: '03-2022'
           date_end:   '07-2023'
@@ -86,7 +86,7 @@ sections:
         - title: Middle Data Scientist
           company: Koaila
           company_url: 'https://koaila.com/'
-          company_logo: koaila
+          # company_logo: koaila
           location: Remote, Mountain View, CA, USA
           date_start: '04-2023'
           date_end:   '07-2023'
@@ -108,7 +108,7 @@ sections:
         - title: Data Scientist
           company: Data Science Academy
           company_url: 'https://dsa.az'
-          company_logo: dsa
+          # company_logo: dsa
           location: Baku, Azerbaijan
           date_start: '01-2020'
           date_end:   '07-2020'
@@ -118,7 +118,7 @@ sections:
         - title: Student Researcher
           company: Baku Higher Oil School
           company_url: 'https://bhos.edu.az'
-          company_logo: bhos
+          # company_logo: bhos
           location: Baku, Azerbaijan
           date_start: '03-2018'
           date_end:   '12-2029'
