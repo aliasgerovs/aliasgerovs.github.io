@@ -1,9 +1,9 @@
 ---
-title: Privacy Concerned Machine Learning Implementation on Image Classification
+title: Privacy Concerned Decentralized Machine Learning Implementation on Image Classification
 summary: In my project, I aimed to explore federated learning for image classification while ensuring privacy. The main objective was to develop a federated learning algorithm specifically for image classification tasks and evaluate its performance in comparison to centralized training approach. 
 tags:
   - Federated Learning
-  - Decentralized Learning Approach
+  - Decentralized Learning
   - Classification
 date: '2023-11-07 T00:00:00Z'
 
@@ -54,6 +54,82 @@ external_link: 'https://arxiv.org/submit/5089853/view'
 #     name: Follow
 #     url: https://arxiv.org/submit/5089853/view
 url_code: 'https://arxiv.org/submit/5089853/view'
+url_pdf: ''
+url_slides: ''
+url_video: ''
+
+title: Recognition of Azerbaijani phonemes using Machine Learning
+summary: I conducted a research project focused on recognizing Azerbaijani phonemes using machine learning, signal processing, and image processing techniques. The project involved utilizing deep neural networks and signal processing methods like short-term Fourier transform for high accuracy in classifying audio files from a dataset of approximately 1900 samples belonging to 32 classes
+tags:
+  - Natural Language Processing
+  - Speech Recognition
+  - Signal Processing
+
+date: '2022-09-22 T00:00:00Z'
+
+# Optional external URL for project (replaces project detail page).
+external_link: 'https://bhos.edu.az/en/conference/32'
+# image:
+#   caption: Photo by rawpixel on Unsplash
+#   focal_point: Smart
+
+# links:
+#   - icon: github
+#     icon_pack: fab
+#     name: Follow
+#     url: https://arxiv.org/submit/5089853/view
+url_code: 'https://bhos.edu.az/en/conference/32'
+url_pdf: ''
+url_slides: ''
+url_video: ''
+
+
+title: Counting Objects For Traffic Surveillance Systems
+summary: I contributed to a fully automated traffic analysis system that can monitor and predict traffic flow, counting passing cars, and identifying their direction and lanes without manual calibration, suitable for uncalibrated highway cameras. 
+tags:
+  - Computer Vision
+  - Deep Learning
+  - Vehicle Detection
+
+date: '2021-07-22 T00:00:00Z'
+
+# Optional external URL for project (replaces project detail page).
+external_link: 'https://bhos.edu.az/en/conference/32'
+# image:
+#   caption: Photo by rawpixel on Unsplash
+#   focal_point: Smart
+
+# links:
+#   - icon: github
+#     icon_pack: fab
+#     name: Follow
+#     url: https://arxiv.org/submit/5089853/view
+url_code: 'https://bhos.edu.az/en/conference/32'
+url_pdf: ''
+url_slides: ''
+url_video: ''
+
+title : Classification of Retinal Optical Coherence Tomography Images
+summary: This project utilized Retinal Optical Coherence Tomography (OCT) images, applying machine learning and deep learning techniques for effective classification. Convolutional Auto Encoders compressed the images, and SVM and Artificial Neural Networks classified them into four classes.
+tags:
+  - Computer Vision
+  - Deep Learning
+  - Vehicle Detection
+
+date: '2021-03-01 T00:00:00Z'
+
+# Optional external URL for project (replaces project detail page).
+external_link: 'https://bhos.edu.az/en/conference/32'
+# image:
+#   caption: Photo by rawpixel on Unsplash
+#   focal_point: Smart
+
+# links:
+#   - icon: github
+#     icon_pack: fab
+#     name: Follow
+#     url: https://arxiv.org/submit/5089853/view
+url_code: 'https://bhos.edu.az/en/conference/32'
 url_pdf: ''
 url_slides: ''
 url_video: ''

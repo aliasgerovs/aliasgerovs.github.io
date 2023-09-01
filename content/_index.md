@@ -244,7 +244,7 @@ sections:
       title: Service
       subtitle: ''
       text: |-
-         - Participant at [III World Robot Olympiad](https://wro-association.org/) 
+         - Participant at [III World Robot Olympiad](https://wro-association.org/) 2019
     design:
       columns: '1'
   # - block: collection
