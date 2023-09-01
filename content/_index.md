@@ -95,7 +95,7 @@ sections:
               - Identifyed and prioritized high-potential users for targeted upsell opportunities by harnessing the transformative power of data-driven insight.
         - title: Middle Data Scientist
           company: Voiceloft
-          company_url: 'voiceloft.com'
+          company_url: 'https://voiceloft.com/'
           company_logo: voiceloft
           location: Remote, Middletown, Delaware, United States
           date_start: '2021-03-01'
