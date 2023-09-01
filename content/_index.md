@@ -75,8 +75,8 @@ sections:
           company_url: 'https://www.revenue.ai'
           company_logo: voiceloft
           location: Remote, Amsterdam, Noord-Holland, The Netherlands
-          date_start: 'Mar 2022'
-          date_end:   'Jul 2023'
+          date_start: '2022-03-01'
+          date_end:   '2023-07-01'
           description: |2-
                   - Musigma Project ( mu-sigma.com ) (01.2023 - 04.2023) (USA) As a Data Science expert at the MuSigma project, I've skillfully designed and implemented anomaly detection alerting pipelines on Azure using PySpark, Python, and PostgreSQL, enhancing monthly newsletters with data-driven insights and ensuring timely detection of irregularities. 
                   - PepsiCo Brazil Project ( pepsico.com.br ) (08.2022 - 01.2023)(Brazil) Data Engineering Expert at Pepsico Brazil, proficient in Python, PySpark, and Azure Data Factory, adept at building ML models and ETL pipelines. Expert in data processing and visualization with tools like Plotly, driving data-driven decision-making and business impact. Anicura Project ( anicuragroup.com ) (05.2022 - 08.2022) (Italy, Sweden, Germany ) 
@@ -87,8 +87,8 @@ sections:
           company_url: 'https://koaila.com/'
           company_logo: voiceloft
           location: Remote, Mountain View, CA, USA
-          date_start: 'Apr 2023'
-          date_end:   'Jul 2023'
+          date_start: '2023-04-01'
+          date_end:   '2023-08-01'
           description: |2-
               - Leveraging AI and granular product usage data to gain profound insights into user behaviors, feature adoption patterns, and customer preferences. 
               - Applying advanced machine learning techniques, including state-of-the-art algorithms and statistical modeling, to analyze extensive customer and product data.
@@ -98,8 +98,8 @@ sections:
           company_url: 'voiceloft.com'
           company_logo: voiceloft
           location: Remote, Middletown, Delaware, United States
-          date_start: 'March 2021'
-          date_end:   'July 2022'
+          date_start: '2021-03-01'
+          date_end:   '2022-07-01'
           description: |2-
               - Neural Space Project (neuralspace.ai) (11.2021 - 03.2022) (UK) Senior Machine Learning engineer, worked on design, development, testing , tuning of ASR - speech recognition models for 11 languages.
               - Imla Project (imla.az) (07.2021 - 11.2021) (Azerbaijan) Deep Learning Engineer, designed, developed, tested, and fine-tuned cutting-edge ASR speech recognition models for the Azerbaijani language employing frameworks such as PyTorch and Kaldi.
@@ -109,8 +109,8 @@ sections:
           company_url: 'https://dsa.az'
           company_logo: voiceloft
           location: Baku, Azerbaijan
-          date_start: 'Jan 2020'
-          date_end:   'Jul 2020'
+          date_start: '2020-01-01'
+          date_end:   '2020-07-01'
           description: |2-
               - As a dedicated data science instructor, I've guided students in mastering Data Science methodologies using R, Python, Spark, Spark SQL and various machine learning and deep learning methodologies. 
               - Support and trainings to researchers relating to research methods
@@ -119,8 +119,8 @@ sections:
           company_url: 'https://bhos.edu.az'
           company_logo: voiceloft
           location: Baku, Azerbaijan
-          date_start: 'Mar 2018'
-          date_end:   'Dec 2029'
+          date_start: '2018-03-01'
+          date_end:   '2019-12-01'
           description: |2-
               - Worked on the optimizing traffic light timing for vehicles with using Open CV. 
               - I've adeptly used Python (OpenCV), and build object detection models. 
