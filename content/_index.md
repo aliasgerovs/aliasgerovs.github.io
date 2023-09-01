@@ -73,19 +73,19 @@ sections:
         - title: Senior Data Scientist
           company: Revenue.ai
           company_url: 'https://www.revenue.ai'
-          company_logo: voiceloft
+          company_logo: rai
           location: Remote, Amsterdam, Noord-Holland, The Netherlands
           date_start: '2022-03-01'
           date_end:   '2023-07-01'
           description: |2-
-                  - Musigma Project ( mu-sigma.com ) (01.2023 - 04.2023) (USA) As a Data Science expert at the MuSigma project, I've skillfully designed and implemented anomaly detection alerting pipelines on Azure using PySpark, Python, and PostgreSQL, enhancing monthly newsletters with data-driven insights and ensuring timely detection of irregularities. 
-                  - PepsiCo Brazil Project ( pepsico.com.br ) (08.2022 - 01.2023)(Brazil) Data Engineering Expert at Pepsico Brazil, proficient in Python, PySpark, and Azure Data Factory, adept at building ML models and ETL pipelines. Expert in data processing and visualization with tools like Plotly, driving data-driven decision-making and business impact. Anicura Project ( anicuragroup.com ) (05.2022 - 08.2022) (Italy, Sweden, Germany ) 
-                  - Data Scientist on the AniCura project, I've leveraged tools like Scikit-learn TensorFlow, and Pandas to excel in data science and ML deployment, driving impactful results across Italy, Sweden, and Germany, and enhancing operations in multiple markets
-                  - Data Science Expert at Louis Dreyfus Company Project ( ldc.com ) (03.2022 - 05.2022 ) ( France ) At LDC, I've adeptly used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions and business value. My expertise in price analytics and validation ensures accurate pricing strategies
+              - Musigma Project ( mu-sigma.com ) (01.2023 - 04.2023) (USA) As a Data Science expert at the MuSigma project, I've skillfully designed and implemented anomaly detection alerting pipelines on Azure using PySpark, Python, and PostgreSQL, enhancing monthly newsletters with data-driven insights and ensuring timely detection of irregularities. 
+              - PepsiCo Brazil Project ( pepsico.com.br ) (08.2022 - 01.2023)(Brazil) Data Engineering Expert at Pepsico Brazil, proficient in Python, PySpark, and Azure Data Factory, adept at building ML models and ETL pipelines. Expert in data processing and visualization with tools like Plotly, driving data-driven decision-making and business impact. Anicura Project ( anicuragroup.com ) (05.2022 - 08.2022) (Italy, Sweden, Germany ) 
+              - Data Scientist on the AniCura project, I've leveraged tools like Scikit-learn TensorFlow, and Pandas to excel in data science and ML deployment, driving impactful results across Italy, Sweden, and Germany, and enhancing operations in multiple markets
+              - Data Science Expert at Louis Dreyfus Company Project ( ldc.com ) (03.2022 - 05.2022 ) ( France ) At LDC, I've adeptly used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions and business value. My expertise in price analytics and validation ensures accurate pricing strategies
         - title: Middle Data Scientist
           company: Koaila
           company_url: 'https://koaila.com/'
-          company_logo: voiceloft
+          company_logo: koaila
           location: Remote, Mountain View, CA, USA
           date_start: '2023-04-01'
           date_end:   '2023-08-01'
@@ -107,7 +107,7 @@ sections:
         - title: Data Scientist
           company: Data Science Academy
           company_url: 'https://dsa.az'
-          company_logo: voiceloft
+          company_logo: dsa
           location: Baku, Azerbaijan
           date_start: '2020-01-01'
           date_end:   '2020-07-01'
@@ -117,7 +117,7 @@ sections:
         - title: Student Researcher
           company: Baku Higher Oil School
           company_url: 'https://bhos.edu.az'
-          company_logo: voiceloft
+          company_logo: bhos
           location: Baku, Azerbaijan
           date_start: '2018-03-01'
           date_end:   '2019-12-01'
