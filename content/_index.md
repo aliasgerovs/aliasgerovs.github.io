@@ -86,7 +86,7 @@ sections:
           company: Koaila
           company_url: 'https://koaila.com/'
           company_logo: koaila
-          location: Remote, Mountain View, CA, USA
+          location: Remote, Paris, France
           date_start: '2023-04-01'
           date_end:   '2023-08-01'
           description: |2-
