@@ -69,185 +69,185 @@ sections:
       #   Required fields are `title`, `company`, and `date_start`.
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
-      items:
-        - title: Senior Data Scientist
-          company: Revenue.ai
-          company_url: 'https://www.revenue.ai'
-          company_logo: voiceloft
-          location: Remote, Amsterdam, Noord-Holland, The Netherlands
-          date_start: '03-2022'
-          date_end:   '07-2023'
-          description: |2-
-          - Musigma Project ( mu-sigma.com ) (01.2023 - 04.2023) (USA) As a Data Science expert at the MuSigma project, I've skillfully designed and implemented anomaly detection alerting pipelines on Azure using PySpark, Python, and PostgreSQL, enhancing monthly newsletters with data-driven insights and ensuring timely detection of irregularities. 
-          - PepsiCo Brazil Project ( pepsico.com.br ) (08.2022 - 01.2023)(Brazil) Data Engineering Expert at Pepsico Brazil, proficient in Python, PySpark, and Azure Data Factory, adept at building ML models and ETL pipelines. Expert in data processing and visualization with tools like Plotly, driving data-driven decision-making and business impact. Anicura Project ( anicuragroup.com ) (05.2022 - 08.2022) (Italy, Sweden, Germany ) 
-          - Data Scientist on the AniCura project, I've leveraged tools like Scikit-learn, TensorFlow, and Pandas to excel in data science and ML deployment, driving impactful results across Italy, Sweden, and Germany, and enhancing operations in multiple markets
-          - Data Science Expert at Louis Dreyfus Company Project ( ldc.com ) (03.2022 - 05.2022 ) ( France ) At LDC, I've adeptly used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions and business value. My expertise in price analytics and validation ensures accurate pricing strategies
-
-        - title: Middle Data Scientist
-          company: Koaila
-          company_url: 'https://koaila.com/'
-          company_logo: voiceloft
-          location: Remote, Mountain View, CA, USA
-          date_start: '04-2023'
-          date_end:   '07-2023'
-          description: |2-
-              - Leveraging AI and granular product usage data to gain profound insights into user behaviors, feature adoption patterns, and customer preferences. 
-              - Applying advanced machine learning techniques, including state-of-the-art algorithms and statistical modeling, to analyze extensive customer and product data.
-              - Identifying and prioritize high-potential users for targeted upsell opportunities by harnessing the transformative power of data-driven insight
-        - title: Data Scientist
-          company: Voiceloft
-          company_url: 'voiceloft.com'
-          company_logo: voiceloft
-          location: Remote, Middletown, Delaware, United States
-          date_start: '03-2021'
-          date_end:   '04-2022'
-          description: |2-
-              - Neural Space Project (neuralspace.ai) (11.2021 - 03.2022) (UK) Senior Machine Learning engineer, worked on design, development, testing , tuning of ASR - speech recognition models for 11 languages.
-              - Imla Project (imla.az) (07.2021 - 11.2021) (Azerbaijan) Deep Learning Engineer, designed, developed, tested, and fine-tuned cutting-edge ASR speech recognition models for the Azerbaijani language employing frameworks such as PyTorch and Kaldi.
-              - Vooice Project ( voooice.com ) (03.2021 - 07.2021) Data Engineer, audio dataset collection, and creating multilingual speech recognition technologies.
-        - title: Data Scientist
-          company: Data Science Academy
-          company_url: 'https://dsa.az'
-          company_logo: voiceloft
-          location: Baku, Azerbaijan
-          date_start: '01-2020'
-          date_end:   '07-2020'
-          description: |2-
-              - As a dedicated data science instructor, I've guided students in mastering Data Science methodologies using R, Python, Spark, Spark SQL and various machine learning and deep learning methodologies. 
-              - Support and trainings to researchers relating to research methods
-        - title: Student Researcher
-          company: Baku Higher Oil School
-          company_url: 'https://bhos.edu.az'
-          company_logo: voiceloft
-          location: Baku, Azerbaijan
-          date_start: '03-2018'
-          date_end:   '12-2029'
-          description: |2-
-              - Worked on the optimizing traffic light timing for vehicles with using Open CV. 
-              - I've adeptly used Python (OpenCV), and build object detection models. 
-              - Participated in cutting edge research in computer vision.
-              - Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project titled Optimizing Road Networks for Automated Vehicles with using Open CV. 
-                    
-    design:
-      columns: '2'
-  # - block: accomplishments
-  #   content:
-  #     # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
-  #     title: 'Accomplish&shy;ments'
-  #     subtitle:
-  #     # Date format: https://wowchemy.com/docs/customization/#date-format
-  #     date_format: Jan 2006
-  #     # Accomplishments.
-  #     #   Add/remove as many `item` blocks below as you like.
-  #     #   `title`, `organization`, and `date_start` are the required parameters.
-  #     #   Leave other parameters empty if not required.
-  #     #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
   #     items:
-  #       - certificate_url: https://www.coursera.org
-  #         date_end: ''
-  #         date_start: '2021-01-25'
-  #         description: ''
-  #         organization: Coursera
-  #         organization_url: https://www.coursera.org
-  #         title: Neural Networks and Deep Learning
-  #         url: ''
-  #       - certificate_url: https://www.edx.org
-  #         date_end: ''
-  #         date_start: '2021-01-01'
-  #         description: Formulated informed blockchain models, hypotheses, and use cases.
-  #         organization: edX
-  #         organization_url: https://www.edx.org
-  #         title: Blockchain Fundamentals
-  #         url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-  #       - certificate_url: https://www.datacamp.com
-  #         date_end: '2020-12-21'
-  #         date_start: '2020-07-01'
-  #         description: ''
-  #         organization: DataCamp
-  #         organization_url: https://www.datacamp.com
-  #         title: 'Object-Oriented Programming in R'
-  #         url: ''
+  #       - title: Senior Data Scientist
+  #         company: Revenue.ai
+  #         company_url: 'https://www.revenue.ai'
+  #         company_logo: voiceloft
+  #         location: Remote, Amsterdam, Noord-Holland, The Netherlands
+  #         date_start: '03-2022'
+  #         date_end:   '07-2023'
+  #         description: |2-
+  #         - Musigma Project ( mu-sigma.com ) (01.2023 - 04.2023) (USA) As a Data Science expert at the MuSigma project, I've skillfully designed and implemented anomaly detection alerting pipelines on Azure using PySpark, Python, and PostgreSQL, enhancing monthly newsletters with data-driven insights and ensuring timely detection of irregularities. 
+  #         - PepsiCo Brazil Project ( pepsico.com.br ) (08.2022 - 01.2023)(Brazil) Data Engineering Expert at Pepsico Brazil, proficient in Python, PySpark, and Azure Data Factory, adept at building ML models and ETL pipelines. Expert in data processing and visualization with tools like Plotly, driving data-driven decision-making and business impact. Anicura Project ( anicuragroup.com ) (05.2022 - 08.2022) (Italy, Sweden, Germany ) 
+  #         - Data Scientist on the AniCura project, I've leveraged tools like Scikit-learn, TensorFlow, and Pandas to excel in data science and ML deployment, driving impactful results across Italy, Sweden, and Germany, and enhancing operations in multiple markets
+  #         - Data Science Expert at Louis Dreyfus Company Project ( ldc.com ) (03.2022 - 05.2022 ) ( France ) At LDC, I've adeptly used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions and business value. My expertise in price analytics and validation ensures accurate pricing strategies
+
+  #       - title: Middle Data Scientist
+  #         company: Koaila
+  #         company_url: 'https://koaila.com/'
+  #         company_logo: voiceloft
+  #         location: Remote, Mountain View, CA, USA
+  #         date_start: '04-2023'
+  #         date_end:   '07-2023'
+  #         description: |2-
+  #             - Leveraging AI and granular product usage data to gain profound insights into user behaviors, feature adoption patterns, and customer preferences. 
+  #             - Applying advanced machine learning techniques, including state-of-the-art algorithms and statistical modeling, to analyze extensive customer and product data.
+  #             - Identifying and prioritize high-potential users for targeted upsell opportunities by harnessing the transformative power of data-driven insight
+  #       - title: Data Scientist
+  #         company: Voiceloft
+  #         company_url: 'voiceloft.com'
+  #         company_logo: voiceloft
+  #         location: Remote, Middletown, Delaware, United States
+  #         date_start: '03-2021'
+  #         date_end:   '04-2022'
+  #         description: |2-
+  #             - Neural Space Project (neuralspace.ai) (11.2021 - 03.2022) (UK) Senior Machine Learning engineer, worked on design, development, testing , tuning of ASR - speech recognition models for 11 languages.
+  #             - Imla Project (imla.az) (07.2021 - 11.2021) (Azerbaijan) Deep Learning Engineer, designed, developed, tested, and fine-tuned cutting-edge ASR speech recognition models for the Azerbaijani language employing frameworks such as PyTorch and Kaldi.
+  #             - Vooice Project ( voooice.com ) (03.2021 - 07.2021) Data Engineer, audio dataset collection, and creating multilingual speech recognition technologies.
+  #       - title: Data Scientist
+  #         company: Data Science Academy
+  #         company_url: 'https://dsa.az'
+  #         company_logo: voiceloft
+  #         location: Baku, Azerbaijan
+  #         date_start: '01-2020'
+  #         date_end:   '07-2020'
+  #         description: |2-
+  #             - As a dedicated data science instructor, I've guided students in mastering Data Science methodologies using R, Python, Spark, Spark SQL and various machine learning and deep learning methodologies. 
+  #             - Support and trainings to researchers relating to research methods
+  #       - title: Student Researcher
+  #         company: Baku Higher Oil School
+  #         company_url: 'https://bhos.edu.az'
+  #         company_logo: voiceloft
+  #         location: Baku, Azerbaijan
+  #         date_start: '03-2018'
+  #         date_end:   '12-2029'
+  #         description: |2-
+  #             - Worked on the optimizing traffic light timing for vehicles with using Open CV. 
+  #             - I've adeptly used Python (OpenCV), and build object detection models. 
+  #             - Participated in cutting edge research in computer vision.
+  #             - Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project titled Optimizing Road Networks for Automated Vehicles with using Open CV. 
+                    
   #   design:
   #     columns: '2'
-  - block: collection
-    id: posts
-    content:
-      title: Recent Posts
-      subtitle: ''
-      text: ''
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 5
-      # Filter on criteria
-      filters:
-        folders:
-          - post
-        author: ""
-        category: ""
-        tag: ""
-        exclude_featured: true
-        exclude_future: false
-        exclude_past: false
-        publication_type: ""
-      # Choose how many pages you would like to offset by
-      offset: 0
-      # Page order: descending (desc) or ascending (asc) date.
-      order: desc
-    design:
-      # Choose a layout view
-      view: compact
-      columns: '2'
-  - block: collection
-    id: projects
-    content:
-      title: Projects
-      id: projects
-      filters:
-        folders:
-          - project
-      # Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
-      # default_button_index: 0
-      # # Filter toolbar (optional).
-      # # Add or remove as many filters (`filter_button` instances) as you like.
-      # # To show all items, set `tag` to "*".
-      # # To filter by a specific tag, set `tag` to an existing tag name.
-      # # To remove the toolbar, delete the entire `filter_button` block.
-      # buttons:
-      #   - name: All
-      #     tag: '*'
-      #   - name: Deep Learning
-      #     tag: Deep Learning
-      #   - name: Other
-      #     tag: Demo
-    design:
-      # Choose how many columns the section has. Valid values: '1' or '2'.
-      columns: '1'
-      view: compact
-      # For Showcase view, flip alternate rows?
-      # flip_alt_rows: false
-  - block: collection
-    id: publications
-    content:
-      title: Publications
-      # text: |-
-      #   {{% callout note %}}
-      #   Quickly discover relevant content by [filtering publications](./publication/).
-      #   {{% /callout %}}
-      filters:
-        folders:
-          - publication
-        exclude_featured: true
-    design:
-      columns: '2'
-      view: citation
-  - block: markdown
-    id: service
-    content:
-      title: Service
-      subtitle: ''
-      text: |-
-         - Participant at [III World Robot Olympiad](https://wro-association.org/) 
-    design:
-      columns: '1'
+  # # - block: accomplishments
+  # #   content:
+  # #     # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
+  # #     title: 'Accomplish&shy;ments'
+  # #     subtitle:
+  # #     # Date format: https://wowchemy.com/docs/customization/#date-format
+  # #     date_format: Jan 2006
+  # #     # Accomplishments.
+  # #     #   Add/remove as many `item` blocks below as you like.
+  # #     #   `title`, `organization`, and `date_start` are the required parameters.
+  # #     #   Leave other parameters empty if not required.
+  # #     #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
+  # #     items:
+  # #       - certificate_url: https://www.coursera.org
+  # #         date_end: ''
+  # #         date_start: '2021-01-25'
+  # #         description: ''
+  # #         organization: Coursera
+  # #         organization_url: https://www.coursera.org
+  # #         title: Neural Networks and Deep Learning
+  # #         url: ''
+  # #       - certificate_url: https://www.edx.org
+  # #         date_end: ''
+  # #         date_start: '2021-01-01'
+  # #         description: Formulated informed blockchain models, hypotheses, and use cases.
+  # #         organization: edX
+  # #         organization_url: https://www.edx.org
+  # #         title: Blockchain Fundamentals
+  # #         url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
+  # #       - certificate_url: https://www.datacamp.com
+  # #         date_end: '2020-12-21'
+  # #         date_start: '2020-07-01'
+  # #         description: ''
+  # #         organization: DataCamp
+  # #         organization_url: https://www.datacamp.com
+  # #         title: 'Object-Oriented Programming in R'
+  # #         url: ''
+  # #   design:
+  # #     columns: '2'
+  # - block: collection
+  #   id: posts
+  #   content:
+  #     title: Recent Posts
+  #     subtitle: ''
+  #     text: ''
+  #     # Choose how many pages you would like to display (0 = all pages)
+  #     count: 5
+  #     # Filter on criteria
+  #     filters:
+  #       folders:
+  #         - post
+  #       author: ""
+  #       category: ""
+  #       tag: ""
+  #       exclude_featured: true
+  #       exclude_future: false
+  #       exclude_past: false
+  #       publication_type: ""
+  #     # Choose how many pages you would like to offset by
+  #     offset: 0
+  #     # Page order: descending (desc) or ascending (asc) date.
+  #     order: desc
+  #   design:
+  #     # Choose a layout view
+  #     view: compact
+  #     columns: '2'
+  # - block: collection
+  #   id: projects
+  #   content:
+  #     title: Projects
+  #     id: projects
+  #     filters:
+  #       folders:
+  #         - project
+  #     # Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
+  #     # default_button_index: 0
+  #     # # Filter toolbar (optional).
+  #     # # Add or remove as many filters (`filter_button` instances) as you like.
+  #     # # To show all items, set `tag` to "*".
+  #     # # To filter by a specific tag, set `tag` to an existing tag name.
+  #     # # To remove the toolbar, delete the entire `filter_button` block.
+  #     # buttons:
+  #     #   - name: All
+  #     #     tag: '*'
+  #     #   - name: Deep Learning
+  #     #     tag: Deep Learning
+  #     #   - name: Other
+  #     #     tag: Demo
+  #   design:
+  #     # Choose how many columns the section has. Valid values: '1' or '2'.
+  #     columns: '1'
+  #     view: compact
+  #     # For Showcase view, flip alternate rows?
+  #     # flip_alt_rows: false
+  # - block: collection
+  #   id: publications
+  #   content:
+  #     title: Publications
+  #     # text: |-
+  #     #   {{% callout note %}}
+  #     #   Quickly discover relevant content by [filtering publications](./publication/).
+  #     #   {{% /callout %}}
+  #     filters:
+  #       folders:
+  #         - publication
+  #       exclude_featured: true
+  #   design:
+  #     columns: '2'
+  #     view: citation
+  # - block: markdown
+  #   id: service
+  #   content:
+  #     title: Service
+  #     subtitle: ''
+  #     text: |-
+  #        - Participant at [III World Robot Olympiad](https://wro-association.org/) 
+  #   design:
+  #     columns: '1'
   # - block: collection
   #   id: featured
   #   content:
