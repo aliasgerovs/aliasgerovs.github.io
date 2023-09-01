@@ -78,10 +78,10 @@ sections:
           date_start: '2022-03-01'
           date_end:   '2023-07-01'
           description: |2-
-              - Musigma Project ( mu-sigma.com ) (01.2023 - 04.2023) (USA) As a Data Science expert at the MuSigma project, I've skillfully designed and implemented anomaly detection alerting pipelines on Azure using PySpark, Python, and PostgreSQL, enhancing monthly newsletters with data-driven insights and ensuring timely detection of irregularities. 
-              - PepsiCo Brazil Project ( pepsico.com.br ) (08.2022 - 01.2023)(Brazil) Data Engineering Expert at Pepsico Brazil, proficient in Python, PySpark, and Azure Data Factory, adept at building ML models and ETL pipelines. Expert in data processing and visualization with tools like Plotly, driving data-driven decision-making and business impact. Anicura Project ( anicuragroup.com ) (05.2022 - 08.2022) (Italy, Sweden, Germany ) 
-              - Data Scientist on the AniCura project, I've leveraged tools like Scikit-learn TensorFlow, and Pandas to excel in data science and ML deployment, driving impactful results across Italy, Sweden, and Germany, and enhancing operations in multiple markets
-              - Data Science Expert at Louis Dreyfus Company Project ( ldc.com ) (03.2022 - 05.2022 ) ( France ) At LDC, I've adeptly used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions and business value. My expertise in price analytics and validation ensures accurate pricing strategies
+              - Data Science Expert at Musigma project[mu-sigma.com] : 01.2023 - 04.2023 USA. I've skillfully designed and implemented anomaly detection alerting pipelines on Azure using PySpark, Python, and PostgreSQL, enhancing monthly newsletters with data-driven insights and ensuring timely detection of irregularities. 
+              - Data Science Expert at PepsiCo Brazil project[pepsico.com.br] : 08.2022 - 01.2023 Brazil) I have built ML models and ETL pipelines along with data processing and visualization with tools like Plotly, driving data-driven decision-making and business impact. 
+              - Data Science Expert at Anicura Project[anicuragroup.com] : 05.2022 - 08.2022 Italy, Sweden, Germany. I've leveraged tools like Scikit-learn TensorFlow, and Pandas to excel in data science and ML deployment, driving impactful results across Italy, Sweden, and Germany, and enhancing operations in multiple markets
+              - Data Science Expert at Louis Dreyfus Company Project[ldc.com] : 03.2022 - 05.2022  France. At LDC, I've adeptly used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions and business value. My expertise in price analytics and validation ensures accurate pricing strategies using machine learning and time series models.
         - title: Middle Data Scientist
           company: Koaila
           company_url: 'https://koaila.com/'
@@ -90,10 +90,10 @@ sections:
           date_start: '2023-04-01'
           date_end:   '2023-08-01'
           description: |2-
-              - Leveraging AI and granular product usage data to gain profound insights into user behaviors, feature adoption patterns, and customer preferences. 
-              - Applying advanced machine learning techniques, including state-of-the-art algorithms and statistical modeling, to analyze extensive customer and product data.
-              - Identifying and prioritize high-potential users for targeted upsell opportunities by harnessing the transformative power of data-driven insight
-        - title: Data Scientist
+              - Leveraged AI and granular product usage data to gain profound insights into user behaviors, feature adoption patterns, and customer preferences. 
+              - Applied advanced machine learning techniques, including state-of-the-art algorithms and statistical modeling, to analyze extensive customer and product data.
+              - Identifyed and prioritized high-potential users for targeted upsell opportunities by harnessing the transformative power of data-driven insight.
+        - title: Middle Data Scientist
           company: Voiceloft
           company_url: 'voiceloft.com'
           company_logo: voiceloft
@@ -101,10 +101,10 @@ sections:
           date_start: '2021-03-01'
           date_end:   '2022-07-01'
           description: |2-
-              - Neural Space Project (neuralspace.ai) (11.2021 - 03.2022) (UK) Senior Machine Learning engineer, worked on design, development, testing , tuning of ASR - speech recognition models for 11 languages.
-              - Imla Project (imla.az) (07.2021 - 11.2021) (Azerbaijan) Deep Learning Engineer, designed, developed, tested, and fine-tuned cutting-edge ASR speech recognition models for the Azerbaijani language employing frameworks such as PyTorch and Kaldi.
-              - Vooice Project ( voooice.com ) (03.2021 - 07.2021) Data Engineer, audio dataset collection, and creating multilingual speech recognition technologies.
-        - title: Data Scientist
+              - Data Science Expert at Neural Space Project[neuralspace.ai] : 11.2021 - 03.2022 Uniteed Kingdom. Worked on design, development, testing , tuning of ASR - speech recognition models for 11 languages.
+              - Data Science Expert at Imla Project : 07.2021 - 11.2021 Azerbaijan. Designed, developed, tested, and fine-tuned cutting-edge ASR speech recognition models for the Azerbaijani language employing frameworks such as PyTorch and Kaldi.
+              - Data Science Expert Vooice Project[voooice.com] : 03.2021 - 07.2021. Collected audio dataset, and created multilingual speech recognition technologies.
+        - title: Data Science Mentor
           company: Data Science Academy
           company_url: 'https://dsa.az'
           company_logo: dsa
@@ -115,7 +115,7 @@ sections:
               - As a dedicated data science instructor, I've guided students in mastering Data Science methodologies using R, Python, Spark, Spark SQL and various machine learning and deep learning methodologies. 
               - Support and trainings to researchers relating to research methods
         - title: Student Researcher
-          company: Baku Higher Oil School
+          company: Baku Higher Oil School Robotics Lab
           company_url: 'https://bhos.edu.az'
           company_logo: bhos
           location: Baku, Azerbaijan
