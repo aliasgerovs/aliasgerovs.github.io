@@ -113,7 +113,7 @@ sections:
           date_end:   '2020-07-01'
           description: |2-
               - As a dedicated data science instructor, I've guided students in mastering Data Science methodologies using R, Python, Spark, Spark SQL and various machine learning and deep learning methodologies. 
-              - Support and trainings to researchers relating to research methods
+              - Support and trainings to researchers relating to research methods.
         - title: Student Researcher
           company: Baku Higher Oil School Robotics Lab
           company_url: 'https://bhos.edu.az'
