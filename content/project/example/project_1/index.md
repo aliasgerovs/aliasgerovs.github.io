@@ -42,7 +42,7 @@ tags:
 date: '2023-11-07 T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
-external_link: 'https://arxiv.org/submit/5089853/view'
+external_link: 'https://arxiv.org/abs/2309.00136'
 
 # image:
 #   caption: Photo by rawpixel on Unsplash
@@ -52,8 +52,8 @@ external_link: 'https://arxiv.org/submit/5089853/view'
 #   - icon: github
 #     icon_pack: fab
 #     name: Follow
-#     url: https://arxiv.org/submit/5089853/view
-url_code: 'https://arxiv.org/submit/5089853/view'
+#     url: https://arxiv.org/abs/2309.00136
+url_code: 'https://arxiv.org/abs/2309.00136'
 url_pdf: ''
 url_slides: ''
 url_video: ''
@@ -78,7 +78,7 @@ url_video: ''
 # #   - icon: github
 # #     icon_pack: fab
 # #     name: Follow
-# #     url: https://arxiv.org/submit/5089853/view
+# #     url: https://arxiv.org/abs/2309.00136
 # url_code: 'https://bhos.edu.az/en/conference/32'
 # url_pdf: ''
 # url_slides: ''
@@ -103,7 +103,7 @@ url_video: ''
 # #   - icon: github
 # #     icon_pack: fab
 # #     name: Follow
-# #     url: https://arxiv.org/submit/5089853/view
+# #     url: https://arxiv.org/abs/2309.00136
 # url_code: 'https://bhos.edu.az/en/conference/32'
 # url_pdf: ''
 # url_slides: ''
@@ -129,7 +129,7 @@ url_video: ''
 # #   - icon: github
 # #     icon_pack: fab
 # #     name: Follow
-# #     url: https://arxiv.org/submit/5089853/view
+# #     url: https://arxiv.org/abs/2309.00136
 # url_code: 'https://bhos.edu.az/en/conference/32'
 # url_pdf: ''
 # url_slides: ''
