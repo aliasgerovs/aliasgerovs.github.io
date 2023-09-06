@@ -84,7 +84,7 @@
 # url_slides: ''
 # url_video: ''
 
-title: Counting Objects For Traffic Surveillance Systems
+title: D. Counting Objects For Traffic Surveillance Systems
 summary: I contributed to a fully automated traffic analysis system that can monitor and predict traffic flow, counting passing cars, and identifying their direction and lanes without manual calibration, suitable for uncalibrated highway cameras. 
 tags:
   - Computer Vision
