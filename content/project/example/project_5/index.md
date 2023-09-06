@@ -1,28 +1,28 @@
 ---
-# title: Privacy Concerned Decentralized Machine Learning Implementation on Image Classification
-# summary: In my project, I aimed to explore federated learning for image classification while ensuring privacy. The main objective was to develop a federated learning algorithm specifically for image classification tasks and evaluate its performance in comparison to centralized training approach. 
-# tags:
-#   - Federated Learning
-#   - Decentralized Learning
-#   - Classification
-# date: '2023-11-07 T00:00:00Z'
+title: Privacy Concerned Decentralized Machine Learning Implementation on Image Classification
+summary: In my project, I aimed to explore federated learning for image classification while ensuring privacy. The main objective was to develop a federated learning algorithm specifically for image classification tasks and evaluate its performance in comparison to centralized training approach. 
+tags:
+  - Federated Learning
+  - Decentralized Learning
+  - Classification
+date: '2023-11-07 T00:00:00Z'
 
-# # Optional external URL for project (replaces project detail page).
-# external_link: 'https://github.com/aliasgerovs/Federated-Learning'
+# Optional external URL for project (replaces project detail page).
+external_link: 'https://github.com/aliasgerovs/Federated-Learning'
 
-# # image:
-# #   caption: Photo by rawpixel on Unsplash
-# #   focal_point: Smart
+# image:
+#   caption: Photo by rawpixel on Unsplash
+#   focal_point: Smart
 
-# # links:
-# #   - icon: github
-# #     icon_pack: fab
-# #     name: Follow
-# #     url: https://github.com/aliasgerovs/Federated-Learning
-# url_code: 'https://github.com/aliasgerovs/Federated-Learning'
-# url_pdf: ''
-# url_slides: ''
-# url_video: ''
+# links:
+#   - icon: github
+#     icon_pack: fab
+#     name: Follow
+#     url: https://github.com/aliasgerovs/Federated-Learning
+url_code: 'https://github.com/aliasgerovs/Federated-Learning'
+url_pdf: ''
+url_slides: ''
+url_video: ''
 
 # Slides (optional).
 #   Associate this project with Markdown slides.
@@ -51,7 +51,7 @@
 # links:
 #   - icon: github
 #     icon_pack: fab
-#     name: Follow
+# #     name: Follow
 # #     url: https://arxiv.org/abs/2309.00136
 # url_code: 'https://arxiv.org/abs/2309.00136'
 # url_pdf: ''
@@ -95,14 +95,14 @@
 
 # # Optional external URL for project (replaces project detail page).
 # external_link: 'https://bhos.edu.az/en/conference/32'
-# image:
-#   caption: Photo by rawpixel on Unsplash
-#   focal_point: Smart
+# # image:
+# #   caption: Photo by rawpixel on Unsplash
+# #   focal_point: Smart
 
-# links:
-#   - icon: github
-#     icon_pack: fab
-#     name: Follow
+# # links:
+# #   - icon: github
+# #     icon_pack: fab
+# #     name: Follow
 # #     url: https://arxiv.org/abs/2309.00136
 # url_code: 'https://bhos.edu.az/en/conference/32'
 # url_pdf: ''
@@ -110,28 +110,28 @@
 # url_video: ''
 
 
-title : Classification of Retinal Optical Coherence Tomography Images
-summary: This project utilized Retinal Optical Coherence Tomography (OCT) images, applying machine learning and deep learning techniques for effective classification. Convolutional Auto Encoders compressed the images, and SVM and Artificial Neural Networks classified them into four classes.
-tags:
-  - Computer Vision
-  - Deep Learning
-  - Vehicle Detection
+# title : Classification of Retinal Optical Coherence Tomography Images
+# summary: This project utilized Retinal Optical Coherence Tomography (OCT) images, applying machine learning and deep learning techniques for effective classification. Convolutional Auto Encoders compressed the images, and SVM and Artificial Neural Networks classified them into four classes.
+# tags:
+#   - Computer Vision
+#   - Deep Learning
+#   - Vehicle Detection
 
-date: '2021-03-01 T00:00:00Z'
+# date: '2021-03-01 T00:00:00Z'
 
-# Optional external URL for project (replaces project detail page).
-external_link: 'https://bhos.edu.az/en/conference/32'
-# image:
-#   caption: Photo by rawpixel on Unsplash
-#   focal_point: Smart
+# # Optional external URL for project (replaces project detail page).
+# external_link: 'https://bhos.edu.az/en/conference/32'
+# # image:
+# #   caption: Photo by rawpixel on Unsplash
+# #   focal_point: Smart
 
-# links:
-#   - icon: github
-#     icon_pack: fab
-#     name: Follow
-#     url: https://arxiv.org/abs/2309.00136
-url_code: 'https://bhos.edu.az/en/conference/32'
-url_pdf: ''
-url_slides: ''
-url_video: ''
+# # links:
+# #   - icon: github
+# #     icon_pack: fab
+# #     name: Follow
+# #     url: https://arxiv.org/abs/2309.00136
+# url_code: 'https://bhos.edu.az/en/conference/32'
+# url_pdf: ''
+# url_slides: ''
+# url_video: ''
 ---
