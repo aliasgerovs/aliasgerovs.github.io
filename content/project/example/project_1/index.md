@@ -31,18 +31,18 @@ url_video: ''
 #   Otherwise, set `slides = ""`.
 # slides: example
 
-title: Predicting Financial Market Trends using Time Series Analysis and Natural Language Processing
-summary: Conducted a research project that explored the use of Twitter sentiments as a tool for predicting stock prices of major corporations, such as Tesla and Apple. Utilizing Time Series Analysis and Natural Language Processing with Long-Short Term Memory (LSTM) neural networks, my study revealed a robust association between emotions conveyed in tweets and fluctuations in stock prices, highlighting the potential of Twitter sentiments in informing investment strategies.
-tags:
-  - Natural Language Processing
-  - Time Series Analysis
-  - Sentimental 
-  - Stock Price Prediction
+# title: Predicting Financial Market Trends using Time Series Analysis and Natural Language Processing
+# summary: Conducted a research project that explored the use of Twitter sentiments as a tool for predicting stock prices of major corporations, such as Tesla and Apple. Utilizing Time Series Analysis and Natural Language Processing with Long-Short Term Memory (LSTM) neural networks, my study revealed a robust association between emotions conveyed in tweets and fluctuations in stock prices, highlighting the potential of Twitter sentiments in informing investment strategies.
+# tags:
+#   - Natural Language Processing
+#   - Time Series Analysis
+#   - Sentimental 
+#   - Stock Price Prediction
 
-date: '2023-11-07 T00:00:00Z'
+# date: '2023-11-07 T00:00:00Z'
 
-# Optional external URL for project (replaces project detail page).
-external_link: 'https://arxiv.org/abs/2309.00136'
+# # Optional external URL for project (replaces project detail page).
+# external_link: 'https://arxiv.org/abs/2309.00136'
 
 # image:
 #   caption: Photo by rawpixel on Unsplash
@@ -51,12 +51,12 @@ external_link: 'https://arxiv.org/abs/2309.00136'
 # links:
 #   - icon: github
 #     icon_pack: fab
-#     name: Follow
-#     url: https://arxiv.org/abs/2309.00136
-url_code: 'https://arxiv.org/abs/2309.00136'
-url_pdf: ''
-url_slides: ''
-url_video: ''
+# #     name: Follow
+# #     url: https://arxiv.org/abs/2309.00136
+# url_code: 'https://arxiv.org/abs/2309.00136'
+# url_pdf: ''
+# url_slides: ''
+# url_video: ''
 
 
 # title: Recognition of Azerbaijani phonemes using Machine Learning
