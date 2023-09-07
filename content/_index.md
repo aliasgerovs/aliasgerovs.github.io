@@ -281,13 +281,14 @@ sections:
       title: Honors and Awards
       subtitle:
       text: |-
-        - National Student Scientific Conferences 3x 1st place winner in the cateogory of Machine Learning applications  (2020, 2021, 2022)
-        - IELTS 7.5
-        - Top 15th team in III World Robot Olympiad in Gyor, Hungary.
-        - III World Robot Olympiad Azerbaijan Winner - Awarded Golden Medal.
-        - Awarded Presidential Scholarship Due to High Achievements in Education.
-        - Scored 690 out of 700 in University Enterance exam.
-        - Respublic Physics Olympiad Golden Medalist.
+        - 3x National Student Scientific Conferences champion in Machine Learning Applications (2020, 2021, 2022).
+        - Achieved an IELTS score of 7.5.
+        - Ranked among the top 15 teams at the III World Robot Olympiad in Gyor, Hungary.
+        - Awarded the Golden Medal at the III World Robot Olympiad in Azerbaijan.
+        - Earned the Presidential Scholarship for exceptional academic performance.
+        - Scored an impressive 690 out of 700 on the University Entrance Exam.
+        - High school graduate with a Golden Medal, placing in the top 5% among 60k graduating students
+        - Honored as the Golden Medalist in the Respublic Physics Olympiad.
     design:
       columns: '1'
 
