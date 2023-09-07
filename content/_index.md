@@ -281,13 +281,13 @@ sections:
       title: Honors and Awards
       subtitle:
       text: |-
-        - World Robot Olympiad Azerbaijan Winner 2019 - Awarded Golden Medal
-        - Awarded Presidential Scholarship Due to High Achievements in Education
-        - Scored 690 out of 700 in University Enterance exam
-        - Respublic Physics Olympiad Golden Medalist
+        - National Student Scientific Conferences 3x 1st place winner in the cateogory of Machine Learning applications  (2020, 2021, 2022)
         - IELTS 7.5
-        - National Student Scientific Conferences 1st place with machine Learning applications 2x (2021,2022)
-        - Top 15th team in World Robot Olympiad 2019 in Gyor, Hungary
+        - Top 15th team in III World Robot Olympiad in Gyor, Hungary.
+        - III World Robot Olympiad Azerbaijan Winner - Awarded Golden Medal.
+        - Awarded Presidential Scholarship Due to High Achievements in Education.
+        - Scored 690 out of 700 in University Enterance exam.
+        - Respublic Physics Olympiad Golden Medalist.
     design:
       columns: '1'
 
