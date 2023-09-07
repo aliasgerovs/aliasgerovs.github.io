@@ -281,7 +281,7 @@ sections:
       title: Honors and Awards
       subtitle:
       text: |-
-        - 3x National Student Scientific Conferences champion in Machine Learning Applications (2020, 2021, 2022).
+        - 3x National Student Scientific Conferences 1st place winner in Machine Learning Applications (2020, 2021, 2022).
         - Achieved an IELTS score of 7.5.
         - Ranked among the top 15 teams at the III World Robot Olympiad in Gyor, Hungary.
         - Awarded the Golden Medal at the III World Robot Olympiad in Azerbaijan.
