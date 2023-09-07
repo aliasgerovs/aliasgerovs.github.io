@@ -79,9 +79,9 @@ sections:
           date_end:   '2023-07-01'
           description: |2-
               - Musigma - [mu-sigma.com](https://mu-sigma.com/) | 01.2023 - 04.2023, Remote, Illinois, USA. Played a pivotal role in designing and implementing anomaly detection alerting pipelines, harnessing the power of Azure, PySpark, Python, and PostgreSQL. 
-              - PepsiCo Brazil - [pepsico.com.br](https://pepsico.com.br/) | 08.2022 - 01.2023, Brazil. Developed robust ML models, harnessed data processing and visualization tools to drive data-driven decision-making. 
+              - PepsiCo - [pepsico.com.br](https://pepsico.com.br/) | 08.2022 - 01.2023, Brazil. Developed robust ML models, harnessed data processing and visualization tools to drive data-driven decision-making. 
               - Anicura - [anicuragroup.com](https://anicuragroup.com/) | 05.2022 - 08.2022, Italy, Sweden, Germany. Leveraged Natural Language Processing and built language models for product details classification for the different markets.
-              - Louis Dreyfus Company [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  France. Used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions.
+              - Louis Dreyfus Company - [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  France. Used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions.
 
         - title: Senior Data Scientist
           company: Koaila
@@ -91,8 +91,8 @@ sections:
           date_start: '2023-04-01'
           date_end:   '2023-08-01'
           description: |2-
-              - Leveraged AI and granular product usage data to gain profound insights into user behaviors, feature adoption patterns, and customer preferences. 
               - Employed advanced Natural Language Processing techniques to analyze extensive customer and product data.
+              - Leveraged AI and granular product usage data to gain profound insights into user behaviors, feature adoption patterns, and customer preferences. 
               - Ensured the privacy and security of sensitive customer data while utilizing advanced machine learning techniques to analyze product data.
         - title: Middle Data Scientist
           company: Voiceloft
@@ -113,8 +113,8 @@ sections:
           date_start: '2020-01-01'
           date_end:   '2020-07-01'
           description: |2-
-              - As a dedicated data science instructor, I've guided students in mastering Data Science methodologies using R, Python, Spark, Spark SQL and various machine learning and deep learning methodologies. 
-              - Support and trainings to researchers relating to NLP and Machine Learning research methods.
+              - Guided hundreds of students in mastering Data Science methodologies using R, Python, Spark, Spark SQL and various machine learning and deep learning methodologies. 
+              - Supported trainings to researchers relating to NLP and Machine Learning research methods.
         - title: Student Researcher
           company: Baku Higher Oil School Robotics Lab
           company_url: 'https://bhos.edu.az'
@@ -123,10 +123,11 @@ sections:
           date_start: '2018-03-01'
           date_end:   '2019-12-01'
           description: |2-
+              - Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project titled 'Optimizing Road Networks for Automated Vehicles with using Open CV'. 
               - Worked on the optimizing traffic light timing for vehicles with using Open CV. 
-              - I've adeptly used Python (OpenCV), and build object detection models. 
+              - Adeptly used Python (OpenCV), and build object detection models. 
               - Participated in cutting edge research in computer vision.
-              - Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project titled Optimizing Road Networks for Automated Vehicles with using Open CV. 
+
                     
     design:
       columns: '2'
@@ -274,9 +275,9 @@ sections:
   #     title: Popular Topics
   #   design:
   #     columns: '2'
-  # - block: contact
-  #   id: contact
-  #   content:
+  - block: Honors and Awards
+    id: contact
+    content:
       title: Honors and Awards
       subtitle:
       text: |-
@@ -289,44 +290,44 @@ sections:
         - Top 15th team in World Robot Olympiad 2019 in Gyor, Hungary
 
 
-      # Contact (add or remove contact options as necessary)
-      email: test@example.org
-      phone: 888 888 88 88
-      appointment_url: 'https://calendly.com'
-      address:
-        street: 450 Serra Mall
-        city: Stanford
-        region: CA
-        postcode: '94305'
-        country: United States
-        country_code: US
-      directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
-      office_hours:
-        - 'Monday 10:00 to 13:00'
-        - 'Wednesday 09:00 to 10:00'
-      contact_links:
-        - icon: twitter
-          icon_pack: fab
-          name: DM Me
-          link: 'https://twitter.com/Twitter'
-        - icon: skype
-          icon_pack: fab
-          name: Skype Me
-          link: 'skype:echo123?call'
-        - icon: video
-          icon_pack: fas
-          name: Zoom Me
-          link: 'https://zoom.com'
-      # Automatically link email and phone or display as text?
-      autolink: true
-      # Email form provider
-      form:
-        provider: netlify
-        formspree:
-          id:
-        netlify:
-          # Enable CAPTCHA challenge to reduce spam?
-          captcha: false
-    design:
-      columns: '2'
+    #   # Contact (add or remove contact options as necessary)
+    #   email: test@example.org
+    #   phone: 888 888 88 88
+    #   appointment_url: 'https://calendly.com'
+    #   address:
+    #     street: 450 Serra Mall
+    #     city: Stanford
+    #     region: CA
+    #     postcode: '94305'
+    #     country: United States
+    #     country_code: US
+    #   directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
+    #   office_hours:
+    #     - 'Monday 10:00 to 13:00'
+    #     - 'Wednesday 09:00 to 10:00'
+    #   contact_links:
+    #     - icon: twitter
+    #       icon_pack: fab
+    #       name: DM Me
+    #       link: 'https://twitter.com/Twitter'
+    #     - icon: skype
+    #       icon_pack: fab
+    #       name: Skype Me
+    #       link: 'skype:echo123?call'
+    #     - icon: video
+    #       icon_pack: fas
+    #       name: Zoom Me
+    #       link: 'https://zoom.com'
+    #   # Automatically link email and phone or display as text?
+    #   autolink: true
+    #   # Email form provider
+    #   form:
+    #     provider: netlify
+    #     formspree:
+    #       id:
+    #     netlify:
+    #       # Enable CAPTCHA challenge to reduce spam?
+    #       captcha: false
+    # design:
+    #   columns: '2'
 ---
