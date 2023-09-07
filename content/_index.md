@@ -287,7 +287,7 @@ sections:
         - Awarded the Golden Medal at the III World Robot Olympiad in Azerbaijan.
         - Earned the Presidential Scholarship for exceptional academic performance.
         - Scored an impressive 690 out of 700 on the University Entrance Exam.
-        - High school graduate with a Golden Medal, placing in the top 5% among 60k graduating students
+        - High school graduate with a Golden Medal, placing in the top 5% among 60k graduating students.
         - Honored as the Golden Medalist in the Respublic Physics Olympiad.
     design:
       columns: '1'
