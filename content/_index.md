@@ -93,7 +93,7 @@ sections:
           description: |2-
               - Leveraged AI and granular product usage data to gain profound insights into user behaviors, feature adoption patterns, and customer preferences. 
               - Employed advanced Natural Language Processing techniques to analyze extensive customer and product data.
-              - Ensured the privacy and security of sensitive customer data while utilizing advanced machine learning techniques to analyze extensive customer and product data.
+              - Ensured the privacy and security of sensitive customer data while utilizing advanced machine learning techniques to analyze product data.
         - title: Middle Data Scientist
           company: Voiceloft
           company_url: 'https://voiceloft.com/'
@@ -102,9 +102,9 @@ sections:
           date_start: '2021-03-01'
           date_end:   '2022-07-01'
           description: |2-
-              - Data Science Expert at Neural Space project [neuralspace.ai](https://neuralspace.ai/) | 11.2021 - 03.2022, United Kingdom. Worked on design, development, testing , tuning of ASR - speech recognition models for 11 languages. Developed language identification models for data gathering applications.
-              - Data Science Expert at Imla Project | 07.2021 - 11.2021 Azerbaijan. Designed, developed, tested, and fine-tuned cutting-edge ASR speech recognition models for the Azerbaijani language employing frameworks such as PyTorch and Kaldi.
-              - Data Science Expert Vooice project [voooice.com](https://voooice.com/) | 03.2021 - 07.2021. Collected audio dataset, and created multilingual speech recognition technologies.
+              - Neural Space - [neuralspace.ai](https://neuralspace.ai/) | 11.2021 - 03.2022, United Kingdom. Worked on design, development, testing , tuning of ASR - speech recognition models for 11 languages. Developed language identification models for data gathering applications.
+              - Imla Project - [imla.az](https://voiceloft.com) | 07.2021 - 11.2021 Azerbaijan. Designed, developed, tested, and fine-tuned cutting-edge ASR speech recognition models for the Azerbaijani language employing frameworks such as PyTorch and Kaldi.
+              - Voooice - [voooice.com](https://voooice.com/) | 03.2021 - 07.2021. Collected audio dataset, and created multilingual speech recognition technologies.
         - title: Data Science Instructor
           company: Data Science Academy
           company_url: 'https://dsa.az'
@@ -277,48 +277,56 @@ sections:
   # - block: contact
   #   id: contact
   #   content:
-  #     title: Contact
-  #     subtitle:
-  #     text: |-
-  #       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mi diam, venenatis ut magna et, vehicula efficitur enim.
-  #     # Contact (add or remove contact options as necessary)
-  #     email: test@example.org
-  #     phone: 888 888 88 88
-  #     appointment_url: 'https://calendly.com'
-  #     address:
-  #       street: 450 Serra Mall
-  #       city: Stanford
-  #       region: CA
-  #       postcode: '94305'
-  #       country: United States
-  #       country_code: US
-  #     directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
-  #     office_hours:
-  #       - 'Monday 10:00 to 13:00'
-  #       - 'Wednesday 09:00 to 10:00'
-  #     contact_links:
-  #       - icon: twitter
-  #         icon_pack: fab
-  #         name: DM Me
-  #         link: 'https://twitter.com/Twitter'
-  #       - icon: skype
-  #         icon_pack: fab
-  #         name: Skype Me
-  #         link: 'skype:echo123?call'
-  #       - icon: video
-  #         icon_pack: fas
-  #         name: Zoom Me
-  #         link: 'https://zoom.com'
-  #     # Automatically link email and phone or display as text?
-  #     autolink: true
-  #     # Email form provider
-  #     form:
-  #       provider: netlify
-  #       formspree:
-  #         id:
-  #       netlify:
-  #         # Enable CAPTCHA challenge to reduce spam?
-  #         captcha: false
-  #   design:
-  #     columns: '2'
+      title: Honors and Awards
+      subtitle:
+      text: |-
+        - World Robot Olympiad Azerbaijan Winner 2019 - Awarded Golden Medal
+        - Awarded Presidential Scholarship Due to High Achievements in Education
+        - Scored 690 out of 700 in University Enterance exam
+        - Respublic Physics Olympiad Golden Medalist
+        - IELTS 7.5
+        - National Student Scientific Conferences 1st place with machine Learning applications 2x (2021,2022)
+        - Top 15th team in World Robot Olympiad 2019 in Gyor, Hungary
+
+
+      # Contact (add or remove contact options as necessary)
+      email: test@example.org
+      phone: 888 888 88 88
+      appointment_url: 'https://calendly.com'
+      address:
+        street: 450 Serra Mall
+        city: Stanford
+        region: CA
+        postcode: '94305'
+        country: United States
+        country_code: US
+      directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
+      office_hours:
+        - 'Monday 10:00 to 13:00'
+        - 'Wednesday 09:00 to 10:00'
+      contact_links:
+        - icon: twitter
+          icon_pack: fab
+          name: DM Me
+          link: 'https://twitter.com/Twitter'
+        - icon: skype
+          icon_pack: fab
+          name: Skype Me
+          link: 'skype:echo123?call'
+        - icon: video
+          icon_pack: fas
+          name: Zoom Me
+          link: 'https://zoom.com'
+      # Automatically link email and phone or display as text?
+      autolink: true
+      # Email form provider
+      form:
+        provider: netlify
+        formspree:
+          id:
+        netlify:
+          # Enable CAPTCHA challenge to reduce spam?
+          captcha: false
+    design:
+      columns: '2'
 ---
