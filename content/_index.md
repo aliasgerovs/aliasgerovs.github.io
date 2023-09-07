@@ -60,7 +60,8 @@ sections:
   - block: experience
     id: experience
     content:
-      title: Experience
+      title: Experience 
+      My professional journey in the realm of data science has been characterized by a relentless pursuit of excellence and a deep passion for research in Machine Learning, Natural Language Processing, Distributed Systems, and Privacy Preserving ML. I believe that my extensive industry experience has honed my skills and prepared me for the challenges of academic exploration in these critical domains.
       # Date format for experience
       #   Refer to https://wowchemy.com/docs/customization/#date-format
       date_format: Jan 2006
@@ -78,10 +79,11 @@ sections:
           date_start: '2022-03-01'
           date_end:   '2023-07-01'
           description: |2-
-              - Data Science Expert at Musigma project [mu-sigma.com](https://mu-sigma.com/) | 01.2023 - 04.2023, Remote, Illinois, USA. I've skillfully designed and implemented anomaly detection alerting pipelines on Azure using PySpark, Python, and PostgreSQL, enhancing monthly newsletters with data-driven insights and ensuring timely detection of irregularities. 
-              - Data Science Expert at PepsiCo Brazil project [pepsico.com.br](https://pepsico.com.br/) | 08.2022 - 01.2023, Brazil. I have built ML models and ETL pipelines along with data processing and visualization with tools like Plotly, driving data-driven decision-making and business impact. 
-              - Data Science Expert at Anicura project [anicuragroup.com](https://anicuragroup.com/) | 05.2022 - 08.2022, Italy, Sweden, Germany. I've leveraged tools like Scikit-learn TensorFlow, and Pandas to excel in data science and ML deployment, driving impactful results across Italy, Sweden, and Germany, and enhancing operations in multiple markets.
-              - Data Science Expert at Louis Dreyfus Company project [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  France. At LDC, I've adeptly used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions and business value. My expertise in price analytics and validation ensures accurate pricing strategies using machine learning and time series models.
+              - Musigma - Advanced Anomaly Detection and Data-Driven Insights [mu-sigma.com](https://mu-sigma.com/) | 01.2023 - 04.2023, Remote, Illinois, USA. Played a pivotal role in designing and implementing anomaly detection alerting pipelines, harnessing the power of Azure, PySpark, Python, and PostgreSQL. 
+              - PepsiCo Brazil - Machine Learning for Informed Decision-Making [pepsico.com.br](https://pepsico.com.br/) | 08.2022 - 01.2023, Brazil. Developed robust ML models, harnessed data processing and visualization tools to drive data-driven decision-making. 
+              - Anicura - Catalyzing Global Impact through Data Science and ML [anicuragroup.com](https://anicuragroup.com/) | 05.2022 - 08.2022, Italy, Sweden, Germany. Leveraged Natural Language Processing and built language models for product details classification for the different markets.
+              - Louis Dreyfus Company [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  France. At LDC, I've adeptly used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions.
+
         - title: Senior Data Scientist
           company: Koaila
           company_url: 'https://koaila.com/'
@@ -91,8 +93,8 @@ sections:
           date_end:   '2023-08-01'
           description: |2-
               - Leveraged AI and granular product usage data to gain profound insights into user behaviors, feature adoption patterns, and customer preferences. 
-              - Applied advanced machine learning techniques, including state-of-the-art algorithms and statistical modeling, to analyze extensive customer and product data.
-              - Identifyed and prioritized high-potential users for targeted upsell opportunities by harnessing the transformative power of data-driven insight.
+              - Employed advanced Natural Language Processing techniques to analyze extensive customer and product data.
+              - Ensured the privacy and security of sensitive customer data while utilizing advanced machine learning techniques to analyze extensive customer and product data.
         - title: Middle Data Scientist
           company: Voiceloft
           company_url: 'https://voiceloft.com/'
@@ -101,7 +103,7 @@ sections:
           date_start: '2021-03-01'
           date_end:   '2022-07-01'
           description: |2-
-              - Data Science Expert at Neural Space project [neuralspace.ai](https://neuralspace.ai/) | 11.2021 - 03.2022, United Kingdom. Worked on design, development, testing , tuning of ASR - speech recognition models for 11 languages.
+              - Data Science Expert at Neural Space project [neuralspace.ai](https://neuralspace.ai/) | 11.2021 - 03.2022, United Kingdom. Worked on design, development, testing , tuning of ASR - speech recognition models for 11 languages. Developed language identification models for data gathering applications.
               - Data Science Expert at Imla Project | 07.2021 - 11.2021 Azerbaijan. Designed, developed, tested, and fine-tuned cutting-edge ASR speech recognition models for the Azerbaijani language employing frameworks such as PyTorch and Kaldi.
               - Data Science Expert Vooice project [voooice.com](https://voooice.com/) | 03.2021 - 07.2021. Collected audio dataset, and created multilingual speech recognition technologies.
         - title: Data Science Instructor
@@ -113,7 +115,7 @@ sections:
           date_end:   '2020-07-01'
           description: |2-
               - As a dedicated data science instructor, I've guided students in mastering Data Science methodologies using R, Python, Spark, Spark SQL and various machine learning and deep learning methodologies. 
-              - Support and trainings to researchers relating to research methods.
+              - Support and trainings to researchers relating to NLP and Machine Learning research methods.
         - title: Student Researcher
           company: Baku Higher Oil School Robotics Lab
           company_url: 'https://bhos.edu.az'
