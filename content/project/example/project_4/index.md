@@ -53,7 +53,7 @@ external_link: 'https://arxiv.org/abs/2309.00136'
 #     icon_pack: fab
 #     name: Follow
 #     url: https://arxiv.org/abs/2309.00136
-url_code: ''
+url_code: 'https://colab.research.google.com/drive/1-z66ud5fIrJC_6dQM1WtKPS4MwEfvy9u?authuser=2'
 url_pdf: 'https://arxiv.org/abs/2309.00136'
 url_slides: ''
 url_video: ''

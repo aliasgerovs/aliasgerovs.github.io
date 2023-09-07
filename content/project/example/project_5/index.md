@@ -8,7 +8,7 @@ tags:
 date: '2023-11-07 T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
-external_link: 'https://github.com/aliasgerovs/Federated-Learning'
+external_link: 'https://github.com/aliasgerovs/Federated-Learning/blob/main/Final_Presentation.pdf'
 
 # image:
 #   caption: Photo by rawpixel on Unsplash
@@ -18,10 +18,10 @@ external_link: 'https://github.com/aliasgerovs/Federated-Learning'
 #   - icon: github
 #     icon_pack: fab
 #     name: Follow
-#     url: https://github.com/aliasgerovs/Federated-Learning
-url_code: ''
+#     url: https://github.com/aliasgerovs/Federated-Learning/blob/main/Final_Presentation.pdf
+url_code: 'https://github.com/aliasgerovs/Federated-Learning-Implementation'
 url_pdf: ''
-url_slides: 'https://github.com/aliasgerovs/Federated-Learning'
+url_slides: 'https://github.com/aliasgerovs/Federated-Learning/blob/main/Final_Presentation.pdf'
 url_video: ''
 
 # Slides (optional).
