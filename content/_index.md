@@ -60,8 +60,7 @@ sections:
   - block: experience
     id: experience
     content:
-      title: Experience 
-      My professional journey in the realm of data science has been characterized by a relentless pursuit of excellence and a deep passion for research in Machine Learning, Natural Language Processing, Distributed Systems, and Privacy Preserving ML. I believe that my extensive industry experience has honed my skills and prepared me for the challenges of academic exploration in these critical domains.
+      title: Experience My professional journey in the realm of data science has been characterized by a relentless pursuit of excellence and a deep passion for research in Machine Learning, Natural Language Processing, Distributed Systems, and Privacy Preserving ML. I believe that my extensive industry experience has honed my skills and prepared me for the challenges of academic exploration in these critical domains.
       # Date format for experience
       #   Refer to https://wowchemy.com/docs/customization/#date-format
       date_format: Jan 2006
