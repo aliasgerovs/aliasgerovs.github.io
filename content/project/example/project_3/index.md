@@ -79,9 +79,9 @@ external_link: 'https://bhos.edu.az/en/conference/32'
 #     icon_pack: fab
 #     name: Follow
 #     url: https://arxiv.org/abs/2309.00136
-url_code: 'https://bhos.edu.az/en/conference/32'
-url_pdf: ''
-url_slides: ''
+url_code: 
+url_pdf: 'https://www.academia.edu/73649475/Recognition_of_Azerbaijani_phonemes_using_Machine_Learning'
+url_slides: 'https://bhos.edu.az/en/conference/32'
 url_video: ''
 
 # title: Counting Objects For Traffic Surveillance Systems

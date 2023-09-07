@@ -53,8 +53,8 @@ external_link: 'https://arxiv.org/abs/2309.00136'
 #     icon_pack: fab
 #     name: Follow
 #     url: https://arxiv.org/abs/2309.00136
-url_code: 'https://arxiv.org/abs/2309.00136'
-url_pdf: ''
+url_code: ''
+url_pdf: 'https://arxiv.org/abs/2309.00136'
 url_slides: ''
 url_video: ''
 

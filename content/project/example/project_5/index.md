@@ -19,9 +19,9 @@ external_link: 'https://github.com/aliasgerovs/Federated-Learning'
 #     icon_pack: fab
 #     name: Follow
 #     url: https://github.com/aliasgerovs/Federated-Learning
-url_code: 'https://github.com/aliasgerovs/Federated-Learning'
+url_code: ''
 url_pdf: ''
-url_slides: ''
+url_slides: 'https://github.com/aliasgerovs/Federated-Learning'
 url_video: ''
 
 # Slides (optional).
