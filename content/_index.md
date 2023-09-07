@@ -275,7 +275,7 @@ sections:
   #     title: Popular Topics
   #   design:
   #     columns: '2'
-  - block: Honors and Awards
+  - block: contact
     id: contact
     content:
       title: Honors and Awards
