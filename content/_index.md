@@ -288,7 +288,8 @@ sections:
         - IELTS 7.5
         - National Student Scientific Conferences 1st place with machine Learning applications 2x (2021,2022)
         - Top 15th team in World Robot Olympiad 2019 in Gyor, Hungary
-
+    design:
+      columns: '1'
 
     #   # Contact (add or remove contact options as necessary)
     #   email: test@example.org
