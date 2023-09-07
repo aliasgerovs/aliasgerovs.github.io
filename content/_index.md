@@ -81,7 +81,7 @@ sections:
               - Musigma - [mu-sigma.com](https://mu-sigma.com/) | 01.2023 - 04.2023, Remote, Illinois, USA. Played a pivotal role in designing and implementing anomaly detection alerting pipelines, harnessing the power of Azure, PySpark, Python, and PostgreSQL. 
               - PepsiCo Brazil - [pepsico.com.br](https://pepsico.com.br/) | 08.2022 - 01.2023, Brazil. Developed robust ML models, harnessed data processing and visualization tools to drive data-driven decision-making. 
               - Anicura - [anicuragroup.com](https://anicuragroup.com/) | 05.2022 - 08.2022, Italy, Sweden, Germany. Leveraged Natural Language Processing and built language models for product details classification for the different markets.
-              - Louis Dreyfus Company [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  France. At LDC, I've adeptly used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions.
+              - Louis Dreyfus Company [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  France. Used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions.
 
         - title: Senior Data Scientist
           company: Koaila
