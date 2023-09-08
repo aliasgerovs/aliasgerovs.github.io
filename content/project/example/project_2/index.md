@@ -85,7 +85,7 @@
 # url_video: ''
 
 title: D. Counting Objects For Traffic Surveillance Systems
-summary: I contributed to a fully automated traffic analysis system that can monitor and predict traffic flow, counting passing cars, and identifying their direction and lanes without manual calibration, suitable for uncalibrated highway cameras. 
+summary: Contributed to a fully automated traffic analysis system that can monitor and predict traffic flow, counting passing cars, and identifying their direction and lanes without manual calibration, suitable for uncalibrated highway cameras. Presented the project at the III World Robot Olympiad, which attracted participants from 72 countries, and the event took place in Gyor, Hungary.
 tags:
   - Computer Vision
   - Deep Learning
@@ -96,7 +96,7 @@ date: '2021-07-22 T00:00:00Z'
 # Optional external URL for project (replaces project detail page).
 external_link: 'https://bhos.edu.az/en/conference/32'
 # image:
-#   caption: Photo by rawpixel on Unsplash
+#   caption: Counting Objects For Traffic Surveillance Systems
 #   focal_point: Smart
 
 # links:

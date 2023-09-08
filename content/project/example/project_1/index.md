@@ -121,9 +121,9 @@ date: '2021-03-01 T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
 external_link: 'https://bhos.edu.az/en/conference/32'
-# image:
-#   caption: Photo by rawpixel on Unsplash
-#   focal_point: Smart
+# # image:
+#   caption: Optical Coherence Tomography 
+#   focal_point: OPtical
 
 # links:
 #   - icon: github

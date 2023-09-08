@@ -60,7 +60,7 @@
 
 
 title: C. Recognition of Azerbaijani phonemes using Machine Learning
-summary: I conducted a research project focused on recognizing Azerbaijani phonemes using machine learning, signal processing, and image processing techniques. The project involved utilizing deep neural networks and signal processing methods like short-term Fourier transform for high accuracy in classifying audio files from a dataset of approximately 1900 samples belonging to 32 classes.
+summary: Conducted a research project focused on recognizing Azerbaijani phonemes using machine learning, signal processing, and image processing techniques. The project involved utilizing deep neural networks and signal processing methods like short-term Fourier transform for high accuracy in classifying audio files from a dataset of approximately 1900 samples belonging to 32 classes.
 tags:
   - Natural Language Processing
   - Speech Recognition
@@ -71,8 +71,8 @@ date: '2022-09-22 T00:00:00Z'
 # Optional external URL for project (replaces project detail page).
 external_link: 'https://bhos.edu.az/en/conference/32'
 # image:
-#   caption: Photo by rawpixel on Unsplash
-#   focal_point: Smart
+#   caption: Recognition of Azerbaijani phonemes
+#   focal_point: Phonemes
 
 # links:
 #   - icon: github

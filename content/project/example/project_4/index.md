@@ -45,8 +45,8 @@ date: '2023-11-07 T00:00:00Z'
 external_link: 'https://arxiv.org/abs/2309.00136'
 
 # image:
-#   caption: Photo by rawpixel on Unsplash
-#   focal_point: Smart
+#   caption: Twitter Sentiments
+#   focal_point: Sentiment
 
 # links:
 #   - icon: github
