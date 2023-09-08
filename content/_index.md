@@ -125,11 +125,10 @@ sections:
               - Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project titled 'Optimizing Road Networks for Automated Vehicles with using Open CV'. 
               - Worked on the optimizing traffic light timing for vehicles with using Open CV. 
               - Adeptly used Python (OpenCV), and build object detection models. 
-              - Participated in cutting edge research in computer vision.
-
-                    
+              - Participated in cutting edge research in computer vision.      
     design:
       columns: '2'
+      
   # - block: accomplishments
   #   content:
   #     # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
