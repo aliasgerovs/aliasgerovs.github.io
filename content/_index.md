@@ -78,10 +78,11 @@ sections:
           date_start: '2022-03-01'
           date_end:   '2023-07-01'
           description: |2-
+              - Projects:
               - Musigma - [mu-sigma.com](https://mu-sigma.com/) | 01.2023 - 04.2023, Remote, Illinois, USA.  
-              - PepsiCo - [pepsico.com.br](https://pepsico.com.br/) | 08.2022 - 01.2023, Brazil.
-              - Anicura - [anicuragroup.com](https://anicuragroup.com/) | 05.2022 - 08.2022, Italy, Sweden, Germany. 
-              - Louis Dreyfus Company - [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  France.
+              - PepsiCo - [pepsico.com.br](https://pepsico.com.br/) | 08.2022 - 01.2023, Remote, Brazil.
+              - Anicura - [anicuragroup.com](https://anicuragroup.com/) | 05.2022 - 08.2022, Remote, Italy, Sweden, Germany. 
+              - Louis Dreyfus Company - [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  Remote, France.
         - title: Data Scientist
           company: Koaila
           company_url: 'https://koaila.com/'
