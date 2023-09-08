@@ -25,9 +25,9 @@ organizations:
 bio: My research interests include machine learning, natural language processing, and privacy preserving deep learning.
 # Interests to show in About widget
 interests:
-  - Machine Learning
-  - Natural Language Processing
-  - Privacy Preserving Deep Learning
+- Machine Learning
+- Natural Language Processing
+- Privacy Preserving Deep Learning
 
 social:
   - icon: envelope
