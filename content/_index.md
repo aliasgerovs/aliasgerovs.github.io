@@ -253,13 +253,13 @@ sections:
       title: Honors and Awards
       subtitle:
       text: |-
-        - 2022 : State Program on education of Azerbaijani youth abroad Scholarship Winner [link](https://bhos.edu.az/en/news/1961).
+        - 2022 : State Program on education of Azerbaijani youth abroad Scholarship Winner - [link](https://bhos.edu.az/en/news/1961).
         - 2022 : 3x National Student Scientific Conferences 1st place winner in Machine Learning Applications (2020, 2021, 2022) [link](https://special.azertag.az/en/xeber/1782007).
         - Achieved an IELTS score of 7.5.
-        - Ranked among the top 15 teams at the III World Robot Olympiad in Gyor, Hungary [link](https://ict.az/en/news/4893/).
-        - Awarded the Golden Medal at the III World Robot Olympiad in Azerbaijan [link](https://azertag.az/en/xeber/BHOS_teams_become_winners_of_3rd_Robot_Olympiad-1293217).
-        - Earned the Presidential Scholarship for exceptional academic performance [link](https://e-qanun.az/framework/36465).
-        - Scored an impressive 690 out of 700 on the University Entrance Exam.
+        - Ranked among the top 15 teams at the III World Robot Olympiad in Gyor, Hungary - [link](https://ict.az/en/news/4893/).
+        - Awarded the Golden Medal at the III World Robot Olympiad in Azerbaijan - [link](https://azertag.az/en/xeber/BHOS_teams_become_winners_of_3rd_Robot_Olympiad-1293217).
+        - Earned the Presidential Scholarship for exceptional academic performance - [link](https://e-qanun.az/framework/36465).
+        - Scored an impressive 690 out of 700 on the University Entrance Exam. 
         - High school graduate with a Golden Medal, placing in the top 5% among 60k graduating students.
         - Honored as the Golden Medalist in the Respublic Physics Olympiad.
     design:
