@@ -306,10 +306,4 @@ sections:
     # design:
     #   columns: '2'
 
-  - block: hero
-    content:
-      title: Media Coverage
-      image: WRO
-      filename: WRO.jpg
-      
 ---
