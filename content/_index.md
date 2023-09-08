@@ -310,7 +310,7 @@ sections:
   content:
     title: Media Coverage
     image:
-      filename: WRO.png
+      filename: WRO.jpg
     cta:
       label: '**Get Started**'
       url: https://ict.az/en/news/4893/
