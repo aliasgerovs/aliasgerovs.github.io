@@ -27,7 +27,7 @@ bio: My research interests include machine learning, natural language processing
 interests:
 - Machine Learning
 - Natural Language Processing
-- Privacy Preserving Deep Learning
+- Privacy Preserved Deep Learning
 columns: '1'
 
 social:
