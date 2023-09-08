@@ -306,16 +306,10 @@ sections:
     # design:
     #   columns: '2'
 
-    - block: hero
-  content:
-    title: Media Coverage
-    image:
+  - block: hero
+    content:
+      title: Media Coverage
+      image: WRO
       filename: WRO.jpg
-    cta:
-      label: '**Get Started**'
-      url: https://ict.az/en/news/4893/
-    cta_alt:
-      label: 
-      url:
-    cta_note:
+      
 ---
