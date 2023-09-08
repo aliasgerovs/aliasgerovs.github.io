@@ -70,7 +70,7 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Senior Data Scientist
+        - title: Data Science Researcher
           company: Revenue.ai
           company_url: 'https://www.revenue.ai'
           company_logo: rai
@@ -83,7 +83,7 @@ sections:
               - Anicura - [anicuragroup.com](https://anicuragroup.com/) | 05.2022 - 08.2022, Italy, Sweden, Germany. Leveraged Natural Language Processing and built language models for product details classification for the different markets.
               - Louis Dreyfus Company - [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  France. Used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions.
 
-        - title: Senior Data Scientist
+        - title: Data Science Researcher
           company: Koaila
           company_url: 'https://koaila.com/'
           company_logo: koaila
@@ -94,7 +94,8 @@ sections:
               - Employed advanced Natural Language Processing techniques to analyze extensive customer and product data.
               - Leveraged AI and granular product usage data to gain profound insights into user behaviors, feature adoption patterns, and customer preferences. 
               - Ensured the privacy and security of sensitive customer data while utilizing advanced machine learning techniques to analyze product data.
-        - title: Middle Data Scientist
+        
+        - title: Deep Learning Researcher
           company: Voiceloft
           company_url: 'https://voiceloft.com/'
           company_logo: voiceloft
@@ -225,21 +226,21 @@ sections:
       view: compact
       # For Showcase view, flip alternate rows?
       # flip_alt_rows: false
-  - block: collection
-    id: publications
-    content:
-      title: Publications
-      # text: |-
-      #   {{% callout note %}}
-      #   Quickly discover relevant content by [filtering publications](./publication/).
-      #   {{% /callout %}}
-      filters:
-        folders:
-          - publication
-        exclude_featured: true
-    design:
-      columns: '2'
-      view: citation
+  # - block: collection
+  #   id: publications
+  #   content:
+  #     title: Publications
+  #     # text: |-
+  #     #   {{% callout note %}}
+  #     #   Quickly discover relevant content by [filtering publications](./publication/).
+  #     #   {{% /callout %}}
+  #     filters:
+  #       folders:
+  #         - publication
+  #       exclude_featured: true
+  #   design:
+  #     columns: '2'
+  #     view: citation
   - block: markdown
     id: service
     content:
