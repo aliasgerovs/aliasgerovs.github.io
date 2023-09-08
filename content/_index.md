@@ -70,7 +70,7 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Data Science Researcher
+        - title: Data Scientist
           company: Revenue.ai
           company_url: 'https://www.revenue.ai'
           company_logo: rai
@@ -83,7 +83,7 @@ sections:
               - Anicura - [anicuragroup.com](https://anicuragroup.com/) | 05.2022 - 08.2022, Italy, Sweden, Germany. Leveraged Natural Language Processing and built language models for product details classification for the different markets.
               - Louis Dreyfus Company - [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  France. Used Azure, Python, and PySpark to build ETL pipelines and data models, driving data-driven decisions.
 
-        - title: Data Science Researcher
+        - title: Data Scientist
           company: Koaila
           company_url: 'https://koaila.com/'
           company_logo: koaila
