@@ -28,6 +28,7 @@ interests:
 - Machine Learning
 - Natural Language Processing
 - Privacy Preserving Deep Learning
+columns: '1'
 
 social:
   - icon: envelope
