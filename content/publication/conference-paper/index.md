@@ -1,17 +1,12 @@
-<!-- ---
-title: 'An Empirical Analysis of IDS Approaches in Container Securityr'
+---
+title: '3D-CNNs-Based Touchless Human-Machine Interface'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors:
   - Ali Asgarov
-  - Rustam Maamm
-  - Adnan Harun Dogan
-  - Bugra Alparslan
-  - Abdurrahman Said Gurbuz
-  - admin
-  - Pelin Angin
+  - Ali Parsayan
 
 # Author notes (optional)
 # author_notes:
@@ -19,7 +14,7 @@ authors:
 #   - 'Equal contribution'
 
 date: '2022-09-19T00:00:00Z'
-doi: 'https://doi.org/10.1109/SRMC57347.2022.00007'
+doi: 'https://doi.org/10.1007/978-3-031-43111-1_7'
 
 # Schedule page publish date (NOT publication's date).
 # publishDate: '2017-01-01T00:00:00Z'
@@ -31,10 +26,10 @@ doi: 'https://doi.org/10.1109/SRMC57347.2022.00007'
 publication_types: ['1']
 
 # Publication name and optional abbreviated publication name.
-publication: International Workshop on Secure and Reliable Microservices and Containers 
-publication_short: In *SRMC*
+publication: International Conference on Interactive Collaborative Robotics
+publication_short: ICR
 
-abstract: Microservices architecture has been praised as a lightweight, modular and robust alternative to monolithic software in recent years with software containerization bringing parallel ideas to the table against bare metal and even virtual machine based software deployment solutions. While containers provide support for agile software development in the cloud, they suffer from security issues due to their lightweight structure not providing isolation as strong as that of virtual machines. This calls for the development of robust intrusion detection systems (IDS) for containers, taking into account their specific vulnerabilities. Existing IDS for containerized software deployments have mainly used host-based syscall monitoring, with only a few utilizing network-based monitoring without justification for the particular sensor used. In this paper, we aim to close this research gap by empirically evaluating the performances of system call and network flow based features in machine learning-based intrusion detection for containers when subjected to the same attacks. Our results show that basing the IDS on the network layer exhibits better performance than the host-based IDS for the investigated vulnerabilities, demonstrating the need for network monitoring for enhanced container security.
+abstract: Interacting with machines via hand gestures is a common way for people to communicate with robots. Human utilize gestures in a regular talk to convey meaning and emotions to one another. Gesture-based interactions are utilized in a wide range of applied to a wide range of fields, as telephones, TVs, monitors, video games, and other electronic devices. By technological improvements, gesture recognition is now a more realistic and appealing approach in the context of human interaction. In this research, the relevant experiments are conducted using numerous types of convolutional neural networks, including the proposed customized model, to see which ones performs the best. Because of the introduction of such Microsoft Kinect sensor, increased depth and vision sensing has been widely important for several purposes. Given its ability to measure ranges to objects at a fast frame rate, these types of sensors are widely being employed for 3D acquisitions, as well as for other purposes in robotics and machine learning. This research made use of the Kinect sensor and the use of an RGB-D camera and a 3D convolution neural network, which offer a novel approach for fingertips identification and hand gesture classification in real time that is both accurate and fast (3DCNN).
 
 # Summary. An optional shortened abstract.
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
@@ -49,7 +44,7 @@ featured: false
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: 'https://yigitsever.com/locker/severEmpirical2022/sever_2022_an_empirical_analysis_of_ids_approaches_in_container_security.pdf'
+url_pdf: 'https://link.springer.com/chapter/10.1007/978-3-031-43111-1_7'
 # url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_dataset: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_poster: ''
@@ -89,4 +84,4 @@ Click the _Cite_ button above to demo the feature to enable visitors to import p
 Create your slides in Markdown - click the _Slides_ button to check out the example.
 {{% /callout %}}
 
-Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --> -->
+Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). -->
