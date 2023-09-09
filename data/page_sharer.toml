@@ -83,8 +83,8 @@
 
 [[buttons]]
   id = "google-scholar"
-  url = "https://scholar.google.com"
+  url = "https://scholar.google.com/citations?user={url}&title={title}"
   title = "google-scholar"
-  icon_pack = "fas"
+  icon_pack = "ai"
   icon = "google-scholar"
   enable = true
