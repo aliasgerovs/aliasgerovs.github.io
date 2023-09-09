@@ -40,7 +40,7 @@ social:
     label: Follow me on Twitter
     display:
       header: true
-  - icon: google-scholar
+  - icon: ai
     icon_pack: fas
     link: https://scholar.google.com/citations?user=IwsCoQwAAAAJ&hl
   - icon: github
