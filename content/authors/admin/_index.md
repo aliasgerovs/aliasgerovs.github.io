@@ -40,15 +40,15 @@ social:
     label: Follow me on Twitter
     display:
       header: true
-  - icon: ai
+  - icon: google-scholar
     icon_pack: fas
     link: https://scholar.google.com/citations?user=IwsCoQwAAAAJ&hl
   - icon: github
     icon_pack: fab
     link: https://github.com/aliasgerovs
-  - icon: linkedin
-    icon_pack: fab
-    link: https://www.linkedin.com/in/ali-asgarov/
+  # - icon: linkedin
+  #   icon_pack: fab
+  #   link: https://www.linkedin.com/in/ali-asgarov/
   - icon: cv
     icon_pack: ai
     link: uploads/resume.pdf
