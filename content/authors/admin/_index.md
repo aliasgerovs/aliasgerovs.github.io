@@ -46,9 +46,9 @@ social:
   - icon: github
     icon_pack: fab
     link: https://github.com/aliasgerovs
-  # - icon: linkedin
-  #   icon_pack: fab
-  #   link: https://www.linkedin.com/in/ali-asgarov/
+  - icon: linkedin
+    icon_pack: fab
+    link: https://www.linkedin.com/in/ali-asgarov/
   - icon: cv
     icon_pack: ai
     link: uploads/resume.pdf
