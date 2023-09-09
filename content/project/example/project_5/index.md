@@ -1,10 +1,8 @@
 ---
 title: B. Privacy Concerned Decentralized Machine Learning Implementation on Image Classification
 summary: Aimed to explore federated learning for image classification while ensuring privacy. The main objective was to develop a federated learning algorithm and simulate it for image classification tasks and evaluate its performance in comparison to centralized training approach.
-tags:
-  - Federated Learning
-  - Decentralized Learning
-  - Classification
+tags: ["Federated Learning", "Decentralized Learning", "Classification"]
+  
 date: '2023-11-07 T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
