@@ -1,12 +1,12 @@
 ---
-title: "An example preprint / working paper"
+title: "Predicting Financial Market Trends using Time Series Analysis and Natural Language Processing"
 authors:
 - admin
-date: "2019-04-07T00:00:00Z"
+date: "2023-05-07T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2023-09-01T00:00:00Z"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -18,20 +18,19 @@ publication_types: ["3"]
 publication: ""
 publication_short: ""
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: Forecasting financial market trends through time series analysis and natural language processing poses a complex and demanding undertaking, owing to the numerous variables that can influence stock prices. These variables encompass a spectrum of economic and political occurrences, as well as prevailing public attitudes. Recent research has indicated that the expression of public sentiments on social media platforms such as Twitter may have a noteworthy impact on the determination of stock prices. The objective of this study was to assess the viability of Twitter sentiments as a tool for predicting stock prices of major corporations such as Tesla, Apple. Our study has revealed a robust association between the emotions conveyed in tweets and fluctuations in stock prices. Our findings indicate that positivity, negativity, and subjectivity are the primary determinants of fluctuations in stock prices. The data was analyzed utilizing the Long-Short Term Memory neural network (LSTM) model, which is currently recognized as the leading methodology for predicting stock prices by incorporating Twitter sentiments and historical stock prices data. The models utilized in our study demonstrated a high degree of reliability and yielded precise outcomes for the designated corporations. In summary, this research emphasizes the significance of incorporating public opinions into the prediction of stock prices. The application of Time Series Analysis and Natural Language Processing methodologies can yield significant scientific findings regarding financial market patterns, thereby facilitating informed decision-making among investors. The results of our study indicate that the utilization of Twitter sentiments can serve as a potent instrument for forecasting stock prices, and ought to be factored in when formulating investment strategies.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
-
+summary: 
 tags:
 - Source Themes
 featured: true
 
 links:
 - name: Custom Link
-  url: http://example.org
-url_pdf: http://arxiv.org/pdf/1512.04133v1
-url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
+  url: https://arxiv.org/ftp/arxiv/papers/2309/2309.00136.pdf
+url_pdf: https://arxiv.org/ftp/arxiv/papers/2309/2309.00136.pdf
+url_code: 
 url_dataset: '#'
 url_poster: '#'
 url_project: ''
@@ -42,7 +41,7 @@ url_video: '#'
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/s9CC2SKySJM)'
+  caption: ''
   focal_point: ""
   preview_only: false
 
