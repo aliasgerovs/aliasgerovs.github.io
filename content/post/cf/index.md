@@ -112,28 +112,28 @@ Data Permutation Experiment: Which is permutation of the feature vector across s
 **Results**
 
 **Data Permutation Experiment:**
-PathNet performed best overall in data permutation experiments, except for CUB-200.
-PathNet requires information about the session during testing, potentially giving it an unfair advantage.
-PathNet saturates quickly due to the lack of feature sharing, leaving only the output layer trainable.
-GeppNet variants excelled at incremental class learning.
-EWC was the second-best performer in data permutation experiments, redirecting plasticity instead of freezing weights.
-GeppNet+STM performed well at retaining the base set but struggled with new classes.
-FEL improved significantly but had a 40x memory footprint increase, suggesting it may not be ideal for deployment.
+- PathNet performed best overall in data permutation experiments, except for CUB-200.
+- PathNet requires information about the session during testing, potentially giving it an unfair advantage.
+- PathNet saturates quickly due to the lack of feature sharing, leaving only the output layer trainable.
+- GeppNet variants excelled at incremental class learning.
+- EWC was the second-best performer in data permutation experiments, redirecting plasticity instead of freezing weights.
+- GeppNet+STM performed well at retaining the base set but struggled with new classes.
+- FEL improved significantly but had a 40x memory footprint increase, suggesting it may not be ideal for deployment.
 
 **Multi-Modal Experiment:**
-EWC performed best in multi-modal experiments, possibly because features between modalities were non-redundant.
-PathNet may work better with data having different but not entirely dissimilar representations.
+- EWC performed best in multi-modal experiments, possibly because features between modalities were non-redundant.
+- PathNet may work better with data having different but not entirely dissimilar representations.
 
 **Memory and Efficiency:**
-PathNet and GeppNet variants have different memory usage and training speed.
-PathNet creates a new output layer for each session, making it slow in some tasks.
-Models that expand as sessions increase or store data from prior sessions may have limited real-world application due to memory constraints.
-Memory footprint should be considered when comparing models for incremental learning.
-Metrics can be adapted to other training paradigms like reinforcement learning or unsupervised learning.
+- PathNet and GeppNet variants have different memory usage and training speed.
+- PathNet creates a new output layer for each session, making it slow in some tasks.
+- Models that expand as sessions increase or store data from prior sessions may have limited real-world application due to memory constraints.
+- Memory footprint should be considered when comparing models for incremental learning.
+- Metrics can be adapted to other training paradigms like reinforcement learning or unsupervised learning.
 
 **Optimal Performers:**
-A combination of rehearsal/pseudo-rehearsal and dual-memory systems were optimal for incremental class learning.
-Regularization and ensembling worked best for separating dissimilar sessions in a common DNN framework.
+- A combination of rehearsal/pseudo-rehearsal and dual-memory systems were optimal for incremental class learning.
+- Regularization and ensembling worked best for separating dissimilar sessions in a common DNN framework.
 
 ## Conclusion
 
