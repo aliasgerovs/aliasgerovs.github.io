@@ -1,6 +1,6 @@
 ---
-title: "Measuring Catastrophic Forgetting in Neural Networks. Proceedings of the AAAI Conference on Artificial Intelligence, 32(1)." 
-summary: "A summary of the same paper"
+title: "Measuring Catastrophic Forgetting in Neural Networks." 
+summary: "A summary of the same paper published in `Proceedings of the AAAI Conference on Artificial Intelligence, 32(1)`."
 date: 2023-09-13
 math: true
 featured: false
