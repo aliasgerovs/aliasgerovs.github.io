@@ -104,11 +104,10 @@ Data Permutation Experiment: Which is permutation of the feature vector across s
 
 **Metrics**: Here three different types of metrics suggested by paper. 
 
-T – Total number of sessions
-αnew,i - The test accuracy for session i immediately after it is learned.
-αbase,i - Test accuracy on the first session.
-αall, i - Test accuracy on the all sessions.
-αideal,i - Offline MLP accuracy on the base set, which we assume is the ideal performance.
+- αnew,i - The test accuracy for session i immediately after it is learned.
+- αbase,i - Test accuracy on the first session.
+- αall, i - Test accuracy on the all sessions.
+- αideal,i - Offline MLP accuracy on the base set, which we assume is the ideal performance.
 
 **Results**
 
