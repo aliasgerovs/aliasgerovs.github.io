@@ -29,6 +29,7 @@ Paper says that while we are talking about the high accuracy of DNNs methods tod
 For conducting the study, paper use MLP incrementally trained for the classification tasks. 
 
 **Dataset organization:** The labeled training dataset, denoted as D, is structured into multiple study sessions or batches, represented as {Bt} for t = 1 to T. Each study session Bt consists of a varying number of labeled training data points, with Nt data points in session t. Each data point is represented as (xj, yj) where xj is the feature vector of dimension d, and yj is a discrete label. 
+
 **Sequential Learning:** The neural network is allowed to learn from these study sessions sequentially, in order they are presented. It means that in time t, neural network can only learn from the training session Bt. Network is also allowed to use auxiliary memory to store information from previous sessions which needs to be reported.
 
 **Non-IID Data**: As some batches could have the data which is not identically and independently distributed across all categories, data is assumed **non-IID here**.
