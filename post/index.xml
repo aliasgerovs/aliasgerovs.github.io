@@ -65,26 +65,34 @@ Data Permutation Experiment: Which is permutation of the feature vector across s
 &lt;li>αideal,i - Offline MLP accuracy on the base set, which we assume is the ideal performance.&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>Results&lt;/strong>&lt;/p>
-&lt;p>&lt;strong>Data Permutation Experiment:&lt;/strong>
-PathNet performed best overall in data permutation experiments, except for CUB-200.
-PathNet requires information about the session during testing, potentially giving it an unfair advantage.
-PathNet saturates quickly due to the lack of feature sharing, leaving only the output layer trainable.
-GeppNet variants excelled at incremental class learning.
-EWC was the second-best performer in data permutation experiments, redirecting plasticity instead of freezing weights.
-GeppNet+STM performed well at retaining the base set but struggled with new classes.
-FEL improved significantly but had a 40x memory footprint increase, suggesting it may not be ideal for deployment.&lt;/p>
-&lt;p>&lt;strong>Multi-Modal Experiment:&lt;/strong>
-EWC performed best in multi-modal experiments, possibly because features between modalities were non-redundant.
-PathNet may work better with data having different but not entirely dissimilar representations.&lt;/p>
-&lt;p>&lt;strong>Memory and Efficiency:&lt;/strong>
-PathNet and GeppNet variants have different memory usage and training speed.
-PathNet creates a new output layer for each session, making it slow in some tasks.
-Models that expand as sessions increase or store data from prior sessions may have limited real-world application due to memory constraints.
-Memory footprint should be considered when comparing models for incremental learning.
-Metrics can be adapted to other training paradigms like reinforcement learning or unsupervised learning.&lt;/p>
-&lt;p>&lt;strong>Optimal Performers:&lt;/strong>
-A combination of rehearsal/pseudo-rehearsal and dual-memory systems were optimal for incremental class learning.
-Regularization and ensembling worked best for separating dissimilar sessions in a common DNN framework.&lt;/p>
+&lt;p>&lt;strong>Data Permutation Experiment:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>PathNet performed best overall in data permutation experiments, except for CUB-200.&lt;/li>
+&lt;li>PathNet requires information about the session during testing, potentially giving it an unfair advantage.&lt;/li>
+&lt;li>PathNet saturates quickly due to the lack of feature sharing, leaving only the output layer trainable.&lt;/li>
+&lt;li>GeppNet variants excelled at incremental class learning.&lt;/li>
+&lt;li>EWC was the second-best performer in data permutation experiments, redirecting plasticity instead of freezing weights.&lt;/li>
+&lt;li>GeppNet+STM performed well at retaining the base set but struggled with new classes.&lt;/li>
+&lt;li>FEL improved significantly but had a 40x memory footprint increase, suggesting it may not be ideal for deployment.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Multi-Modal Experiment:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>EWC performed best in multi-modal experiments, possibly because features between modalities were non-redundant.&lt;/li>
+&lt;li>PathNet may work better with data having different but not entirely dissimilar representations.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Memory and Efficiency:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>PathNet and GeppNet variants have different memory usage and training speed.&lt;/li>
+&lt;li>PathNet creates a new output layer for each session, making it slow in some tasks.&lt;/li>
+&lt;li>Models that expand as sessions increase or store data from prior sessions may have limited real-world application due to memory constraints.&lt;/li>
+&lt;li>Memory footprint should be considered when comparing models for incremental learning.&lt;/li>
+&lt;li>Metrics can be adapted to other training paradigms like reinforcement learning or unsupervised learning.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Optimal Performers:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>A combination of rehearsal/pseudo-rehearsal and dual-memory systems were optimal for incremental class learning.&lt;/li>
+&lt;li>Regularization and ensembling worked best for separating dissimilar sessions in a common DNN framework.&lt;/li>
+&lt;/ul>
 &lt;h2 id="conclusion">Conclusion&lt;/h2>
 &lt;p>Catastrophic forgetting is not solved by any single method; combinations of mechanisms are needed.
 Future work should involve using larger and more challenging datasets in lifelong learning research.&lt;/p>
