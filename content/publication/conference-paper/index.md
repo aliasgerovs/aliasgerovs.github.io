@@ -1,6 +1,5 @@
 ---
-title: '3D-CNNs-Based Touchless Human-Machine Interface'
-link: 'https://link.springer.com/chapter/10.1007/978-3-031-43111-1_7'
+title: '[3D-CNNs-Based Touchless Human-Machine Interface](https://link.springer.com/chapter/10.1007/978-3-031-43111-1_7')
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
