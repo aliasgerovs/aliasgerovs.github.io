@@ -35,8 +35,8 @@ For conducting the study, paper use MLP incrementally trained for the classifica
 
 **Evaluation**: The paper says that during the training process, between the training sessions model may undergo testing over the test data since the primary aim here is the assessing of how well the model retains knowledge from previous sessions when learning new ones.
 
-Paper explains how “Catastrophic Forgetting” occur with clearly mentioning that **stability-plasticity** dilemma. Network requires plasticity in order to learn new tasks, but at the same time once there are high weight fluctuations, model starts to forget the previously learned data. It explains that while keeping the weights stable could solve the issue, but it prevents model to learn new training data. That is why it is called stability-plasticity dilemma.
-Here are** two main approaches** that are mentioned by paper. The first one is keeping the old and new representations separate, which could be done using **distributed models, regularization and ensembling.** The second one is combining new and old data and training on merged data, which is not the desired case when the data size is huge, as explained at the beginning of the review.
+Paper explains how **“Catastrophic Forgetting**” occur with clearly mentioning that **stability-plasticity** dilemma. Network requires plasticity in order to learn new tasks, but at the same time once there are high weight fluctuations, model starts to forget the previously learned data. It explains that while keeping the weights stable could solve the issue, but it prevents model to learn new training data. That is why it is called stability-plasticity dilemma.
+Here are **two main approaches** that are mentioned by paper. The first one is keeping the old and new representations separate, which could be done using **distributed models, regularization and ensembling.** The second one is combining new and old data and training on merged data, which is not the desired case when the data size is huge, as explained at the beginning of the review.
 
 
 ## Previous Work
@@ -62,34 +62,35 @@ The paper explains **interference** between new and previously learned represent
 **Evaluation of the Models**
 Five models have been evaluated in this paper, namely **EWC, PathNet, GeppNet, GeppNet+STM, and FEL**. The number of parameters to be used across all models, used bas MLP model which performed well for CUB-200 dataset and Audio Set when training in **offline mood**, the process of training a machine learning model on a fixed dataset in advance, without real-time adaptation to new data. To provide fairness in the comparison the number of parameters in the incremental learning has been chosen as much as close to the base MLP setup. 
 
-**Elastic Weight Consolidation:** EWC adds an additional constraint to the loss function, and directly plasticity away from the weights that contribute most to the previous tasks.
+**Elastic Weight Consolidation:** 
 
-L (θ ) is the combined loss function, θ is the network’s parameters, Lt (θ ) is the loss for session Bt , λ is a hyperparameter that indicates how important the old task(s) are compared to the new task, F is the Fisher information matrix, and θ∗ A are the trainable parameters (weights and biases) important to previously trained tasks.
-The size of hidden layers was chosen to match with MLP capacity.
+- EWC adds an additional constraint to the loss function, and directly plasticity away from the weights that contribute most to the previous tasks.
+
+L (θ ) is the combined loss function, θ is the network’s parameters, Lt (θ ) is the loss for session Bt , λ is a hyperparameter that indicates how important the old task(s) are compared to the new task, F is the Fisher information matrix, and θ∗ A are the trainable parameters (weights and biases) important to previously trained tasks. The size of hidden layers was chosen to match with MLP capacity.
 
 **PathNet:**
 
-Utilizes a genetic algorithm to find an optimal learning path.
-Creates a new output layer for each learning session to retain previous session data.
-Risks losing learning ability if the network's capacity is exceeded, potentially overwriting valuable information.
-Each path in PathNet has its own set of weights, updated independently.
-This independence can lead to inefficient resource allocation, with some paths becoming overly specialized while others remain underutilized.
+- Utilizes a genetic algorithm to find an optimal learning path.
+- Creates a new output layer for each learning session to retain previous session data.
+- Risks losing learning ability if the network's capacity is exceeded, potentially overwriting valuable information.
+- Each path in PathNet has its own set of weights, updated independently.
+- This independence can lead to inefficient resource allocation, with some paths becoming overly specialized while others remain underutilized.
 
 **GeppNet:**
 
-A biologically inspired model that addresses forgetting by rehearsing information.
-Utilizes a Self-Organizing Map (SOM) to project input data into a 2D lattice.
-Initially trains on the first session and then learns subsequent sessions incrementally.
-Updates the SOM layer and classification layer when detecting novel data.
-GeppNet+STM variant stores novel data in a short-term memory buffer and replays it during the sleep phase.
-Capable of making real-time predictions by determining memory location in short-term or long-term storage.
+- A biologically inspired model that addresses forgetting by rehearsing information.
+- Utilizes a Self-Organizing Map (SOM) to project input data into a 2D lattice.
+- Initially trains on the first session and then learns subsequent sessions incrementally.
+- Updates the SOM layer and classification layer when detecting novel data.
+- GeppNet+STM variant stores novel data in a short-term memory buffer and replays it during the sleep phase.
+- Capable of making real-time predictions by determining memory location in short-term or long-term storage.
 
 **Fixed Expansion Layer (FEL):**
 
-Uses sparsity within a neural network featuring two hidden layers to prevent catastrophic forgetting.
-The second hidden layer (FEL-layer) has more capacity but utilizes sparse, fixed weights.
-Partially connected to the first hidden layer, with only some FEL layer units contributing to the final output.
-This design preserves knowledge while learning new tasks, preventing catastrophic forgetting.
+- Uses sparsity within a neural network featuring two hidden layers to prevent catastrophic forgetting.
+- The second hidden layer (FEL-layer) has more capacity but utilizes sparse, fixed weights.
+- Partially connected to the first hidden layer, with only some FEL layer units contributing to the final output.
+- This design preserves knowledge while learning new tasks, preventing catastrophic forgetting.
 
 
 **Experiments and Results**
@@ -105,20 +106,13 @@ Data Permutation Experiment: Which is permutation of the feature vector across s
 
 **Metrics**: Here three different types of metrics suggested by paper. 
 
-![img1](https://ibb.co/DD0LGBW7)
-
 T – Total number of sessions
 αnew,i - The test accuracy for session i immediately after it is learned.
 αbase,i - Test accuracy on the first session.
 αall, i - Test accuracy on the all sessions.
 αideal,i - Offline MLP accuracy on the base set, which we assume is the ideal performance.
 
-
 **Results**
- 
-![img2](https://ibb.co/qykGMVq)
-![img3](linkhttps://ibb.co/Kz9BXxv)
-
 
 **Data Permutation Experiment:**
 PathNet performed best overall in data permutation experiments, except for CUB-200.
@@ -151,4 +145,4 @@ Future work should involve using larger and more challenging datasets in lifelon
 
 
 ## References
-- [Go Serverless: Securing Cloud via Serverless Design Patterns](https://www.usenix.org/conference/hotcloud18/presentation/hong)
+- [Measuring catastrophic forgetting in neural networks](https://ojs.aaai.org/index.php/AAAI/article/view/11651)
