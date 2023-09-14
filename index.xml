@@ -69,11 +69,12 @@ Data Permutation Experiment: Which is permutation of the feature vector across s
 &lt;p>&lt;strong>Incremental Class Learning:&lt;/strong> Model will learn each class in new session after learning the base set.&lt;/p>
 &lt;p>&lt;strong>Multi-Modal Learning:&lt;/strong> Model will learn different datasets, for example data for image classification and then data for audio classification and then evaluation of how model performs.&lt;/p>
 &lt;p>&lt;strong>Metrics&lt;/strong>: Here three different types of metrics suggested by paper.&lt;/p>
-&lt;p>T – Total number of sessions
-αnew,i - The test accuracy for session i immediately after it is learned.
-αbase,i - Test accuracy on the first session.
-αall, i - Test accuracy on the all sessions.
-αideal,i - Offline MLP accuracy on the base set, which we assume is the ideal performance.&lt;/p>
+&lt;ul>
+&lt;li>αnew,i - The test accuracy for session i immediately after it is learned.&lt;/li>
+&lt;li>αbase,i - Test accuracy on the first session.&lt;/li>
+&lt;li>αall, i - Test accuracy on the all sessions.&lt;/li>
+&lt;li>αideal,i - Offline MLP accuracy on the base set, which we assume is the ideal performance.&lt;/li>
+&lt;/ul>
 &lt;p>&lt;strong>Results&lt;/strong>&lt;/p>
 &lt;p>&lt;strong>Data Permutation Experiment:&lt;/strong>
 PathNet performed best overall in data permutation experiments, except for CUB-200.
