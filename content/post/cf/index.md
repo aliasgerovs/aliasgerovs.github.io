@@ -66,8 +66,6 @@ Five models have been evaluated in this paper, namely **EWC, PathNet, GeppNet, G
 
 - EWC adds an additional constraint to the loss function, and directly plasticity away from the weights that contribute most to the previous tasks.
 
-L (θ ) is the combined loss function, θ is the network’s parameters, Lt (θ ) is the loss for session Bt , λ is a hyperparameter that indicates how important the old task(s) are compared to the new task, F is the Fisher information matrix, and θ∗ A are the trainable parameters (weights and biases) important to previously trained tasks. The size of hidden layers was chosen to match with MLP capacity.
-
 **PathNet:**
 
 - Utilizes a genetic algorithm to find an optimal learning path.
