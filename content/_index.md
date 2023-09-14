@@ -168,14 +168,14 @@ sections:
       # Choose a layout view
       view: compact
       columns: '2'
-  - block: collection
-    id: projects
-    content:
-      title: Projects
-      id: projects
-      filters:
-        folders:
-          - project
+  # - block: collection
+  #   id: projects
+  #   content:
+  #     title: Projects
+  #     id: projects
+  #     filters:
+  #       folders:
+  #         - project
       # Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
       # default_button_index: 0
       # # Filter toolbar (optional).
