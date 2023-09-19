@@ -48,11 +48,7 @@ sections:
           location: Remote, Amsterdam, Noord-Holland, The Netherlands
           date_start: '2022-03-01'
           date_end:   '2023-07-01'
-          description: |2-
-              - Musigma - [mu-sigma.com](https://mu-sigma.com/) | 01.2023 - 04.2023, Remote, Illinois, USA.
-              - PepsiCo - [pepsico.com.br](https://pepsico.com.br/) | 08.2022 - 01.2023, Remote, Brazil. 
-              - Anicura - [anicuragroup.com](https://anicuragroup.com/) | 05.2022 - 08.2022, Remote, Italy, Sweden, Germany. 
-              - Louis Dreyfus Company - [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  Remote, France. 
+
         - title: Data Scientist
           company: Koaila
           company_url: 'https://koaila.com/'
@@ -68,10 +64,7 @@ sections:
           location: Remote, Middletown, Delaware, United States
           date_start: '2021-03-01'
           date_end:   '2022-07-01'
-          description: |2-
-              - Neural Space - [neuralspace.ai](https://neuralspace.ai/) | 11.2021 - 03.2022, United Kingdom. 
-              - Imla Project - [imla.az](https://voiceloft.com) | 07.2021 - 11.2021, Azerbaijan. 
-              - Voooice - [voooice.com](https://voooice.com/) | 03.2021 - 07.2021, Azerbaijan 
+
         - title: Data Science Instructor
           company: Data Science Academy
           company_url: 'https://dsa.az'
@@ -87,8 +80,6 @@ sections:
           location: Baku, Azerbaijan
           date_start: '2018-03-01'
           date_end:   '2019-12-01'
-          description: |2-
-              - AREA - Azerbaijan Robotics Engineering Academy 03.2018 - 12.2019
 
   
     design:
