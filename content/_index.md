@@ -70,8 +70,8 @@ sections:
           date_end:   '2022-07-01'
           description: |2-
               - Neural Space - [neuralspace.ai](https://neuralspace.ai/) | 11.2021 - 03.2022, United Kingdom. 
-              - Imla Project - [imla.az](https://voiceloft.com) | 07.2021 - 11.2021 Azerbaijan. 
-              - Voooice - [voooice.com](https://voooice.com/) | 03.2021 - 07.2021. 
+              - Imla Project - [imla.az](https://voiceloft.com) | 07.2021 - 11.2021, Azerbaijan. 
+              - Voooice - [voooice.com](https://voooice.com/) | 03.2021 - 07.2021, Azerbaijan 
         - title: Data Science Instructor
           company: Data Science Academy
           company_url: 'https://dsa.az'
@@ -88,7 +88,7 @@ sections:
           date_start: '2018-03-01'
           date_end:   '2019-12-01'
           description: |2-
-              - AREA-Azerbaijan Robotics Engineering Academy 03.2018 - 12.2019
+              - Combined projects with AREA - Azerbaijan Robotics Engineering Academy 03.2018 - 12.2019
 
   
     design:
