@@ -1,6 +1,7 @@
 ---
-title: A.3D-CNNs-Based Touchless Human Machine Interface
-summary : Interacting with machines via hand gestures is a common way for people to communicate with robots. Human utilize gestures in a regular talk to convey meaning and emotions to one another. Gesture-based interactions are utilized in a wide range of applied to a wide range of fields, as telephones, TVs, monitors, video games, and other electronic devices. By technological improvements, gesture recognition is now a more realistic and appealing approach in the context of human interaction. In this research, the relevant experiments are conducted using numerous types of convolutional neural networks, including the proposed customized model, to see which ones performs the best. Because of the introduction of such Microsoft Kinect sensor, increased depth and vision sensing has been widely important for several purposes. Given its ability to measure ranges to objects at a fast frame rate, these types of sensors are widely being employed for 3D acquisitions, as well as for other purposes in robotics and machine learning. This research made use of the Kinect sensor and the use of an RGB-D camera and a 3D convolution neural network, which offer a novel approach for fingertips identification and hand gesture classification in real time that is both accurate and fast (3DCNN).
+title: A. 3D-CNNs-Based Touchless Human Machine Interface
+summary : 
+This research investigates the use of convolutional neural networks, including a customized model, for gesture recognition in various applications like robotics, televisions, and video games. Leveraging the Microsoft Kinect sensor's depth and vision sensing capabilities, the study employs an RGB-D camera and a 3D convolutional neural network (3DCNN) to achieve real-time, accurate, and fast fingertip identification and hand gesture classification.
 tags: 
   - Gesture Recognition
   - Human Machine Interaction 
