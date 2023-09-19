@@ -88,7 +88,7 @@ sections:
           date_start: '2018-03-01'
           date_end:   '2019-12-01'
           description: |2-
-              - Combined projects with AREA - Azerbaijan Robotics Engineering Academy 03.2018 - 12.2019
+              - AREA - Azerbaijan Robotics Engineering Academy 03.2018 - 12.2019
 
   
     design:
