@@ -1,14 +1,49 @@
 ---
-# title: Privacy Concerned Decentralized Machine Learning Implementation on Image Classification
-# summary: In my project, I aimed to explore federated learning for image classification while ensuring privacy. The main objective was to develop a federated learning algorithm specifically for image classification tasks and evaluate its performance in comparison to centralized training approach. 
+title: A.3D-CNNs-Based Touchless Human Machine Interface
+summary : Interacting with machines via hand gestures is a common way for people to communicate with robots. Human utilize gestures in a regular talk to convey meaning and emotions to one another. Gesture-based interactions are utilized in a wide range of applied to a wide range of fields, as telephones, TVs, monitors, video games, and other electronic devices. By technological improvements, gesture recognition is now a more realistic and appealing approach in the context of human interaction. In this research, the relevant experiments are conducted using numerous types of convolutional neural networks, including the proposed customized model, to see which ones performs the best. Because of the introduction of such Microsoft Kinect sensor, increased depth and vision sensing has been widely important for several purposes. Given its ability to measure ranges to objects at a fast frame rate, these types of sensors are widely being employed for 3D acquisitions, as well as for other purposes in robotics and machine learning. This research made use of the Kinect sensor and the use of an RGB-D camera and a 3D convolution neural network, which offer a novel approach for fingertips identification and hand gesture classification in real time that is both accurate and fast (3DCNN).
+tags: 
+  - Gesture Recognition
+  - Human Machine Interaction 
+  - Deep Learning
+  
+date: '2023-11-07 T00:00:00Z'
+
+# Optional external URL for project (replaces project detail page).
+external_link: 'https://link.springer.com/chapter/10.1007/978-3-031-43111-1_7'
+
+# image:
+#   caption: Federated Learning
+#   focal_point: Federated
+
+# links:
+#   - icon: github
+#     icon_pack: fab
+#     name: Follow
+#     url: https://link.springer.com/chapter/10.1007/978-3-031-43111-1_7
+# url_code: 'https://link.springer.com/chapter/10.1007/978-3-031-43111-1_7'
+url_pdf: 'https://link.springer.com/chapter/10.1007/978-3-031-43111-1_7'
+# url_slides: 'https://link.springer.com/chapter/10.1007/978-3-031-43111-1_7'
+url_video: ''
+
+# Slides (optional).
+#   Associate this project with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
+#   Otherwise, set `slides = ""`.
+# slides: example
+
+# title: Predicting Financial Market Trends using Time Series Analysis and Natural Language Processing
+# summary: Conducted a research project that explored the use of Twitter sentiments as a tool for predicting stock prices of major corporations, such as Tesla and Apple. Utilizing Time Series Analysis and Natural Language Processing with Long-Short Term Memory (LSTM) neural networks, my study revealed a robust association between emotions conveyed in tweets and fluctuations in stock prices, highlighting the potential of Twitter sentiments in informing investment strategies.
 # tags:
-#   - Federated Learning
-#   - Decentralized Learning
-#   - Classification
+#   - Natural Language Processing
+#   - Time Series Analysis
+#   - Sentimental 
+#   - Stock Price Prediction
+
 # date: '2023-11-07 T00:00:00Z'
 
 # # Optional external URL for project (replaces project detail page).
-# external_link: 'https://github.com/aliasgerovs/Federated-Learning'
+# external_link: 'https://arxiv.org/abs/2309.00136'
 
 # image:
 #   caption: Photo by rawpixel on Unsplash
@@ -18,42 +53,11 @@
 #   - icon: github
 #     icon_pack: fab
 # #     name: Follow
-# #     url: https://github.com/aliasgerovs/Federated-Learning
-# url_code: 'https://github.com/aliasgerovs/Federated-Learning'
+# #     url: https://arxiv.org/abs/2309.00136
+# url_code: 'https://arxiv.org/abs/2309.00136'
 # url_pdf: ''
 # url_slides: ''
 # url_video: ''
-
-# Slides (optional).
-#   Associate this project with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
-# slides: example
-
-title: C. Predicting Financial Market Trends using Time Series Analysis and Natural Language Processing
-summary: Conducted a research project that explored the use of Twitter sentiments as a tool for predicting stock prices of major corporations, such as Tesla and Apple. Utilizing Time Series Analysis and Natural Language Processing with Long-Short Term Memory (LSTM) neural networks, my study revealed a robust association between emotions conveyed in tweets and fluctuations in stock prices, highlighting the potential of Twitter sentiments in informing investment strategies.
-
-tags: Natural Language Processing, Time Series Analysis, Sentimental, Stock Price Prediction
-
-date: '2023-11-07 T00:00:00Z'
-
-# Optional external URL for project (replaces project detail page).
-external_link: 'https://arxiv.org/abs/2309.00136'
-
-# image:
-#   caption: Twitter Sentiments
-#   focal_point: Sentiment
-
-# links:
-#   - icon: github
-#     icon_pack: fab
-#     name: Follow
-#     url: https://arxiv.org/abs/2309.00136
-url_code: 'https://colab.research.google.com/drive/1-z66ud5fIrJC_6dQM1WtKPS4MwEfvy9u?authuser=2'
-url_pdf: 'https://arxiv.org/abs/2309.00136'
-url_slides: ''
-url_video: ''
 
 
 # title: Recognition of Azerbaijani phonemes using Machine Learning
