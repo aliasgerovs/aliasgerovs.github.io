@@ -25,7 +25,6 @@ organizations:
 bio: My research interests include machine learning, natural language processing, and deep learning.
 # Interests to show in About widget
 interests:
-- Machine Learning
 - Deep Learning
 - Natural Language Processing
 - Human Computer Interaction

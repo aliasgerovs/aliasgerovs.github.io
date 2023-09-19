@@ -84,7 +84,7 @@
 # url_slides: ''
 # url_video: ''
 
-title: B. Counting Objects For Traffic Surveillance Systems
+title: D. Counting Objects For Traffic Surveillance Systems
 summary: Contributed to a fully automated traffic analysis system that can monitor and predict traffic flow, counting passing cars, and identifying their direction and lanes without manual calibration, suitable for uncalibrated highway cameras. Presented the project at the III World Robot Olympiad, which attracted participants from 72 countries, and the event took place in Gyor, Hungary.
 tags:
   - Computer Vision
