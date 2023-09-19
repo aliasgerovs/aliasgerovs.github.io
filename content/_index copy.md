@@ -49,10 +49,10 @@ sections:
           date_start: '2022-03-01'
           date_end:   '2023-07-01'
           description: |2-
-              - Musigma - [mu-sigma.com](https://mu-sigma.com/) | 01.2023 - 04.2023, Remote, Illinois, USA.
-              - PepsiCo - [pepsico.com.br](https://pepsico.com.br/) | 08.2022 - 01.2023, Remote, Brazil. 
-              - Anicura - [anicuragroup.com](https://anicuragroup.com/) | 05.2022 - 08.2022, Remote, Italy, Sweden, Germany. 
-              - Louis Dreyfus Company - [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  Remote, France. 
+              - Musigma - [mu-sigma.com](https://mu-sigma.com/) | 01.2023 - 04.2023, Remote, Illinois, USA. Developed chatbot models, successfully deployed them in production environments, and establishing a robust model traning pipeline.
+              - PepsiCo - [pepsico.com.br](https://pepsico.com.br/) | 08.2022 - 01.2023, Remote, Brazil. Developed a custom NLP models and leveraged that for filter detection within user intents. Integrated filter detection into the chatbot and dashboard for enhanced functionality.
+              - Anicura - [anicuragroup.com](https://anicuragroup.com/) | 05.2022 - 08.2022, Remote, Italy, Sweden, Germany. Developed text classification NLP models for predicting multi-level product categories within different markets.
+              - Louis Dreyfus Company - [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  Remote, France. Developed robust ML models, harnessed data processing and visualization tools to drive data-driven decision-making. 
         - title: Data Scientist
           company: Koaila
           company_url: 'https://koaila.com/'
@@ -60,6 +60,10 @@ sections:
           location: Remote, Paris, France
           date_start: '2023-04-01'
           date_end:   '2023-08-01'
+          description: |2-
+              - Employed advanced Natural Language Processing techniques to analyze extensive customer and product data.
+              - Leveraged AI and granular product usage data to gain profound insights into user behaviors, feature adoption patterns, and customer preferences. 
+              - Ensured the privacy and security of sensitive customer data while utilizing advanced machine learning techniques to analyze product data.
               
         - title: Deep Learning Researcher
           company: Voiceloft
@@ -69,9 +73,9 @@ sections:
           date_start: '2021-03-01'
           date_end:   '2022-07-01'
           description: |2-
-              - Neural Space - [neuralspace.ai](https://neuralspace.ai/) | 11.2021 - 03.2022, United Kingdom. 
-              - Imla Project - [imla.az](https://voiceloft.com) | 07.2021 - 11.2021 Azerbaijan. 
-              - Voooice - [voooice.com](https://voooice.com/) | 03.2021 - 07.2021. 
+              - Neural Space - [neuralspace.ai](https://neuralspace.ai/) | 11.2021 - 03.2022, United Kingdom. Worked on design, development, testing , tuning of ASR - speech recognition models for 11 languages. Developed language identification models for data gathering applications.
+              - Imla Project - [imla.az](https://voiceloft.com) | 07.2021 - 11.2021 Azerbaijan. Designed, developed, tested, and fine-tuned cutting-edge ASR speech recognition models for the Azerbaijani language employing frameworks such as PyTorch and Kaldi.
+              - Voooice - [voooice.com](https://voooice.com/) | 03.2021 - 07.2021. Collected audio dataset, and created multilingual speech recognition technologies.
         - title: Data Science Instructor
           company: Data Science Academy
           company_url: 'https://dsa.az'
@@ -79,7 +83,9 @@ sections:
           location: Baku, Azerbaijan
           date_start: '2020-01-01'
           date_end:   '2020-07-01'
-
+          description: |2-
+              - Guided hundreds of students in mastering Data Science methodologies using R, Python, Spark, Spark SQL and various machine learning and deep learning methodologies. 
+              - Supported trainings to researchers relating to NLP and Machine Learning research methods.
         - title: Student Researcher
           company: Baku Higher Oil School Robotics Lab
           company_url: 'https://bhos.edu.az'
@@ -88,9 +94,12 @@ sections:
           date_start: '2018-03-01'
           date_end:   '2019-12-01'
           description: |2-
-              - AREA-Azerbaijan Robotics Engineering Academy 03.2018 - 12.2019
+              - Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project titled 'Optimizing Road Networks for Automated Vehicles with using Open CV'. 
+              - Worked on the optimizing traffic light timing for vehicles with using Open CV. 
+              - Adeptly used Python (OpenCV), and build object detection models. 
+              - Participated in cutting edge research in computer vision.
 
-  
+                    
     design:
       columns: '2'
   # - block: accomplishments
