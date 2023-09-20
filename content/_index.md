@@ -49,7 +49,7 @@ sections:
           date_start: '2022-03-01'
           date_end:   '2023-07-01'
           description: |2- 
-              Projects worked on: 
+              Projects : 
               -  Musigma - [mu-sigma.com](https://mu-sigma.com/)
               -  PepsiCo - [pepsi.com](https://pepsi.com.br/)
               -  Anicura - [anicuragroup.com](https://anicuragroup.com/)
@@ -69,7 +69,7 @@ sections:
           date_start: '2023-04-01'
           date_end:   '2023-08-01'
           description: |2-
-             Projects worked on:
+             Projects :
              - Prophesee - [prophesee.ai](https://prophesee.ai/)
              - Microtica - [microtica.com](https://microtica.com/)
              - Filestage - [filestage.com](https://filestage.io)
@@ -86,10 +86,10 @@ sections:
           date_start: '2021-03-01'
           date_end:   '2022-07-01'
           description: |2-
-             Projects worked on:
-             - Project : Neural Space - [neuralspace.ai](https://neuralspace.ai/)
-             - Project : Imla Project - [imla.az](https://voiceloft.com)
-             - Project : Voooice - [voooice.com](https://voooice.com/)
+             Projects :
+             - Neural Space - [neuralspace.ai](https://neuralspace.ai/)
+             - Imla Project - [imla.az](https://voiceloft.com)
+             - Voooice - [voooice.com](https://voooice.com/)
 
              Responsibilities: 
              - Deep learning researcher specialized in designing, developing, and continuously tuning voice recognition models. 
@@ -103,7 +103,7 @@ sections:
           date_start: '2020-01-01'
           date_end:   '2020-07-01'
           description: |2-
-            Projects Worked on:
+            Projects :
              - QSS Analytics - [qss.az](http://www.qss.az)
              - Data Science Bootcamps - [dsa.az](http://www.dsa.az)
             
@@ -119,14 +119,14 @@ sections:
           date_start: '2018-03-01'
           date_end:   '2019-12-01'
           description: |2-
-              Projects worked on:
+              Projects :
               - III World Robot Olympiad - [wro.com](https://wro-association.org)
               - AREA - Azerbaijan Robotics Engineering Academy - [robot.az](https://www.robot.org.az)
               
               Responsibilities: 
               - Student researcher specialized in deep learning model research and development.
               - Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project titled 'Optimizing Road Networks for Automated Vehicles with using Open CV'. 
-              - Worked on the optimizing traffic light timing for vehicles with using Open CV. 
+              -  the optimizing traffic light timing for vehicles with using Open CV. 
               Adeptly used Python (OpenCV), and build object detection models.  
 
     design:
