@@ -76,7 +76,7 @@ sections:
              
              Responsibilities: 
              - Research-oriented data scientist proficient in Python, FastAPI, AWS, Git, and modeling techniques.
-             - Specialized in AI/ML modeling pipeline design
+             - Specialized in AI/ML modeling pipeline design.
 
         - title: Deep Learning Researcher
           company: Voiceloft
@@ -106,6 +106,7 @@ sections:
             Projects Worked on:
              - Project : QSS Analytics - [qss.az](http://www.qss.az)
              - Project : Data Science Bootcamps - [dsa.az](http://www.dsa.az)
+            
             Responsibilities: 
             - Data science instructor proficient in Python, R, Matlab and SQL.
             - Specialized in deep learning model research and development. 
@@ -121,6 +122,7 @@ sections:
               Projects worked on:
               - Project : III World Robot Olympiad - [wro.com](https://wro-association.org)
               - Project : AREA - Azerbaijan Robotics Engineering Academy - [robot.az](https://www.robot.org.az)
+              
               Responsibilities: 
               - Student researcher specialized in deep learning model research and development.
               - Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project titled 'Optimizing Road Networks for Automated Vehicles with using Open CV'. 
