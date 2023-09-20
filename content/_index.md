@@ -52,7 +52,7 @@ sections:
               - Project : Musigma - [mu-sigma.com](https://mu-sigma.com/)
               - Project : Anicura - [anicuragroup.com](https://anicuragroup.com/)
               - Project : Louis Dreyfus Company - [ldc.com](https://ldc.com/)
-          text : Test
+          # text : Test
         - title: Data Scientist
           company: Koaila
           company_url: 'https://koaila.com/'
