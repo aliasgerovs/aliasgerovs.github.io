@@ -52,6 +52,7 @@ sections:
               - Project : Musigma - [mu-sigma.com](https://mu-sigma.com/)
               - Project : Anicura - [anicuragroup.com](https://anicuragroup.com/)
               - Project : Louis Dreyfus Company - [ldc.com](https://ldc.com/)
+          text : Test
         - title: Data Scientist
           company: Koaila
           company_url: 'https://koaila.com/'
@@ -60,8 +61,9 @@ sections:
           date_start: '2023-04-01'
           date_end:   '2023-08-01'
           description: |2-
-             - Project : Koaila - [koaila.com](https://koaila.com/)
              - Project : Prophesee - [prophesee.ai](https://prophesee.ai/)
+             - Project : Microtica - [microtica.com](https://microtica.com/)
+             - Project : Filestage - [filestage.com](https://filestage.io)
               
         - title: Deep Learning Researcher
           company: Voiceloft
