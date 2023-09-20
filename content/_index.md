@@ -79,6 +79,7 @@ sections:
              - Research-oriented data scientist proficient in Python, FastAPI, AWS, Git, and modeling techniques.
              - Built clustering, classification, semi-supervised models for user behaviour analysis.
              - Specialized in AI/ML modeling pipeline design.
+             - Built text classification NLP models.
 
         - title: Deep Learning Researcher
           company: Voiceloft
