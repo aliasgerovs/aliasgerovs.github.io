@@ -125,9 +125,7 @@ sections:
               
               Responsibilities: 
               - Student researcher specialized in deep learning model research and development.
-              - Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project titled 'Optimizing Road Networks for Automated Vehicles with using Open CV'. 
-              -  the optimizing traffic light timing for vehicles with using Open CV. 
-              Adeptly used Python (OpenCV), and build object detection models.  
+              - Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project of optimizing traffic light timing for vehicles with using Open CV.
 
     design:
       columns: '2'
