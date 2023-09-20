@@ -49,10 +49,9 @@ sections:
           date_start: '2022-03-01'
           date_end:   '2023-07-01'
           description: |2-
-           - Project : Musigma - [mu-sigma.com](https://mu-sigma.com/)
-           - Project : Anicura - [anicuragroup.com](https://anicuragroup.com/)
-           - Project : Louis Dreyfus Company - [ldc.com](https://ldc.com/)
-          
+          - Project : Musigma - [mu-sigma.com](https://mu-sigma.com/)
+          - Project : Anicura - [anicuragroup.com](https://anicuragroup.com/)
+          - Project : Louis Dreyfus Company - [ldc.com](https://ldc.com/)
 
         - title: Data Scientist
           company: Koaila
