@@ -104,8 +104,8 @@ sections:
           date_end:   '2020-07-01'
           description: |2-
             Projects Worked on:
-             - Project : QSS Analytics - [qss.az](http://www.qss.az)
-             - Project : Data Science Bootcamps - [dsa.az](http://www.dsa.az)
+             - QSS Analytics - [qss.az](http://www.qss.az)
+             - Data Science Bootcamps - [dsa.az](http://www.dsa.az)
             
             Responsibilities: 
             - Data science instructor proficient in Python, R, Matlab and SQL.
