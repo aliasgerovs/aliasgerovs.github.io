@@ -51,7 +51,7 @@ sections:
           description: |2- 
               Worked on 
               - Project : Musigma - [mu-sigma.com](https://mu-sigma.com/)
-              - Project : PepsiCo - [pepsi.com][https://pepsi.com.br/]
+              - Project : PepsiCo - [pepsi.com](https://pepsi.com.br/)
               - Project : Anicura - [anicuragroup.com](https://anicuragroup.com/)
               - Project : Louis Dreyfus Company - [ldc.com](https://ldc.com/)
           # text : Test
