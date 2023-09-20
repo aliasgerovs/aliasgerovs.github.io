@@ -47,11 +47,11 @@ sections:
           company_logo: rai
           location: Remote, Amsterdam, Noord-Holland, The Netherlands
           date_start: '2022-03-01'
+          date_end:   '2023-07-01'
           description: |2-
-          - Project : Musigma - [mu-sigma.com](https://mu-sigma.com/)
-          - Project : Anicura - [anicuragroup.com](https://anicuragroup.com/)
-          - Project : Louis Dreyfus Company - [ldc.com](https://ldc.com/)
-
+              - Project : Musigma - [mu-sigma.com](https://mu-sigma.com/)
+              - Project : Anicura - [anicuragroup.com](https://anicuragroup.com/)
+              - Project : Louis Dreyfus Company - [ldc.com](https://ldc.com/)
         - title: Data Scientist
           company: Koaila
           company_url: 'https://koaila.com/'
@@ -60,9 +60,9 @@ sections:
           date_start: '2023-04-01'
           date_end:   '2023-08-01'
           description: |2-
-          - Project : Koaila - [koaila.com](https://koaila.com/)
-          - Project : Prophesee - [prophesee.ai](https://prophesee.ai/)
-
+             - Project : Koaila - [koaila.com](https://koaila.com/)
+             - Project : Prophesee - [prophesee.ai](https://prophesee.ai/)
+              
         - title: Deep Learning Researcher
           company: Voiceloft
           company_url: 'https://voiceloft.com/'
@@ -71,9 +71,9 @@ sections:
           date_start: '2021-03-01'
           date_end:   '2022-07-01'
           description: |2-
-          - Project : Neural Space - [neuralspace.ai](https://neuralspace.ai/)
-          - Project : Imla Project - [imla.az](https://voiceloft.com)
-          - Project : Voooice - [voooice.com](https://voooice.com/)
+             - Project : Neural Space - [neuralspace.ai](https://neuralspace.ai/)
+             - Project : Imla Project - [imla.az](https://voiceloft.com)
+             - Project : Voooice - [voooice.com](https://voooice.com/)
 
         - title: Data Science Instructor
           company: Data Science Academy
@@ -83,7 +83,7 @@ sections:
           date_start: '2020-01-01'
           date_end:   '2020-07-01'
           description: |2-
-          - Project : QSS Analytics - [qss.az](http://www.qss.az)
+             - Project : QSS Analytics - [qss.az](http://www.qss.az)
 
         - title: Student Researcher
           company: Baku Higher Oil School Robotics Lab
@@ -93,9 +93,9 @@ sections:
           date_start: '2018-03-01'
           date_end:   '2019-12-01'
           description: |2-
-          - Project : III World Robot Olympiad - [wro.com](https://wro-association.org)
-          - Project : AREA - Azerbaijan Robotics Engineering Academy - [robot.az](https://www.robot.org.az)
-  
+              - Project : III World Robot Olympiad - [wro.com](https://wro-association.org)
+              - Project : AREA - Azerbaijan Robotics Engineering Academy - [robot.az](https://www.robot.org.az)
+     
     design:
       columns: '2'
   # - block: accomplishments
