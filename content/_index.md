@@ -49,11 +49,17 @@ sections:
           date_start: '2022-03-01'
           date_end:   '2023-07-01'
           description: |2- 
-              Worked on 
-              - Project : Musigma - [mu-sigma.com](https://mu-sigma.com/)
-              - Project : PepsiCo - [pepsi.com](https://pepsi.com.br/)
-              - Project : Anicura - [anicuragroup.com](https://anicuragroup.com/)
-              - Project : Louis Dreyfus Company - [ldc.com](https://ldc.com/)
+              Projects worked on: 
+              -  Musigma - [mu-sigma.com](https://mu-sigma.com/)
+              -  PepsiCo - [pepsi.com](https://pepsi.com.br/)
+              -  Anicura - [anicuragroup.com](https://anicuragroup.com/)
+              -  Louis Dreyfus Company - [ldc.com](https://ldc.com/)
+              
+              Responsibilities: 
+              Research-oriented data scientist proficient in machine learning.
+              Proficient in Python, PySpark, Azure, and PostgreSQL.
+              Specialized in AI/ML modeling pipeline design.
+
           # text : Test
         - title: Data Scientist
           company: Koaila
@@ -63,11 +69,14 @@ sections:
           date_start: '2023-04-01'
           date_end:   '2023-08-01'
           description: |2-
-             Worked on
-             - Project : Prophesee - [prophesee.ai](https://prophesee.ai/)
-             - Project : Microtica - [microtica.com](https://microtica.com/)
-             - Project : Filestage - [filestage.com](https://filestage.io)
-              
+             Projects worked on:
+             - Prophesee - [prophesee.ai](https://prophesee.ai/)
+             - Microtica - [microtica.com](https://microtica.com/)
+             - Filestage - [filestage.com](https://filestage.io)
+             
+             Responsibilities: 
+             Research-oriented data scientist proficient in Python, FastAPI, AWS, Git, and modeling techniques.
+
         - title: Deep Learning Researcher
           company: Voiceloft
           company_url: 'https://voiceloft.com/'
@@ -76,10 +85,14 @@ sections:
           date_start: '2021-03-01'
           date_end:   '2022-07-01'
           description: |2-
-             Worked on
+             Projects worked on:
              - Project : Neural Space - [neuralspace.ai](https://neuralspace.ai/)
              - Project : Imla Project - [imla.az](https://voiceloft.com)
              - Project : Voooice - [voooice.com](https://voooice.com/)
+
+             Responsibilities: 
+             Deep learning researcher specialized in designing, developing, and continuously tuning voice recognition models. 
+             Proficient in Python, Deep Learning, PySpark, PostgreSQL, AWS, PyTorch, TensorFlow, Speech Recognition.
 
         - title: Data Science Instructor
           company: Data Science Academy
@@ -89,9 +102,12 @@ sections:
           date_start: '2020-01-01'
           date_end:   '2020-07-01'
           description: |2-
-            Worked on
+            Projects Worked on:
              - Project : QSS Analytics - [qss.az](http://www.qss.az)
              - Project : Data Science Bootcamps - [dsa.az](http://www.dsa.az)
+            Responsibilities: 
+            Data science instructor proficient in Python, R, Matlab and SQL.
+            Specialized in deep learning model research and development. 
 
         - title: Student Researcher
           company: Baku Higher Oil School Robotics Lab
@@ -101,10 +117,15 @@ sections:
           date_start: '2018-03-01'
           date_end:   '2019-12-01'
           description: |2-
-              Worked on
+              Projects worked on:
               - Project : III World Robot Olympiad - [wro.com](https://wro-association.org)
               - Project : AREA - Azerbaijan Robotics Engineering Academy - [robot.az](https://www.robot.org.az)
-     
+              Responsibilities: 
+              Student researcher specialized in deep learning model research and development.
+              Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project titled 'Optimizing Road Networks for Automated Vehicles with using Open CV'. 
+              Worked on the optimizing traffic light timing for vehicles with using Open CV. 
+              Adeptly used Python (OpenCV), and build object detection models.  
+
     design:
       columns: '2'
   # - block: accomplishments
