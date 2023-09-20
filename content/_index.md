@@ -58,6 +58,7 @@ sections:
               Responsibilities: 
               - Research-oriented data scientist proficient in machine learning.
               - Proficient in Python, PySpark, Azure, and PostgreSQL.
+              - Built anomaly detection, classification, regression models for alerting pipelines.
               - Specialized in AI/ML modeling pipeline design.
 
           # text : Test
@@ -76,6 +77,7 @@ sections:
              
              Responsibilities: 
              - Research-oriented data scientist proficient in Python, FastAPI, AWS, Git, and modeling techniques.
+             - Built clustering, classification, semi-supervised models for user behaviour analysis.
              - Specialized in AI/ML modeling pipeline design.
 
         - title: Deep Learning Researcher
