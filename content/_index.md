@@ -59,7 +59,7 @@ sections:
               - Research-oriented data scientist proficient in machine learning.
               - Proficient in Python, PySpark, Azure, and PostgreSQL.
               - Built anomaly detection, classification, regression models for alerting pipelines.
-              - Specialized in AI/ML modeling pipeline design.
+              - Specialized in designing end-to-end AI/ML modeling pipelines for efficient data-driven solutions.
 
           # text : Test
         - title: Data Scientist
@@ -76,10 +76,10 @@ sections:
              - Filestage - [filestage.com](https://filestage.io)
              
              Responsibilities: 
-             - Research-oriented data scientist proficient in Python, FastAPI, AWS, Git, and modeling techniques.
-             - Built clustering, classification, semi-supervised models for user behaviour analysis.
-             - Specialized in AI/ML modeling pipeline design.
-             - Built text classification NLP models.
+             - Research and develop clustering, classification, and semi-supervised models for user behavior analysis.
+             - Proficient in Python, FastAPI, AWS, Git, and modeling techniques.
+             - Specialize in AI/ML modeling pipeline design.
+             - Build text classification NLP models for sentiment analysis and content categorization.
 
         - title: Deep Learning Researcher
           company: Voiceloft
@@ -97,6 +97,7 @@ sections:
              Responsibilities: 
              - Deep learning researcher specialized in designing, developing, and continuously tuning voice recognition models. 
              - Proficient in Python, Deep Learning, PySpark, PostgreSQL, AWS, PyTorch, TensorFlow, Speech Recognition.
+             - Designed deep learning modeling pipelines.
 
         - title: Data Science Instructor
           company: Data Science Academy
@@ -111,8 +112,10 @@ sections:
              - Data Science Bootcamps - [dsa.az](http://www.dsa.az)
             
             Responsibilities: 
-            - Data science instructor proficient in Python, R, Matlab and SQL.
-            - Specialized in deep learning model research and development. 
+            - Instructed and guided students in data science methodologies with proficiency in Python, R, Matlab, and SQL.
+            - Specialized in mentoring deep learning model research and development.
+            - Provided hands-on training and practical insights to empower students with the skills needed in the field of data science. 
+            - Participated in hackathons organized by [UNDP](https://www.undp.org), [ABB](https://abb-bank.az).
 
         - title: Student Researcher
           company: Baku Higher Oil School Robotics Lab
@@ -129,6 +132,7 @@ sections:
               Responsibilities: 
               - Student researcher specialized in deep learning model research and development.
               - Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project of optimizing traffic light timing for vehicles with using Open CV.
+              - Worked on student conference papers focusing on deep learning applications under the guidance of Dr. Ali Parsayan
 
     design:
       columns: '2'
