@@ -94,7 +94,9 @@ sections:
           location: Baku, Azerbaijan
           date_start: '2018-03-01'
           date_end:   '2019-12-01'
-          Project : III World Robot Olympiad - [wro.com](https://wro-association.org)
+          description: |2-
+          - Project : III World Robot Olympiad - [wro.com](https://wro-association.org)
+          - Project : AREA - Azerbaijan Robotics Engineering Academy - [robot.az](https://www.robot.org.az)
   
     design:
       columns: '2'
