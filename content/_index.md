@@ -120,8 +120,8 @@ sections:
           date_end:   '2019-12-01'
           description: |2-
               Projects worked on:
-              - Project : III World Robot Olympiad - [wro.com](https://wro-association.org)
-              - Project : AREA - Azerbaijan Robotics Engineering Academy - [robot.az](https://www.robot.org.az)
+              - III World Robot Olympiad - [wro.com](https://wro-association.org)
+              - AREA - Azerbaijan Robotics Engineering Academy - [robot.az](https://www.robot.org.az)
               
               Responsibilities: 
               - Student researcher specialized in deep learning model research and development.
