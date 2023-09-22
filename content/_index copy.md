@@ -41,7 +41,7 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Data Scientist
+        - title: Machine Learning Engineer
           company: Revenue.ai
           company_url: 'https://www.revenue.ai'
           company_logo: rai
@@ -53,7 +53,7 @@ sections:
               - PepsiCo - [pepsico.com.br](https://pepsico.com.br/) | 08.2022 - 01.2023, Remote, Brazil. Developed a custom NLP models and leveraged that for filter detection within user intents. Integrated filter detection into the chatbot and dashboard for enhanced functionality.
               - Anicura - [anicuragroup.com](https://anicuragroup.com/) | 05.2022 - 08.2022, Remote, Italy, Sweden, Germany. Developed text classification NLP models for predicting multi-level product categories within different markets.
               - Louis Dreyfus Company - [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  Remote, France. Developed robust ML models, harnessed data processing and visualization tools to drive data-driven decision-making. 
-        - title: Data Scientist
+        - title: Machine Learning Engineer
           company: Koaila
           company_url: 'https://koaila.com/'
           company_logo: koaila
@@ -65,7 +65,7 @@ sections:
               - Leveraged AI and granular product usage data to gain profound insights into user behaviors, feature adoption patterns, and customer preferences. 
               - Ensured the privacy and security of sensitive customer data while utilizing advanced machine learning techniques to analyze product data.
               
-        - title: Deep Learning Researcher
+        - title: Machine Learning Engineer
           company: Voiceloft
           company_url: 'https://voiceloft.com/'
           company_logo: voiceloft
@@ -76,7 +76,7 @@ sections:
               - Neural Space - [neuralspace.ai](https://neuralspace.ai/) | 11.2021 - 03.2022, United Kingdom. Worked on design, development, testing , tuning of ASR - speech recognition models for 11 languages. Developed language identification models for data gathering applications.
               - Imla Project - [imla.az](https://voiceloft.com) | 07.2021 - 11.2021 Azerbaijan. Designed, developed, tested, and fine-tuned cutting-edge ASR speech recognition models for the Azerbaijani language employing frameworks such as PyTorch and Kaldi.
               - Voooice - [voooice.com](https://voooice.com/) | 03.2021 - 07.2021. Collected audio dataset, and created multilingual speech recognition technologies.
-        - title: Data Science Instructor
+        - title: Machine Learning Instructor
           company: Data Science Academy
           company_url: 'https://dsa.az'
           company_logo: dsa
@@ -86,7 +86,7 @@ sections:
           description: |2-
               - Guided hundreds of students in mastering Data Science methodologies using R, Python, Spark, Spark SQL and various machine learning and deep learning methodologies. 
               - Supported trainings to researchers relating to NLP and Machine Learning research methods.
-        - title: Student Researcher
+        - title: Machine Learning Researcher
           company: Baku Higher Oil School Robotics Lab
           company_url: 'https://bhos.edu.az'
           company_logo: bhos
