@@ -26,6 +26,7 @@ bio: My research interests include deep learning, computer vision, natural langu
 # Interests to show in About widget
 interests:
 - Deep Learning
+- Multi-Modal Learning
 - Computer Vision
 - Natural Language Processing
 
