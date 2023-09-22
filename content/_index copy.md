@@ -86,7 +86,7 @@ sections:
           description: |2-
               - Guided hundreds of students in mastering Data Science methodologies using R, Python, Spark, Spark SQL and various machine learning and deep learning methodologies. 
               - Supported trainings to researchers relating to NLP and Machine Learning research methods.
-        - title: Machine Learning Researcher
+        - title: Student Researcher
           company: Baku Higher Oil School Robotics Lab
           company_url: 'https://bhos.edu.az'
           company_logo: bhos
