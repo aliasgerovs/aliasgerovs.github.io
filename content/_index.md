@@ -41,7 +41,7 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Data Scientist
+        - title: Machine Learning Engineer
           company: Revenue.ai
           company_url: 'https://www.revenue.ai'
           company_logo: rai
@@ -56,13 +56,13 @@ sections:
               -  Louis Dreyfus Company - [ldc.com](https://ldc.com/)
               
               Responsibilities: 
-              - Research-oriented data scientist proficient in machine learning.
+              - Research-oriented machine learning engineer. 
               - Proficient in Python, PySpark, Azure, and PostgreSQL.
               - Built anomaly detection, classification, regression models for alerting pipelines.
               - Specialized in designing end-to-end AI/ML modeling pipelines for efficient data-driven solutions.
 
           # text : Test
-        - title: Data Scientist
+        - title: Machine Learning Engineer
           company: Koaila
           company_url: 'https://koaila.com/'
           company_logo: koaila
@@ -81,7 +81,7 @@ sections:
              - Specialize in AI/ML modeling pipeline design.
              - Build text classification NLP models for sentiment analysis and content categorization.
 
-        - title: Deep Learning Researcher
+        - title: Machine Learning Engineer
           company: Voiceloft
           company_url: 'https://voiceloft.com/'
           company_logo: voiceloft
@@ -99,7 +99,7 @@ sections:
              - Proficient in Python, Deep Learning, PySpark, PostgreSQL, AWS, PyTorch, TensorFlow, Speech Recognition.
              - Designed deep learning modeling pipelines.
 
-        - title: Data Science Instructor
+        - title: Machine Learning Instructor
           company: Data Science Academy
           company_url: 'https://dsa.az'
           company_logo: dsa
@@ -112,12 +112,12 @@ sections:
              - Data Science Bootcamps - [dsa.az](http://www.dsa.az)
             
             Responsibilities: 
-            - Instructed and guided students in data science methodologies with proficiency in Python, R, Matlab, and SQL.
+            - Instructed and guided students in machine learning methodologies with proficiency in Python, R, Matlab, and SQL.
             - Specialized in mentoring deep learning model research and development.
             - Provided hands-on training and practical insights to empower students with the skills needed in the field of data science. 
             - Participated in hackathons organized by [UNDP](https://www.undp.org), [ABB](https://abb-bank.az).
 
-        - title: Student Researcher
+        - title: Machine Learning Researcher
           company: Baku Higher Oil School Robotics Lab
           company_url: 'https://bhos.edu.az'
           company_logo: bhos
