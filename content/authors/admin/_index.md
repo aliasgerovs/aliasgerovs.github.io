@@ -22,7 +22,7 @@ organizations:
     url: https://www.gwu.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include deep learning, machine learning, natural language processing.
+bio: My research interests include deep learning, computer vision, natural language processing.
 # Interests to show in About widget
 interests:
 - Deep Learning
