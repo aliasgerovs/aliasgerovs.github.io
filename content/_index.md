@@ -114,7 +114,7 @@ sections:
             Responsibilities: 
             - Instructed and guided students in machine learning methodologies with proficiency in Python, R, Matlab, and SQL.
             - Specialized in mentoring deep learning model research and development.
-            - Provided hands-on training and practical insights to empower students with the skills needed in the field of data science. 
+            - Provided hands-on training and practical insights to empower students with the skills needed in the field of machine learning. 
             - Participated in hackathons organized by [UNDP](https://www.undp.org), [ABB](https://abb-bank.az).
 
         - title: Machine Learning Researcher
