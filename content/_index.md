@@ -117,7 +117,7 @@ sections:
             - Provided hands-on training and practical insights to empower students with the skills needed in the field of machine learning. 
             - Participated in hackathons organized by [UNDP](https://www.undp.org), [ABB](https://abb-bank.az).
 
-        - title: Machine Learning Researcher
+        - title: Student Researcher
           company: Baku Higher Oil School Robotics Lab
           company_url: 'https://bhos.edu.az'
           company_logo: bhos
