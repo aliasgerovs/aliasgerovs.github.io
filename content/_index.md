@@ -46,7 +46,7 @@ sections:
           company_url: 'https://www.revenue.ai'
           company_logo: rai
           location: Remote, Amsterdam, Noord-Holland, The Netherlands
-          date_start: '2022-03-01'
+          date_start: '2022-04-01'
           date_end:   '2023-07-01'
           description: |2- 
               Projects : 
@@ -86,8 +86,8 @@ sections:
           company_url: 'https://voiceloft.com/'
           company_logo: voiceloft
           location: Remote, Middletown, Delaware, United States
-          date_start: '2021-03-01'
-          date_end:   '2022-07-01'
+          date_start: '2021-02-01'
+          date_end:   '2022-04-01'
           description: |2-
              Projects :
              - Neural Space - [neuralspace.ai](https://neuralspace.ai/)
@@ -104,8 +104,8 @@ sections:
           company_url: 'https://dsa.az'
           company_logo: dsa
           location: Baku, Azerbaijan
-          date_start: '2020-01-01'
-          date_end:   '2020-07-01'
+          date_start: '2020-06-01'
+          date_end:   '2021-06-01'
           description: |2-
             Projects :
              - QSS Analytics - [qss.az](http://www.qss.az)
@@ -123,7 +123,7 @@ sections:
           company_logo: bhos
           location: Baku, Azerbaijan
           date_start: '2018-03-01'
-          date_end:   '2019-12-01'
+          date_end:   '2020-06-01'
           description: |2-
               Projects :
               - III World Robot Olympiad - [wro.com](https://wro-association.org)
