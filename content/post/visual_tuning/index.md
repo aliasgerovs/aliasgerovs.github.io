@@ -1,6 +1,6 @@
 ---
 title: "Visual Instruction Tuning." 
-summary: "A summary of the same paper published in `37th Conference on Neural Information Processing Systems(NeurIPS'23)."
+summary: "A summary of the same paper published in `37th Conference on Neural Information Processing Systems(NeurIPS'23)`."
 date: 2023-10-01
 math: true
 featured: false

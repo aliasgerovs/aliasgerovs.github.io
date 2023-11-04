@@ -22,13 +22,13 @@ organizations:
     url: https://www.gwu.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include deep learning, multi-modal learning, computer vision, natural language processing.
+bio: My research interests include deep learning, multi-modal learning, natural language processing, computer vision.
 # Interests to show in About widget
 interests:
 - Deep Learning
 - Multi-Modal Learning
-- Computer Vision
 - Natural Language Processing
+- Computer Vision
 
 columns: '1'
 
