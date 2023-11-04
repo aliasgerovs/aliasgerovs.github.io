@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>instruction tuning | Ali Asgarov</title><link>https://aliasgerovs.github.io/tag/instruction-tuning/</link><atom:link href="https://aliasgerovs.github.io/tag/instruction-tuning/index.xml" rel="self" type="application/rss+xml"/><description>instruction tuning</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Oct 2023 00:00:00 +0000</lastBuildDate><image><url>https://aliasgerovs.github.io/media/icon_hu589cfebf829ca0be6fa534080fda45bf_12159_512x512_fill_lanczos_center_3.png</url><title>instruction tuning</title><link>https://aliasgerovs.github.io/tag/instruction-tuning/</link></image><item><title>Visual Instruction Tuning.</title><link>https://aliasgerovs.github.io/post/visual_tuning/</link><pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><guid>https://aliasgerovs.github.io/post/visual_tuning/</guid><description>&lt;h2 id="problem-statement">Problem Statement:&lt;/h2>
+&lt;p>The paper addresses the limitations of existing vision-language pretraining models by highlighting the need for aligning events and their associated arguments in images. The goal is to enable vision-language models to understand the semantics of images and the roles of objects within those images.&lt;/p>
+&lt;h2 id="event-graph-alignment-loss">Event Graph Alignment Loss:&lt;/h2>
+&lt;p>The paper introduces an innovative evaluation metric, the &amp;ldquo;Event Graph Alignment Loss,&amp;rdquo; to assess the alignment between vision and language in complex event-rich datasets.&lt;/p>
+&lt;h2 id="pretraining-with-large-event-rich-datasets">Pretraining with Large Event-Rich Datasets:&lt;/h2>
+&lt;p>To enhance model understanding, the paper employs a large event-rich dataset for pretraining, offering more challenging benchmarks for image retrieval. This approach aims to promote a deeper comprehension of detailed, lengthy event descriptions.&lt;/p>
+&lt;h2 id="zero-shot-clip-event-model">Zero-Shot Clip Event Model:&lt;/h2>
+&lt;p>The paper utilizes the &amp;ldquo;ZeroShot Clip Event&amp;rdquo; model, achieving a 5% improvement in event extraction F-score compared to standard Multimedia Event Extraction methods.&lt;/p>
+&lt;h2 id="detailed-approach">Detailed Approach:&lt;/h2>
+&lt;p>The paper outlines its approach in detail, emphasizing the utilization of text information extraction techniques to extract event structures from images. Object detection is performed using R-CNN, and primary event detection focuses on identifying the key event, especially when multiple events are present.&lt;/p>
+&lt;h2 id="experiments-and-data">Experiments and Data:&lt;/h2>
+&lt;p>The experiments involve a dataset of 100,000 images from news websites. The ViT-B/32 architecture initializes the model parameters, and the MME^2 framework is employed. Captions provide distant supervision to interpret images, and negative event descriptions are generated using prompt functions for contrasting. Event graph alignment is achieved through optimal transport methods.&lt;/p>
+&lt;h2 id="incorporating-event-structure-in-pretraining">Incorporating Event Structure in Pretraining:&lt;/h2>
+&lt;p>The paper emphasizes the incorporation of event-structured knowledge into vision-language pretraining, demonstrating a focus on zero-shot learning.&lt;/p>
+&lt;h2 id="conclusion-and-future-directions">Conclusion and Future Directions:&lt;/h2>
+&lt;p>The paper underscores the significance of aligning events and their arguments in vision-language models. Future research may explore how this approach can be further enhanced and extended to other challenging vision-language tasks.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://doi.org/10.48550/arXiv.2304.08485" target="_blank" rel="noopener">Visual Instruction Tuning&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>
