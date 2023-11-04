@@ -1,7 +1,7 @@
 ---
 title: "VisualGPT: Data-efficient Adaptation of Pretrained Language Models for Image Captioning." 
 summary: "A summary of the same paper published in `2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)`."
-date: 2023-09-01
+date: 2023-10-15
 math: true
 featured: false
 authors: 

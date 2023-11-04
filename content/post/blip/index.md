@@ -1,7 +1,7 @@
 ---
 title: "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation." 
 summary: "A summary of the same paper published in `Proceedings of the 39th International Conference on Machine Learning, PMLR`."
-date: 2023-29-10
+date: 2023-10-29
 math: true
 featured: false
 authors: 
