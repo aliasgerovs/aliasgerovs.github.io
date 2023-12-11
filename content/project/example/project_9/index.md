@@ -110,17 +110,17 @@
 # url_video: ''
 
 
-title : F. [Vision ] Classification of Retinal Optical Coherence Tomography Images
-summary: This project utilized Retinal Optical Coherence Tomography (OCT) images, applying machine learning and deep learning techniques for effective classification. Convolutional Auto Encoders compressed the images, and SVM and Artificial Neural Networks classified them into four classes.
-tags:
-  - Object Detection
-  - Deep Learning
-  - Image Classification
+title : C. [Language & Vision ] PromptCraft: Prompt Learning for Vision‑Language Models 
+summary: Enhanced vision‑language models like CLIP for image captioning by addressing the challenges of prompt design, which usually require expertise and time. Our approach models contextual words in prompts with adjustable vectors while preserving the pre‑trained model’s core parameters.
 
-date: '2021-03-01 T00:00:00Z'
+tags:
+  - Large Language Models
+  - Computer Vision
+
+date: '2023-05-01 T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
-external_link: 'https://bhos.edu.az/en/conference/32'
+# external_link: 'https://bhos.edu.az/en/conference/32'
 # # image:
 #   caption: Optical Coherence Tomography 
 #   focal_point: OPtical
@@ -131,7 +131,7 @@ external_link: 'https://bhos.edu.az/en/conference/32'
 #     name: Follow
 #     url: https://arxiv.org/abs/2309.00136
 url_code: ''
-url_pdf: 'https://www.academia.edu/73649123/Classification_of_Retinal_Optical_Coherence_Tomography_Images'
-url_slides: 'https://bhos.edu.az/en/conference/32'
+# url_pdf: 'https://www.academia.edu/73649123/Classification_of_Retinal_Optical_Coherence_Tomography_Images'
+# url_slides: 'https://bhos.edu.az/en/conference/32'
 url_video: ''
 ---

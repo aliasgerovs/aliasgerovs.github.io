@@ -1,5 +1,5 @@
 ---
-title: C. [Vision] Privacy Concerned Decentralized Machine Learning Implementation
+title: D. [Vision] Privacy Concerned Decentralized Machine Learning Implementation
 summary: Aimed to explore federated learning for image classification while ensuring privacy. The main objective was to develop a federated learning algorithm and simulate it for image classification tasks and evaluate its performance in comparison to centralized training approach.
 tags: 
   - Federated Learning

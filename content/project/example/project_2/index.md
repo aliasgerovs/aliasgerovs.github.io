@@ -84,17 +84,18 @@
 # url_slides: ''
 # url_video: ''
 
-title: D. [Vision] Counting Objects For Traffic Surveillance Systems
-summary: Contributed to a fully automated traffic analysis system that can monitor and predict traffic flow, counting passing cars, and identifying their direction and lanes without manual calibration, suitable for uncalibrated highway cameras. Presented the project at the III World Robot Olympiad, which attracted participants from 72 countries, and the event took place in Gyor, Hungary.
+title: A. [NLP & Vision] FeedVQA : Few‑shot Visual Question Answering with Language Model Feedback
+summary: Leveraging LLMs knowledge‑based visual question answering, harnesses generated captions as contextual inputs for a robust answer prediction model. With this approach, the captioning model is able to be improved through feedback and guidance from the LLMs.
+
 tags:
   - Computer Vision
+  - Large Language Models
   - Deep Learning
-  - Vehicle Detection
 
-date: '2021-07-22 T00:00:00Z'
+date: '2023-10-01 T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
-external_link: 'https://bhos.edu.az/en/conference/32'
+# external_link: ''
 # image:
 #   caption: Counting Objects For Traffic Surveillance Systems
 #   focal_point: Smart
@@ -106,7 +107,7 @@ external_link: 'https://bhos.edu.az/en/conference/32'
 #     url: https://arxiv.org/abs/2309.00136
 url_code: ''
 url_pdf: ''
-url_slides: 'https://bhos.edu.az/en/conference/32'
+# url_slides: 'https://bhos.edu.az/en/conference/32'
 url_video: ''
 
 
