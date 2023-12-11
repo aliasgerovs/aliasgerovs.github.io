@@ -110,7 +110,7 @@
 # url_video: ''
 
 
-title : C. [NLP & Vision ] PromptCraft - Prompt Learning for Vision‑Language Models 
+title : C. [NLP & Vision] PromptCraft - Prompt Learning for Vision‑Language Models 
 summary: Enhanced vision‑language models like CLIP for image captioning by addressing the challenges of prompt design, which usually require expertise and time. Our approach models contextual words in prompts with adjustable vectors while preserving the pre‑trained model’s core parameters.
 
 tags:
