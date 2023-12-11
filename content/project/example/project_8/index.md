@@ -110,7 +110,7 @@
 # url_video: ''
 
 
-title : B. [Vision & Language] TorCHLIP : Optimized CLIP Model for Multimodal Deep Learning Implemented in PyTorch
+title : B. [Vision & Language] TorCHLIP - Optimized CLIP Model for Multimodal Deep Learning Implemented in PyTorch
 summary: Optimized implementation of the CLIP model, tailored for advanced multimodal deep learning tasks, using PyTorch. The project offers a strong foundation for researchers and developers to explore image and language comprehension. 
 tags:
   - Large Language Models

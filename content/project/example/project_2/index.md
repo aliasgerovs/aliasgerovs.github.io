@@ -84,7 +84,7 @@
 # url_slides: ''
 # url_video: ''
 
-title: A. [NLP & Vision] FeedVQA : Few‑shot Visual Question Answering with Language Model Feedback
+title: A. [NLP & Vision] FeedVQA -  Few‑shot Visual Question Answering with Language Model Feedback
 summary: Leveraging LLMs knowledge‑based visual question answering, harnesses generated captions as contextual inputs for a robust answer prediction model. With this approach, the captioning model is able to be improved through feedback and guidance from the LLMs.
 
 tags:
