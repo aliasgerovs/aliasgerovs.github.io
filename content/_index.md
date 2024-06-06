@@ -253,15 +253,15 @@ sections:
       title: Honors and Awards
       subtitle:
       text: |-
-        - 2022 : Winner, State Program on education of Azerbaijani youth abroad Scholarship Winner.
-        - 2022 : Winner, 3x National Student Scientific Conferences 1st place winner in Machine Learning Applications (2020, 2021, 2022).
-        - 2021 : Certified, Achieved an IELTS score of 7.5.
-        - 2020 : Finalist, Ranked among the top 15 teams at the III World Robot Olympiad in Gyor, Hungary.
-        - 2019 : Winner, Awarded the Golden Medal at the III World Robot Olympiad in Azerbaijan.
-        - 2018 : Winner, Earned the Presidential Scholarship for exceptional academic performance.
-        - 2017 : Scorer, Scored an impressive 690 out of 700 on the University Entrance Exam. 
-        - 2017 : Winner, High school graduate with a Golden Medal, placing in the top 5% among 60k graduating students.
-        - 2017 : Winner,Honored as the Golden Medalist in the Respublic Physics Olympiad.
+        - 2022, Winner, State Program on education of Azerbaijani youth abroad Scholarship Winner.
+        - 2022, Winner, 3x National Student Scientific Conferences 1st place winner in Machine Learning Applications (2020, 2021, 2022).
+        - 2021, Certified, Achieved an IELTS score of 7.5.
+        - 2020, Finalist, Ranked among the top 15 teams at the III World Robot Olympiad in Gyor, Hungary.
+        - 2019, Winner, Awarded the Golden Medal at the III World Robot Olympiad in Azerbaijan.
+        - 2018, Winner, Earned the Presidential Scholarship for exceptional academic performance.
+        - 2017, Scorer, Scored an impressive 690 out of 700 on the University Entrance Exam. 
+        - 2017, Winner, High school graduate with a Golden Medal, placing in the top 5% among 60k graduating students.
+        - 2017, Winner,Honored as the Golden Medalist in the Respublic Physics Olympiad.
     design:
       columns: '1'
 
