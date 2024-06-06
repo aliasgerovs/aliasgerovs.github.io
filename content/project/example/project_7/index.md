@@ -110,28 +110,28 @@
 # url_video: ''
 
 
-title : H. [Vision] Classification of Retinal Optical Coherence Tomography Images
-summary: This project utilized Retinal Optical Coherence Tomography (OCT) images, applying machine learning and deep learning techniques for effective classification. Convolutional Auto Encoders compressed the images, and SVM and Artificial Neural Networks classified them into four classes.
-tags:
-  - Object Detection
-  - Deep Learning
-  - Image Classification
+# title : H. [Vision] Classification of Retinal Optical Coherence Tomography Images
+# summary: This project utilized Retinal Optical Coherence Tomography (OCT) images, applying machine learning and deep learning techniques for effective classification. Convolutional Auto Encoders compressed the images, and SVM and Artificial Neural Networks classified them into four classes.
+# tags:
+#   - Object Detection
+#   - Deep Learning
+#   - Image Classification
 
-date: '2021-03-01 T00:00:00Z'
+# date: '2021-03-01 T00:00:00Z'
 
-# Optional external URL for project (replaces project detail page).
-external_link: 'https://bhos.edu.az/en/conference/32'
-# # image:
-#   caption: Optical Coherence Tomography 
-#   focal_point: OPtical
+# # Optional external URL for project (replaces project detail page).
+# external_link: 'https://bhos.edu.az/en/conference/32'
+# # # image:
+# #   caption: Optical Coherence Tomography 
+# #   focal_point: OPtical
 
-# links:
-#   - icon: github
-#     icon_pack: fab
-#     name: Follow
-#     url: https://arxiv.org/abs/2309.00136
-url_code: ''
-url_pdf: 'https://www.academia.edu/73649123/Classification_of_Retinal_Optical_Coherence_Tomography_Images'
-url_slides: 'https://bhos.edu.az/en/conference/32'
-url_video: ''
----
+# # links:
+# #   - icon: github
+# #     icon_pack: fab
+# #     name: Follow
+# #     url: https://arxiv.org/abs/2309.00136
+# url_code: ''
+# url_pdf: 'https://www.academia.edu/73649123/Classification_of_Retinal_Optical_Coherence_Tomography_Images'
+# url_slides: 'https://bhos.edu.az/en/conference/32'
+# url_video: ''
+# ---
