@@ -41,63 +41,71 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Machine Learning Engineer
+
+        - title: Lead Machine Learning Engineer
+          company: Polygraf.ai
+          company_url: 'https://www.polygraf.ai'
+          company_logo: rai
+          location: Austin, Texas, USA
+          date_start: '2022-04-01'
+
+        - title: Lead Machine Learning Engineer
           company: Revenue.ai
           company_url: 'https://www.revenue.ai'
           company_logo: rai
           location: Remote, Amsterdam, Noord-Holland, The Netherlands
           date_start: '2022-04-01'
           date_end:   '2023-07-01'
-          description: |2- 
-              Projects : 
-              -  Musigma - [mu-sigma.com](https://mu-sigma.com/)
-              -  PepsiCo - [pepsi.com](https://pepsi.com.br/)
-              -  Anicura - [anicuragroup.com](https://anicuragroup.com/)
-              -  Louis Dreyfus Company - [ldc.com](https://ldc.com/)
+          # description: |2- 
+          #     Projects : 
+          #     -  Musigma - [mu-sigma.com](https://mu-sigma.com/)
+          #     -  PepsiCo - [pepsi.com](https://pepsi.com.br/)
+          #     -  Anicura - [anicuragroup.com](https://anicuragroup.com/)
+          #     -  Louis Dreyfus Company - [ldc.com](https://ldc.com/)
               
-              Responsibilities: 
-              - Research-oriented machine learning engineer. 
-              - Proficient in Python, PySpark, Azure, and PostgreSQL.
-              - Built anomaly detection, classification, regression models for alerting pipelines.
-              - Specialized in designing end-to-end AI/ML modeling pipelines for efficient data-driven solutions.
+          #     Responsibilities: 
+          #     - Research-oriented machine learning engineer. 
+          #     - Proficient in Python, PySpark, Azure, and PostgreSQL.
+          #     - Built anomaly detection, classification, regression models for alerting pipelines.
+          #     - Specialized in designing end-to-end AI/ML modeling pipelines for efficient data-driven solutions.
 
           # text : Test
-        - title: Machine Learning Engineer
+        - title: Lead Machine Learning Engineer
           company: Koaila
           company_url: 'https://koaila.com/'
           company_logo: koaila
-          location: Remote, Paris, France
+          location: Paris, France
           date_start: '2023-05-01'
           date_end:   '2023-08-01'
-          description: |2-
-             Projects :
-             - Prophesee - [prophesee.ai](https://prophesee.ai/)
-             - Microtica - [microtica.com](https://microtica.com/)
-             - Filestage - [filestage.com](https://filestage.io)
+          # description: |2-
+            #  Projects :
+            #  - Prophesee - [prophesee.ai](https://prophesee.ai/)
+            #  - Microtica - [microtica.com](https://microtica.com/)
+            #  - Filestage - [filestage.com](https://filestage.io)
              
-             Responsibilities: 
-             - Research and develop clustering, classification, and semi-supervised models for user behavior analysis.
-             - Proficient in Python, FastAPI, AWS, Git, and modeling techniques.
-             - Specialize in AI/ML modeling pipeline design.
-             - Build text classification NLP models for sentiment analysis and content categorization.
+            #  Responsibilities: 
+            #  - Research and develop clustering, classification, and semi-supervised models for user behavior analysis.
+            #  - Proficient in Python, FastAPI, AWS, Git, and modeling techniques.
+            #  - Specialize in AI/ML modeling pipeline design.
+            #  - Build text classification NLP models for sentiment analysis and content categorization.
 
-        - title: Machine Learning Engineer
+        - title: Middle Machine Learning Engineer
           company: Voiceloft
           company_url: 'https://voiceloft.com/'
           company_logo: voiceloft
           location: Remote, Middletown, Delaware, United States
           date_start: '2021-02-01'
           date_end:   '2022-04-01'
-          description: |2-
-             Projects :
-             - Neural Space - [neuralspace.ai](https://neuralspace.ai/)
-             - Imla Project - [imla.az](https://voiceloft.com)
-             - Voooice - [voooice.com](https://voooice.com/)
+          # description: |2-
+          #    Projects :
+          #    - Neural Space - [neuralspace.ai](https://neuralspace.ai/)
+          #    - Imla Project - [imla.az](https://voiceloft.com)
+          #    - Voooice - [voooice.com](https://voooice.com/)
 
-             Responsibilities: 
-             - Deep learning researcher specialized in designing, developing, and continuously tuning voice recognition models. 
-             - Proficient in Python, Deep Learning, PySpark, PostgreSQL, AWS, PyTorch, TensorFlow, Speech Recognition.
-             - Designed deep learning modeling pipelines.
+          #    Responsibilities: 
+          #    - Deep learning researcher specialized in designing, developing, and continuously tuning voice recognition models. 
+          #    - Proficient in Python, Deep Learning, PySpark, PostgreSQL, AWS, PyTorch, TensorFlow, Speech Recognition.
+          #    - Designed deep learning modeling pipelines.
 
         - title: Machine Learning Instructor
           company: Data Science Academy
@@ -106,33 +114,33 @@ sections:
           location: Baku, Azerbaijan
           date_start: '2020-06-01'
           date_end:   '2021-06-01'
-          description: |2-
-            Projects :
-             - QSS Analytics - [qss.az](http://www.qss.az)
-             - Data Science Bootcamps - [dsa.az](http://www.dsa.az)
+          # description: |2-
+          #   Projects :
+          #    - QSS Analytics - [qss.az](http://www.qss.az)
+          #    - Data Science Bootcamps - [dsa.az](http://www.dsa.az)
             
-            Responsibilities: 
-            - Instructed and guided students in machine learning methodologies with proficiency in Python, R, Matlab, and SQL.
-            - Specialized in mentoring deep learning model research and development.
-            - Provided hands-on training and practical insights to empower students with the skills needed in the field of machine learning. 
-            - Participated in hackathons organized by [UNDP](https://www.undp.org), [ABB](https://abb-bank.az).
+          #   Responsibilities: 
+          #   - Instructed and guided students in machine learning methodologies with proficiency in Python, R, Matlab, and SQL.
+          #   - Specialized in mentoring deep learning model research and development.
+          #   - Provided hands-on training and practical insights to empower students with the skills needed in the field of machine learning. 
+          #   - Participated in hackathons organized by [UNDP](https://www.undp.org), [ABB](https://abb-bank.az).
 
         - title: Student Researcher
-          company: Baku Higher Oil School Robotics Lab
+          company: Baku Higher Oil School AI Lab
           company_url: 'https://bhos.edu.az'
           company_logo: bhos
           location: Baku, Azerbaijan
           date_start: '2018-03-01'
           date_end:   '2020-06-01'
-          description: |2-
-              Projects :
-              - III World Robot Olympiad - [wro.com](https://wro-association.org)
-              - AREA - Azerbaijan Robotics Engineering Academy - [robot.az](https://www.robot.org.az)
+          # description: |2-
+          #     Projects :
+          #     - III World Robot Olympiad - [wro.com](https://wro-association.org)
+          #     - AREA - Azerbaijan Robotics Engineering Academy - [robot.az](https://www.robot.org.az)
               
-              Responsibilities: 
-              - Student researcher specialized in deep learning model research and development.
-              - Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project of optimizing traffic light timing for vehicles with using Open CV.
-              - Worked on student conference papers focusing on deep learning applications under the guidance of Dr. Ali Parsayan
+          #     Responsibilities: 
+          #     - Student researcher specialized in deep learning model research and development.
+          #     - Represented Azerbaijan in Hungary among world countries in World Robot Olympiad with project of optimizing traffic light timing for vehicles with using Open CV.
+          #     - Worked on student conference papers focusing on deep learning applications under the guidance of Dr. Ali Parsayan
 
     design:
       columns: '2'
@@ -245,15 +253,15 @@ sections:
       title: Honors and Awards
       subtitle:
       text: |-
-        - 2022 : State Program on education of Azerbaijani youth abroad Scholarship Winner.
-        - 2022 : 3x National Student Scientific Conferences 1st place winner in Machine Learning Applications (2020, 2021, 2022).
-        - Achieved an IELTS score of 7.5.
-        - Ranked among the top 15 teams at the III World Robot Olympiad in Gyor, Hungary.
-        - Awarded the Golden Medal at the III World Robot Olympiad in Azerbaijan.
-        - Earned the Presidential Scholarship for exceptional academic performance.
-        - Scored an impressive 690 out of 700 on the University Entrance Exam. 
-        - High school graduate with a Golden Medal, placing in the top 5% among 60k graduating students.
-        - Honored as the Golden Medalist in the Respublic Physics Olympiad.
+        - 2022 : Winner, State Program on education of Azerbaijani youth abroad Scholarship Winner.
+        - 2022 : Winner, 3x National Student Scientific Conferences 1st place winner in Machine Learning Applications (2020, 2021, 2022).
+        - 2021 : Certified, Achieved an IELTS score of 7.5.
+        - 2020 : Finalist, Ranked among the top 15 teams at the III World Robot Olympiad in Gyor, Hungary.
+        - 2019 : Winner, Awarded the Golden Medal at the III World Robot Olympiad in Azerbaijan.
+        - 2018 : Winner, Earned the Presidential Scholarship for exceptional academic performance.
+        - 2017 : Scorer, Scored an impressive 690 out of 700 on the University Entrance Exam. 
+        - 2017 : Winner, High school graduate with a Golden Medal, placing in the top 5% among 60k graduating students.
+        - 2017 : Winner,Honored as the Golden Medalist in the Respublic Physics Olympiad.
     design:
       columns: '1'
 

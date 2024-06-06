@@ -110,13 +110,16 @@
 # url_video: ''
 
 
-title : B. [NLP & Vision] TorCHLIP - Optimized CLIP Model for Multimodal Deep Learning Implemented in PyTorch
-summary: Optimized implementation of the CLIP model, tailored for advanced multimodal deep learning tasks, using PyTorch. The project offers a strong foundation for researchers and developers to explore image and language comprehension. 
+title : B. [NLP & Vision] AzClip - Optimized Multimodal LLMs for Efficient Image Retrieval in Low‐Resource
+Languages Using Contrastive Loss
+summary: Investigated the integration of Multilingual BERT with base image encoder models such as ResNet50, EfficientNet0, Vision Transformer (ViT), and Tiny Swin Transformer for building vision‐language retrieval systems in Azerbaijani, a low‐resource language.
+Developed synthetic datasets through machine translation and image augmentation to enhance model training, achieving a peak performance of 0.87 MAP on Flickr30k with EfficientNet0.
+Released code and pre‐trained weights to foster further research in multimodal applications across underrepresented languages, demonstrat‐ ing significant adaptability with consistent performance across diverse datasets.
 tags:
   - Large Language Models
   - Computer Vision
 
-date: '2023-08-01 T00:00:00Z'
+date: '2023-12-01 T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
 # external_link: 'https://bhos.edu.az/en/conference/32'

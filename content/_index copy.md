@@ -41,18 +41,35 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Machine Learning Engineer
+
+        - title: Lead Machine Learning Engineer
+          company: Polygraf.ai
+          company_url: 'https://www.polygraf.ai'
+          company_logo: poli
+          location: Austin, Texas, USA
+          date_start: '2023-12-01'
+          date_end:   'Present'
+          description: |2-
+              - Developing AI solutions for data governance, content verification, and AI‐generated content detection.
+              - Ensuring the protection of confidential and proprietary data through advanced AI techniques.
+              - Developing work flows using AWS components like Sagemaker, Lambda, Step Functions as building blocks for creating pipelines with stages for training, validation, scoring, deployment to production for Machine Learning Models.
+              - Fine‐tuning BERT, RoBERTa, DeBERTa, and T5 models for text classification to identify AI‐generated content, achieved a 92% F1 score, and deployed them through AWS SageMaker and Google Cloud (GCP) Deep Learning VM in Python.
+              - Utilizing LSTM and pre‐trained CNN models for transfer learning to detect deepfake images andv ideos, preventing misinformation.
+              - Developing Retrieval‐Augmented Generation (RAG) models and a hybrid reranking system to enhance text generation quality to avoid hallucination in LLM usage across different domains.
+
+        - title: Lead Machine Learning Engineer
           company: Revenue.ai
           company_url: 'https://www.revenue.ai'
           company_logo: rai
           location: Remote, Amsterdam, Noord-Holland, The Netherlands
-          date_start: '2022-03-01'
+          date_start: '2022-04-01'
           date_end:   '2023-07-01'
           description: |2-
               - Musigma - [mu-sigma.com](https://mu-sigma.com/) | 01.2023 - 04.2023, Remote, Illinois, USA. Developed chatbot models, successfully deployed them in production environments, and establishing a robust model traning pipeline.
               - PepsiCo - [pepsico.com.br](https://pepsico.com.br/) | 08.2022 - 01.2023, Remote, Brazil. Developed a custom NLP models and leveraged that for filter detection within user intents. Integrated filter detection into the chatbot and dashboard for enhanced functionality.
               - Anicura - [anicuragroup.com](https://anicuragroup.com/) | 05.2022 - 08.2022, Remote, Italy, Sweden, Germany. Developed text classification NLP models for predicting multi-level product categories within different markets.
               - Louis Dreyfus Company - [ldc.com](https://ldc.com/) | 03.2022 - 05.2022  Remote, France. Developed robust ML models, harnessed data processing and visualization tools to drive data-driven decision-making. 
+
         - title: Machine Learning Engineer
           company: Koaila
           company_url: 'https://koaila.com/'

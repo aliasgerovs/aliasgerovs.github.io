@@ -110,7 +110,7 @@
 # url_video: ''
 
 
-title : J. [Vision] Classification of Retinal Optical Coherence Tomography Images
+title : H. [Vision] Classification of Retinal Optical Coherence Tomography Images
 summary: This project utilized Retinal Optical Coherence Tomography (OCT) images, applying machine learning and deep learning techniques for effective classification. Convolutional Auto Encoders compressed the images, and SVM and Artificial Neural Networks classified them into four classes.
 tags:
   - Object Detection

@@ -84,15 +84,21 @@
 # url_slides: ''
 # url_video: ''
 
-title: A. [NLP & Vision] FeedVQA -  Few‑shot Visual Question Answering with Language Model Feedback
-summary: Leveraging LLMs knowledge‑based visual question answering, harnesses generated captions as contextual inputs for a robust answer prediction model. With this approach, the captioning model is able to be improved through feedback and guidance from the LLMs.
+title: A. [NLP] Memory Mixology - Enhanced RAG Using Hybrid Re‐ranking and Sentence Similarity
+summary: Developed the Retrieval‐Augmented Generation (RAG) by integrating sequence‐to‐sequence models with NFCorpus and SciFact datasets to address limitations in memory, interpretability, and output quality of conventional pre‐trained models.
+
+Integrated parametric and non‐parametric techniques in the RAG system to improve text relevance and accuracy for complex queries.
+
+Applied the mixedbread‐ai/mxbai‐embed‐large‐v1 model to generate document embeddings, using BM25 for initial retrieval followed by Sentence Transformer‐based re‐ranking to improve the selection accuracy of relevant texts.
+
+Achieved performance metrics with the RAG system, recording 71.28% accuracy, 92.67% precision, and 71.28% recall in identifying the top‐20 most relevant documents from a large corpus.
 
 tags:
   - Computer Vision
   - Large Language Models
   - Deep Learning
 
-date: '2023-10-01 T00:00:00Z'
+date: '2024-02-01 T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
 # external_link: ''
