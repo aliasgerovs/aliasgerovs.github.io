@@ -19,14 +19,17 @@ jobs:
           submodules: true  # Fetch any Git submodules (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
+      - name: Clear Hugo Cache
+        run: hugo --gc --cleanDestinationDir
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build
-        run: hugo 
+      - name: Build with Verbose Output
+        run: hugo --verbose --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
