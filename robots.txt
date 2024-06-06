@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://aliasgerovs.github.io/sitemap.xml

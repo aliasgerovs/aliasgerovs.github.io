@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Paper Reviews | Ali Asgarov</title><link>https://aliasgerovs.github.io/category/paper-reviews/</link><atom:link href="https://aliasgerovs.github.io/category/paper-reviews/index.xml" rel="self" type="application/rss+xml"/><description>Paper Reviews</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 29 Oct 2023 00:00:00 +0000</lastBuildDate><image><url>https://aliasgerovs.github.io/media/icon_hu589cfebf829ca0be6fa534080fda45bf_12159_512x512_fill_lanczos_center_3.png</url><title>Paper Reviews</title><link>https://aliasgerovs.github.io/category/paper-reviews/</link></image><item><title>BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation.</title><link>https://aliasgerovs.github.io/post/blip/</link><pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate><guid>https://aliasgerovs.github.io/post/blip/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>&lt;strong>What is the main research question or hypothesis and why it is important ?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Can a VLP framework, BLIP, effectively utilize noisy web data for both understanding-based and generation-based vision-language tasks, and improve performance across these tasks?&lt;/li>
+&lt;li>Current VLP models often specialize in either understanding-based tasks (like image-text retrieval) or generation-based tasks (like image captioning), but not both.&lt;/li>
+&lt;li>Current VLP models are relying on large datasets of noisy image-text pairs from the web, which can limit performance due to suboptimal supervision.&lt;/li>
+&lt;/ul>
+&lt;h2 id="literature-review">Literature Review&lt;/h2>
+&lt;p>&lt;strong>Which previous studies and what gaps are highlighted ?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Prior work relied on noisy web-crawled data, underestimating the impact of this noise on VLP performance.&lt;/li>
+&lt;li>Existing models struggle to perform well on both understanding-based tasks (like image-text retrieval) and generation-based tasks (like image captioning).&lt;/li>
+&lt;li>Traditional knowledge distillation methods are not fully effective for VLP, as they don&amp;rsquo;t leverage the rich semantic nature of language.&lt;/li>
+&lt;/ul>
+&lt;h2 id="methodology">Methodology&lt;/h2>
+&lt;p>&lt;strong>How was the study designed, and why was this design chosen?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>BLIP (Bootstrapping Language-Image Pre-training) framework to address the issues with noisy web-crawled image-text pairs by introducing a new model architecture called MED (Multimodal Mixture of Encoder-Decoder) and a dataset bootstrapping method named CapFilt.&lt;/li>
+&lt;li>&lt;strong>Model Architecture (MED):&lt;/strong> The MED architecture was chosen for its flexibility in handling both understanding-based and generation-based vision-language tasks. It utilizes a visual transformer as the image encoder and a BERT-like structure for text encoding&lt;/li>
+&lt;li>&lt;strong>CapFilt (Captioning and Filtering):&lt;/strong> This method was chosen to improve the quality of the training data. It involves generating synthetic captions for web images using an image-grounded text decoder (captioner) and filtering out noisy image-text pairs using an image-grounded text encoder (filter). Both components are fine-tuned on a high-quality dataset like COCO. This approach helps in creating a cleaner, more reliable dataset for pre-training the model.&lt;/li>
+&lt;/ul>
+&lt;h2 id="experiments-and-results">Experiments and Results&lt;/h2>
+&lt;p>&lt;strong>What were the main findings of the study and what were the limitations ?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>The models are implemented in PyTorch and pre-trained on a substantial hardware setup with 16-GPU nodes.&lt;/li>
+&lt;li>Two types of Vision Transformers (ViT-B/16 and ViT-L/16) are explored for image transformation, initialized from models pre-trained on ImageNet&lt;/li>
+&lt;li>For text transformation, BERTbase is used.&lt;/li>
+&lt;li>CapFilt appears to enhance performance significantly, particularly when both the captioner and the filter are applied together.&lt;/li>
+&lt;li>Here, the paper discusses the importance of diversity in synthetic captions generated during pre-training.&lt;/li>
+&lt;li>The experiments highlight the importance of pre-training details, dataset quality (improved by CapFilt), caption diversity, and parameter sharing strategies in enhancing the model&amp;rsquo;s performance.&lt;/li>
+&lt;li>BLIP is evaluated on COCO and Flickr30K datasets.&lt;/li>
+&lt;li>It uses Image-Text Contrastive (ITC) and Image-Text Matching (ITM) losses during fine-tuning.&lt;/li>
+&lt;li>Evaluated on NoCaps and COCO datasets using the Language Modeling (LM) loss.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>&lt;strong>How do the findings address the initial research question or hypothesis and are there recommendations for future research??&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>BLIP, a new VLP framework with stateof-the-art performance on a wide range of downstream
+vision-language tasks, including understanding-based and generation-based tasks.&lt;/li>
+&lt;li>Further research areas:
+&lt;ul>
+&lt;li>Multiple rounds of dataset bootstrapping&lt;/li>
+&lt;li>Generate multiple synthetic captions per image to further enlarge the pre-training corpus&lt;/li>
+&lt;li>Model ensemble by training multiple different captioners and filters and combining their forces in CapFilt&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://doi.org/10.48550/arXiv.2201.12086" target="_blank" rel="noopener">BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>VisualGPT: Data-efficient Adaptation of Pretrained Language Models for Image Captioning.</title><link>https://aliasgerovs.github.io/post/visual-gpt/</link><pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate><guid>https://aliasgerovs.github.io/post/visual-gpt/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>&lt;strong>What is the main research question or hypothesis and why it is important ?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>How can we efficiently adapt a large pre-trained language model to new domains of image captioning with small quantities of multimodal data?&lt;/li>
+&lt;li>It tackles the challenge of limited annotated data availability in real-world applications of machine learning, specifically in the context of generating accurate and contextually relevant captions for images.&lt;/li>
+&lt;/ul>
+&lt;h2 id="literature-review">Literature Review&lt;/h2>
+&lt;p>&lt;strong>Which previous studies and what gaps are highlighted ?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Focused on filling templates with extracted objects, attributes, and relationships - not NLP.&lt;/li>
+&lt;li>Feng et al. propose unsupervised captioning without using paired
+image-caption supervision&lt;/li>
+&lt;/ul>
+&lt;h2 id="methodology">Methodology&lt;/h2>
+&lt;p>&lt;strong>How was the study designed, and why was this design chosen?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Designed to adapt a pretrained language model (PLM), specifically GPT-2, for the task of image captioning.&lt;/li>
+&lt;li>Design aimed to exploit this existing knowledge to generate coherent and contextually relevant captions without having to train a model from scratch.&lt;/li>
+&lt;li>Encoder-decoder attention, which allows the integration of visual information from the image encoder with the linguistic knowledge of the PLM.&lt;/li>
+&lt;li>&lt;strong>Self-Resurrecting Activation Unit (SRAU)&lt;/strong>: SRAUs were introduced to control the balance between visual information and linguistic knowledge during caption generation. This design choice was made to ensure that the model refers to the visual input when necessary while primarily relying on its linguistic knowledge.&lt;/li>
+&lt;li>Designed to harness the power of PLMs for image captioning while carefully balancing visual and linguistic information, using innovative mechanisms like SRAUs and meshed connections, and optimizing for human-like caption quality through reinforcement learning.&lt;/li>
+&lt;/ul>
+&lt;h2 id="experiments-and-results">Experiments and Results&lt;/h2>
+&lt;p>&lt;strong>What were the main findings of the study and what were the limitations ?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>The paper evaluates the model on three datasets: &lt;strong>MS COCO, Conceptual Captions, IU X-ray&lt;/strong>&lt;/li>
+&lt;li>The performance is measured using metrics like BLEU, METEOR, ROUGE, and CIDEr.&lt;/li>
+&lt;li>The paper compares the model with several state-of-the-art transformer-based models:&lt;/li>
+&lt;li>&lt;strong>Plain Transformer&lt;/strong>: A basic transformer model.&lt;/li>
+&lt;li>&lt;strong>AoA Transformer&lt;/strong>: Integrates an attention-on-attention module.&lt;/li>
+&lt;li>&lt;strong>M2 Transformer&lt;/strong>: Introduces a meshed connection between encoder and decoder.&lt;/li>
+&lt;li>&lt;strong>X-Transformer&lt;/strong>: Uses bilinear pooling for visual information.&lt;/li>
+&lt;li>&lt;strong>OSCAR&lt;/strong>: Finetunes BERT initialization on image-language datasets.&lt;/li>
+&lt;li>The paper also creates variants of these models using GPT as the decoder for a fair comparison. For the VisualGPT model, a hyperparameter τ is set to 0.2, which helps control sparsity. All models are trained in a reinforcement learning setting, and the hyperparameters are tuned on the validation set of MS COCO.&lt;/li>
+&lt;li>VisualGPT outperforms all baselines in various training data scenarios:&lt;/li>
+&lt;li>On MS COCO, it outperforms the best baseline by 4.1 CIDEr (0.1% data), 6.4 CIDEr (0.5% data), and 2.5 CIDEr (1% data).&lt;/li>
+&lt;li>On Conceptual Captions, it surpasses the best baseline by 4.2 CIDEr (0.1% data), 3.5 CIDEr (0.5% data), and 0.3 CIDEr (1% data).&lt;/li>
+&lt;li>&lt;strong>Comparison with BERT-based model&lt;/strong>: VisualGPT is compared with OSCAR, a BERT-based model, and shows better performance on both datasets. This validates the choice of using GPT as a decoder, given its autoregressive nature aligning more closely with image captioning objectives.&lt;/li>
+&lt;/ul>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>&lt;strong>How do the findings address the initial research question or hypothesis and are there recommendations for future research?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>VisualGPT can effectively generate image captions with limited training data, making it ideal for low-resource languages and specialized fields&lt;/li>
+&lt;li>Explore different pre-training methods for performance improvement.&lt;/li>
+&lt;/ul>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://doi.org/10.48550/arXiv.2102.10407" target="_blank" rel="noopener">VisualGPT: Data-efficient Adaptation of Pretrained Language Models for Image Captioning.&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Visual Instruction Tuning.</title><link>https://aliasgerovs.github.io/post/visual_tuning/</link><pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><guid>https://aliasgerovs.github.io/post/visual_tuning/</guid><description>&lt;h2 id="problem-statement">Problem Statement:&lt;/h2>
+&lt;p>The paper addresses the limitations of existing vision-language pretraining models by highlighting the need for aligning events and their associated arguments in images. The goal is to enable vision-language models to understand the semantics of images and the roles of objects within those images.&lt;/p>
+&lt;h2 id="event-graph-alignment-loss">Event Graph Alignment Loss:&lt;/h2>
+&lt;p>The paper introduces an innovative evaluation metric, the &amp;ldquo;Event Graph Alignment Loss,&amp;rdquo; to assess the alignment between vision and language in complex event-rich datasets.&lt;/p>
+&lt;h2 id="pretraining-with-large-event-rich-datasets">Pretraining with Large Event-Rich Datasets:&lt;/h2>
+&lt;p>To enhance model understanding, the paper employs a large event-rich dataset for pretraining, offering more challenging benchmarks for image retrieval. This approach aims to promote a deeper comprehension of detailed, lengthy event descriptions.&lt;/p>
+&lt;h2 id="zero-shot-clip-event-model">Zero-Shot Clip Event Model:&lt;/h2>
+&lt;p>The paper utilizes the &amp;ldquo;ZeroShot Clip Event&amp;rdquo; model, achieving a 5% improvement in event extraction F-score compared to standard Multimedia Event Extraction methods.&lt;/p>
+&lt;h2 id="detailed-approach">Detailed Approach:&lt;/h2>
+&lt;p>The paper outlines its approach in detail, emphasizing the utilization of text information extraction techniques to extract event structures from images. Object detection is performed using R-CNN, and primary event detection focuses on identifying the key event, especially when multiple events are present.&lt;/p>
+&lt;h2 id="experiments-and-data">Experiments and Data:&lt;/h2>
+&lt;p>The experiments involve a dataset of 100,000 images from news websites. The ViT-B/32 architecture initializes the model parameters, and the MME^2 framework is employed. Captions provide distant supervision to interpret images, and negative event descriptions are generated using prompt functions for contrasting. Event graph alignment is achieved through optimal transport methods.&lt;/p>
+&lt;h2 id="incorporating-event-structure-in-pretraining">Incorporating Event Structure in Pretraining:&lt;/h2>
+&lt;p>The paper emphasizes the incorporation of event-structured knowledge into vision-language pretraining, demonstrating a focus on zero-shot learning.&lt;/p>
+&lt;h2 id="conclusion-and-future-directions">Conclusion and Future Directions:&lt;/h2>
+&lt;p>The paper underscores the significance of aligning events and their arguments in vision-language models. Future research may explore how this approach can be further enhanced and extended to other challenging vision-language tasks.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://doi.org/10.48550/arXiv.2304.08485" target="_blank" rel="noopener">Visual Instruction Tuning&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Measuring Catastrophic Forgetting in Neural Networks.</title><link>https://aliasgerovs.github.io/post/catastrophic_forgetting/</link><pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate><guid>https://aliasgerovs.github.io/post/catastrophic_forgetting/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The paper discusses the challenges associated with deep neural network when it comes to &lt;strong>incremental learning&lt;/strong> and &lt;strong>catastrophic forgetting&lt;/strong>. Catastrophic forgetting is the issue once a neural network is trained for a specific task, it is challenging to adapt it to new tasks without forgetting the knowledge it has gained from previous tasks. Also, it mentions that &lt;strong>various methods and solutions&lt;/strong> have been proposed to address this issue, but there is &lt;strong>no comprehensive evaluation&lt;/strong> of those methods in the different types of the real-world data. As a proposed solution to show that, paper emphasizes the need for evaluating these mechanisms - regularization, ensembling, rehearsal, dual-memory models, and sparsecoding using new metrics and benchmarks. This is important because the current evaluations are inconsistent and often conducted on &lt;strong>small-scale problems like MNIST&lt;/strong>.
+Paper says that while we are talking about the high accuracy of DNNs methods today, we still need to accept that catastrophic forgetting issue &lt;strong>has not been still solved&lt;/strong>, we can see it from the simple MLP – Multi Layer Perceptron models as there is inability of standard DNN architectures and training algorithms to handle incremental learning without experiencing catastrophic forgetting. There is still need for retraining still, which could be not possible to do that all the time due to being time-consuming and &lt;strong>computationally intensive&lt;/strong>, especially when dealing with large datasets.&lt;/p>
+&lt;h2 id="approach">Approach&lt;/h2>
+&lt;p>For conducting the study, paper use MLP incrementally trained for the classification tasks.&lt;/p>
+&lt;p>&lt;strong>Dataset organization:&lt;/strong> The labeled training dataset, denoted as D, is structured into multiple study sessions or batches, represented as {Bt} for t = 1 to T. Each study session Bt consists of a varying number of labeled training data points, with Nt data points in session t. Each data point is represented as (xj, yj) where xj is the feature vector of dimension d, and yj is a discrete label.&lt;/p>
+&lt;p>&lt;strong>Sequential Learning:&lt;/strong> The neural network is allowed to learn from these study sessions sequentially, in order they are presented. It means that in time t, neural network can only learn from the training session Bt. Network is also allowed to use auxiliary memory to store information from previous sessions which needs to be reported.&lt;/p>
+&lt;p>&lt;strong>Non-IID Data&lt;/strong>: As some batches could have the data which is not identically and independently distributed across all categories, data is assumed &lt;strong>non-IID here&lt;/strong>.&lt;/p>
+&lt;p>&lt;strong>Evaluation&lt;/strong>: The paper says that during the training process, between the training sessions model may undergo testing over the test data since the primary aim here is the assessing of how well the model retains knowledge from previous sessions when learning new ones.&lt;/p>
+&lt;p>Paper explains how &lt;strong>“Catastrophic Forgetting&lt;/strong>” occur with clearly mentioning that &lt;strong>stability-plasticity&lt;/strong> dilemma. Network requires plasticity in order to learn new tasks, but at the same time once there are high weight fluctuations, model starts to forget the previously learned data. It explains that while keeping the weights stable could solve the issue, but it prevents model to learn new training data. That is why it is called stability-plasticity dilemma.
+Here are &lt;strong>two main approaches&lt;/strong> that are mentioned by paper. The first one is keeping the old and new representations separate, which could be done using &lt;strong>distributed models, regularization and ensembling.&lt;/strong> The second one is combining new and old data and training on merged data, which is not the desired case when the data size is huge, as explained at the beginning of the review.&lt;/p>
+&lt;h2 id="previous-work">Previous Work&lt;/h2>
+&lt;p>Goodfellow and other have compared the different &lt;strong>activation functions&lt;/strong> and &lt;strong>learning algorithms&lt;/strong>, even though both are not designed for solving the catastrophic forgetting but it is commonly concluded that learning algorithms have &lt;strong>larger impact&lt;/strong> on that which is the focus of the paper.&lt;/p>
+&lt;p>Paper also talks about &lt;strong>Evolved Plastic ANN&lt;/strong> that has been studied by Soltoggio, Stanley and Risi, where neural networks can establish the plasticity with time but still there was no established benchmarks for the comparison of the performance of that networks over different real-world datasets.&lt;/p>
+&lt;p>&lt;strong>How to mitigate Catastrophic Forgetting?&lt;/strong>&lt;/p>
+&lt;p>Previously suggested &lt;strong>5 approaches&lt;/strong> have been discussed in the paper.
+&lt;strong>Regularization&lt;/strong>: It describes the idea here is addition of the constraints to the weight updating process. The approach proposed has &lt;strong>fast&lt;/strong> and &lt;strong>slow&lt;/strong> weights, where the former one has the plasticity where it is affected by the updates considerably, while the latter one has the stability which is hardly affected by the weights updates and as a result it remembers the previous learned data. Here EWC is used for the evaluation of the regularization.&lt;/p>
+&lt;p>&lt;strong>Ensemble Methods:&lt;/strong> Here the idea is explicitly or implicitly training classification NN models and ensembling them for the prediction. For the explicite ensembling method, &lt;strong>multiple sub-neural&lt;/strong> networks are being trained for each new session, however memory usage is increased a lot in that case. There are some approaches for alleviating this issue, &lt;strong>Accuracy Weighted Ensembles&lt;/strong>, and &lt;strong>Life-long Machine Learning&lt;/strong> which are automatically deciding which subnets should be added to the ensemble. For the implicite ensembling method, &lt;strong>PathNet&lt;/strong> is the one of the proposed solutions, which finds the optimal path in the neural network for each learning session and it keeps those paths frozen, and when new sessions learned previous ones are not forgotten. PathNet is used here for the evaluation of the ensemble methods.&lt;/p>
+&lt;p>&lt;strong>Rehearsal Methods:&lt;/strong> Here the described idea is rehearsal methods try to &lt;strong>mix data&lt;/strong> from the earlier sessions with the current session data to mitigate the CF. The main border here is the need for the storing of the previous data which is &lt;strong>costly&lt;/strong>. There is also pseudorehersal methods which are used to generate patterns that are combined with the current training session.
+Here is also &lt;strong>GeppNet&lt;/strong>, which uses self-organizing map SOM as a hidden layer to topologically recognize the data from the input layer and clustering it to &lt;strong>2-D lattice&lt;/strong>. Here to evaluate the rehearsal methods GeppNet is being used.&lt;/p>
+&lt;p>&lt;strong>Dual-Memory Models:&lt;/strong> The paper describes of the dual memory models have been adapted from the mammalian brain, which is assumed to store memories in two distinct spheres, hippocampus and pre-frontal cortex. Dual Memory Models uses rehearsal methods but not all rehearsal methods use Dual-Memory models. Paper uses GeppNet and GeppNet + STM (Short Term Memory) for the evaluation of the dual memory models which is used for mitigating the CF issue.&lt;/p>
+&lt;p>&lt;strong>Sparse-Coding Methods:&lt;/strong>
+The paper explains &lt;strong>interference&lt;/strong> between new and previously learned representations in the neural network as one of the primary reasons for the catastrophic forgetting issue. Sparse-Coding methods can reduce the chance of interference however it could ruin the generalization. It talks about two methods here &lt;strong>CALM&lt;/strong> and &lt;strong>ALCOVE&lt;/strong>, where former one is searching for the node which has not been dedicated for showing other information or concept while latter one ALCOVE is shallow neural network uses distance-based representation which result in keeping weights unchanged even there is new data learned.&lt;/p>
+&lt;p>&lt;strong>Evaluation of the Models&lt;/strong>
+Five models have been evaluated in this paper, namely &lt;strong>EWC, PathNet, GeppNet, GeppNet+STM, and FEL&lt;/strong>. The number of parameters to be used across all models, used bas MLP model which performed well for CUB-200 dataset and Audio Set when training in &lt;strong>offline mood&lt;/strong>, the process of training a machine learning model on a fixed dataset in advance, without real-time adaptation to new data. To provide fairness in the comparison the number of parameters in the incremental learning has been chosen as much as close to the base MLP setup.&lt;/p>
+&lt;p>&lt;strong>Elastic Weight Consolidation:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>EWC adds an additional constraint to the loss function, and directly plasticity away from the weights that contribute most to the previous tasks.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>PathNet:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Utilizes a genetic algorithm to find an optimal learning path.&lt;/li>
+&lt;li>Creates a new output layer for each learning session to retain previous session data.&lt;/li>
+&lt;li>Risks losing learning ability if the network&amp;rsquo;s capacity is exceeded, potentially overwriting valuable information.&lt;/li>
+&lt;li>Each path in PathNet has its own set of weights, updated independently.&lt;/li>
+&lt;li>This independence can lead to inefficient resource allocation, with some paths becoming overly specialized while others remain underutilized.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>GeppNet:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>A biologically inspired model that addresses forgetting by rehearsing information.&lt;/li>
+&lt;li>Utilizes a Self-Organizing Map (SOM) to project input data into a 2D lattice.&lt;/li>
+&lt;li>Initially trains on the first session and then learns subsequent sessions incrementally.&lt;/li>
+&lt;li>Updates the SOM layer and classification layer when detecting novel data.&lt;/li>
+&lt;li>GeppNet+STM variant stores novel data in a short-term memory buffer and replays it during the sleep phase.&lt;/li>
+&lt;li>Capable of making real-time predictions by determining memory location in short-term or long-term storage.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Fixed Expansion Layer (FEL):&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Uses sparsity within a neural network featuring two hidden layers to prevent catastrophic forgetting.&lt;/li>
+&lt;li>The second hidden layer (FEL-layer) has more capacity but utilizes sparse, fixed weights.&lt;/li>
+&lt;li>Partially connected to the first hidden layer, with only some FEL layer units contributing to the final output.&lt;/li>
+&lt;li>This design preserves knowledge while learning new tasks, preventing catastrophic forgetting.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Experiments and Results&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Dataset selection:&lt;/strong> As stated before, paper reiterate on the point that today CF mitigating methods have not been properly tested on the real-world datasets. Here the reasons for the choosing CUB-200, AudioSet and MNIST is due to having large number of classes, small number of samples in some classes, and different data modalities namely image and audio.
+For the comprehensive evaluation, different benchmarks settled up for the model performance.
+Data Permutation Experiment: Which is permutation of the feature vector across sessions, and then evaluation of the models’ performance how it recalls the previous training’s data.&lt;/p>
+&lt;p>&lt;strong>Incremental Class Learning:&lt;/strong> Model will learn each class in new session after learning the base set.&lt;/p>
+&lt;p>&lt;strong>Multi-Modal Learning:&lt;/strong> Model will learn different datasets, for example data for image classification and then data for audio classification and then evaluation of how model performs.&lt;/p>
+&lt;p>&lt;strong>Metrics&lt;/strong>: Here three different types of metrics suggested by paper.&lt;/p>
+&lt;ul>
+&lt;li>αnew,i - The test accuracy for session i immediately after it is learned.&lt;/li>
+&lt;li>αbase,i - Test accuracy on the first session.&lt;/li>
+&lt;li>αall, i - Test accuracy on the all sessions.&lt;/li>
+&lt;li>αideal,i - Offline MLP accuracy on the base set, which we assume is the ideal performance.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Results&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Data Permutation Experiment:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>PathNet performed best overall in data permutation experiments, except for CUB-200.&lt;/li>
+&lt;li>PathNet requires information about the session during testing, potentially giving it an unfair advantage.&lt;/li>
+&lt;li>PathNet saturates quickly due to the lack of feature sharing, leaving only the output layer trainable.&lt;/li>
+&lt;li>GeppNet variants excelled at incremental class learning.&lt;/li>
+&lt;li>EWC was the second-best performer in data permutation experiments, redirecting plasticity instead of freezing weights.&lt;/li>
+&lt;li>GeppNet+STM performed well at retaining the base set but struggled with new classes.&lt;/li>
+&lt;li>FEL improved significantly but had a 40x memory footprint increase, suggesting it may not be ideal for deployment.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Multi-Modal Experiment:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>EWC performed best in multi-modal experiments, possibly because features between modalities were non-redundant.&lt;/li>
+&lt;li>PathNet may work better with data having different but not entirely dissimilar representations.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Memory and Efficiency:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>PathNet and GeppNet variants have different memory usage and training speed.&lt;/li>
+&lt;li>PathNet creates a new output layer for each session, making it slow in some tasks.&lt;/li>
+&lt;li>Models that expand as sessions increase or store data from prior sessions may have limited real-world application due to memory constraints.&lt;/li>
+&lt;li>Memory footprint should be considered when comparing models for incremental learning.&lt;/li>
+&lt;li>Metrics can be adapted to other training paradigms like reinforcement learning or unsupervised learning.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Optimal Performers:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>A combination of rehearsal/pseudo-rehearsal and dual-memory systems were optimal for incremental class learning.&lt;/li>
+&lt;li>Regularization and ensembling worked best for separating dissimilar sessions in a common DNN framework.&lt;/li>
+&lt;/ul>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>Catastrophic forgetting is not solved by any single method; combinations of mechanisms are needed.
+Future work should involve using larger and more challenging datasets in lifelong learning research.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://ojs.aaai.org/index.php/AAAI/article/view/11651" target="_blank" rel="noopener">Measuring catastrophic forgetting in neural networks&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

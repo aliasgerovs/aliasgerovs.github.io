@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>zero-shot transfer | Ali Asgarov</title><link>https://aliasgerovs.github.io/tag/zero-shot-transfer/</link><atom:link href="https://aliasgerovs.github.io/tag/zero-shot-transfer/index.xml" rel="self" type="application/rss+xml"/><description>zero-shot transfer</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 29 Oct 2023 00:00:00 +0000</lastBuildDate><image><url>https://aliasgerovs.github.io/media/icon_hu589cfebf829ca0be6fa534080fda45bf_12159_512x512_fill_lanczos_center_3.png</url><title>zero-shot transfer</title><link>https://aliasgerovs.github.io/tag/zero-shot-transfer/</link></image><item><title>BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation.</title><link>https://aliasgerovs.github.io/post/blip/</link><pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate><guid>https://aliasgerovs.github.io/post/blip/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>&lt;strong>What is the main research question or hypothesis and why it is important ?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Can a VLP framework, BLIP, effectively utilize noisy web data for both understanding-based and generation-based vision-language tasks, and improve performance across these tasks?&lt;/li>
+&lt;li>Current VLP models often specialize in either understanding-based tasks (like image-text retrieval) or generation-based tasks (like image captioning), but not both.&lt;/li>
+&lt;li>Current VLP models are relying on large datasets of noisy image-text pairs from the web, which can limit performance due to suboptimal supervision.&lt;/li>
+&lt;/ul>
+&lt;h2 id="literature-review">Literature Review&lt;/h2>
+&lt;p>&lt;strong>Which previous studies and what gaps are highlighted ?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Prior work relied on noisy web-crawled data, underestimating the impact of this noise on VLP performance.&lt;/li>
+&lt;li>Existing models struggle to perform well on both understanding-based tasks (like image-text retrieval) and generation-based tasks (like image captioning).&lt;/li>
+&lt;li>Traditional knowledge distillation methods are not fully effective for VLP, as they don&amp;rsquo;t leverage the rich semantic nature of language.&lt;/li>
+&lt;/ul>
+&lt;h2 id="methodology">Methodology&lt;/h2>
+&lt;p>&lt;strong>How was the study designed, and why was this design chosen?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>BLIP (Bootstrapping Language-Image Pre-training) framework to address the issues with noisy web-crawled image-text pairs by introducing a new model architecture called MED (Multimodal Mixture of Encoder-Decoder) and a dataset bootstrapping method named CapFilt.&lt;/li>
+&lt;li>&lt;strong>Model Architecture (MED):&lt;/strong> The MED architecture was chosen for its flexibility in handling both understanding-based and generation-based vision-language tasks. It utilizes a visual transformer as the image encoder and a BERT-like structure for text encoding&lt;/li>
+&lt;li>&lt;strong>CapFilt (Captioning and Filtering):&lt;/strong> This method was chosen to improve the quality of the training data. It involves generating synthetic captions for web images using an image-grounded text decoder (captioner) and filtering out noisy image-text pairs using an image-grounded text encoder (filter). Both components are fine-tuned on a high-quality dataset like COCO. This approach helps in creating a cleaner, more reliable dataset for pre-training the model.&lt;/li>
+&lt;/ul>
+&lt;h2 id="experiments-and-results">Experiments and Results&lt;/h2>
+&lt;p>&lt;strong>What were the main findings of the study and what were the limitations ?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>The models are implemented in PyTorch and pre-trained on a substantial hardware setup with 16-GPU nodes.&lt;/li>
+&lt;li>Two types of Vision Transformers (ViT-B/16 and ViT-L/16) are explored for image transformation, initialized from models pre-trained on ImageNet&lt;/li>
+&lt;li>For text transformation, BERTbase is used.&lt;/li>
+&lt;li>CapFilt appears to enhance performance significantly, particularly when both the captioner and the filter are applied together.&lt;/li>
+&lt;li>Here, the paper discusses the importance of diversity in synthetic captions generated during pre-training.&lt;/li>
+&lt;li>The experiments highlight the importance of pre-training details, dataset quality (improved by CapFilt), caption diversity, and parameter sharing strategies in enhancing the model&amp;rsquo;s performance.&lt;/li>
+&lt;li>BLIP is evaluated on COCO and Flickr30K datasets.&lt;/li>
+&lt;li>It uses Image-Text Contrastive (ITC) and Image-Text Matching (ITM) losses during fine-tuning.&lt;/li>
+&lt;li>Evaluated on NoCaps and COCO datasets using the Language Modeling (LM) loss.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>&lt;strong>How do the findings address the initial research question or hypothesis and are there recommendations for future research??&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>BLIP, a new VLP framework with stateof-the-art performance on a wide range of downstream
+vision-language tasks, including understanding-based and generation-based tasks.&lt;/li>
+&lt;li>Further research areas:
+&lt;ul>
+&lt;li>Multiple rounds of dataset bootstrapping&lt;/li>
+&lt;li>Generate multiple synthetic captions per image to further enlarge the pre-training corpus&lt;/li>
+&lt;li>Model ensemble by training multiple different captioners and filters and combining their forces in CapFilt&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://doi.org/10.48550/arXiv.2201.12086" target="_blank" rel="noopener">BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>
