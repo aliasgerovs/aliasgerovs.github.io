@@ -42,18 +42,18 @@ sections:
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
 
-        # - title: Lead Machine Learning Engineer
-        #   company: Polygraf.ai
-        #   company_url: 'https://www.polygraf.ai'
-        #   company_logo: poli
-        #   location: Austin, Texas, USA
-        #   date_start: '2022-04-01'
+        - title: Lead Machine Learning Engineer
+          company: Polygraf.ai
+          company_url: 'https://www.polygraf.ai'
+          company_logo: poli
+          location: Austin, Texas, USA
+          date_start: '2022-04-01'
 
         - title: Lead Machine Learning Engineer
           company: Revenue.ai
           company_url: 'https://www.revenue.ai'
           company_logo: rai
-          location: Remote, Amsterdam, Noord-Holland, The Netherlands
+          location: Amsterdam, Noord-Holland, The Netherlands
           date_start: '2022-04-01'
           date_end:   '2023-07-01'
           # description: |2- 
@@ -93,7 +93,7 @@ sections:
           company: Voiceloft
           company_url: 'https://voiceloft.com/'
           company_logo: voiceloft
-          location: Remote, Middletown, Delaware, United States
+          location: Middletown, Delaware, United States
           date_start: '2021-02-01'
           date_end:   '2022-04-01'
           # description: |2-
