@@ -112,9 +112,7 @@
 
 title : B. [NLP & Vision] AzClip - Optimized Multimodal LLMs for Efficient Image Retrieval in Low‐Resource
 Languages Using Contrastive Loss
-summary: Investigated the integration of Multilingual BERT with base image encoder models such as ResNet50, EfficientNet0, Vision Transformer (ViT), and Tiny Swin Transformer for building vision‐language retrieval systems in Azerbaijani, a low‐resource language.
-Developed synthetic datasets through machine translation and image augmentation to enhance model training, achieving a peak performance of 0.87 MAP on Flickr30k with EfficientNet0.
-Released code and pre‐trained weights to foster further research in multimodal applications across underrepresented languages, demonstrat‐ ing significant adaptability with consistent performance across diverse datasets.
+summary: Investigated the integration of Multilingual BERT with base image encoder models such as ResNet50, EfficientNet0, Vision Transformer (ViT), and Tiny Swin Transformer for building vision‐language retrieval systems in Azerbaijani, a low‐resource language. Developed synthetic datasets through machine translation and image augmentation to enhance model training, achieving a peak performance of 0.87 MAP on Flickr30k with EfficientNet0. Released code and pre‐trained weights to foster further research in multimodal applications across underrepresented languages, demonstrat‐ ing significant adaptability with consistent performance across diverse datasets.
 tags:
   - Large Language Models
   - Computer Vision
