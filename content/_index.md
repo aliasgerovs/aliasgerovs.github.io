@@ -45,7 +45,7 @@ sections:
         - title: Lead Machine Learning Engineer
           company: Polygraf.ai
           company_url: 'https://www.polygraf.ai'
-          company_logo: rai
+          company_logo: poli
           location: Austin, Texas, USA
           date_start: '2022-04-01'
 
