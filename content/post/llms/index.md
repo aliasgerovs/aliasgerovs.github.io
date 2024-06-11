@@ -25,6 +25,7 @@ LLMs have already become a daily tool for almost every task we perform. We ask t
 
 This paper investigates how LLMs incorporate confidence in their responses. It shows that even when explicitly prompted with “Please say how much you are confident about this response,” almost half (47%) of the responses are incorrect. The worse thing is that today people heavily rely on what LLMs generate, the paper says. This paper highlights the negative consequences of LLM-Human interaction and suggests recommendations to mitigate them.
 
+![alt text](image-5.png)
 
 ## Little bit more detailed intro to the problem.
 In the paper, it is mentioned that in order to build reliable Human-AI interaction, prediction confidence in responses is very important. It also shows that there is a tendency to include confidence in the outputs of LLMs, for example, “I am very confident about this, since …”, “According to Wikipedia, …”. In linguistic literature, such phrases are called “epistemic markers” because they support Human-Human conversation and aid in decision-making processes. That is why the paper hypothesizes that it would be helpful to use them in Human-AI conversation as well.
