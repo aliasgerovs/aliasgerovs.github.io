@@ -71,13 +71,13 @@ sections:
           #     - Specialized in designing end-to-end AI/ML modeling pipelines for efficient data-driven solutions.
 
           # text : Test
-        - title: Lead Machine Learning Engineer
-          company: Koaila
-          company_url: 'https://koaila.com/'
-          company_logo: koaila
-          location: Paris, France
-          date_start: '2023-05-01'
-          date_end:   '2023-08-01'
+        # - title: Lead Machine Learning Engineer
+        #   company: Koaila
+        #   company_url: 'https://koaila.com/'
+        #   company_logo: koaila
+        #   location: Paris, France
+        #   date_start: '2023-05-01'
+        #   date_end:   '2023-08-01'
           # description: |2-
             #  Projects :
             #  - Prophesee - [prophesee.ai](https://prophesee.ai/)
