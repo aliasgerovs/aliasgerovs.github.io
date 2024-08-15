@@ -14,7 +14,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Computer Science PhD Student
+role: PhD student in the Computer Science
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -72,7 +72,7 @@ last_name: Asgarov
 email: aliasgarov@vt.edu
 ---
 
-I am an incoming PhD student in Computer Science at Virginia Tech, with a Master of Science in Computer Science from [George Washington University](gwu.edu). My research interests are centered around natural language processing, computer vision, and multimodal tasks.
+I am an incoming PhD student in Computer Science at [Virginia Tech](https://www.vt.edu/), with a Master of Science in Computer Science from [George Washington University](gwu.edu). My research interests are centered around natural language processing, computer vision, and multimodal tasks.
 
 You can reach me at ```  aliasgarov [at] vt [dot] edu```.
 {style="text-align: justify;"}
