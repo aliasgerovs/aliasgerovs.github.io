@@ -47,7 +47,7 @@ sections:
           company_url: 'https://www.polygraf.ai'
           company_logo: poli
           location: Austin, Texas, USA
-          date_start: '2023-10-01'
+          date_start: '2023-12-01'
           date_end:   '2024-08-01'
 
         - title: Lead Machine Learning Engineer
