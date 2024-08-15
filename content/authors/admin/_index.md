@@ -14,12 +14,12 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: MSc Computer Science Student
+role: Computer Science PhD Student
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: George Washington University
-    url: https://www.gwu.edu/
+  - name: Virginia Tech
+    url: https://www.vt.edu/
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include deep learning, multi-modal learning, natural language processing, computer vision.
@@ -69,11 +69,10 @@ status:
 highlight_name: true
 first_name: Ali
 last_name: Asgarov
-email: ali.asgarov@gwu.edu
+email: aliasgarov@vt.edu
 ---
 
-I hold a Master of Science in Computer Science from [George Washington University](gwu.edu), with a specialization in natural language processing and
-computer vision.
+I am an incoming PhD student in Computer Science at Virginia Tech, with a Master of Science in Computer Science from [George Washington University](gwu.edu). My research interests are centered around natural language processing, computer vision, and multimodal tasks.
 
-You can reach me at ```  aliasgerov07 [at] gmail [dot] com```.
+You can reach me at ```  aliasgarov [at] vt [dot] edu```.
 {style="text-align: justify;"}
