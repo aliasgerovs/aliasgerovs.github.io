@@ -48,7 +48,7 @@ sections:
           company_logo: vt
           location: Blacksburg, VA, USA
           date_start: '2024-08-10'
-          # date_end:   ''
+          # date_end:   '2025-08-10'
 
         - title: Lead Machine Learning Engineer
           company: Polygraf.ai
