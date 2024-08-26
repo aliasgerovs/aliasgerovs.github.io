@@ -42,6 +42,14 @@ sections:
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
 
+        - title: Graduate Teaching Assistant
+          company: Virginia Tech
+          company_url: 'https://www.vt.edu'
+          company_logo: vt
+          location: Blacksburg, VA, USA
+          date_start: '2024-08-10'
+          date_end:   'Present'
+
         - title: Lead Machine Learning Engineer
           company: Polygraf.ai
           company_url: 'https://www.polygraf.ai'
