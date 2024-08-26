@@ -64,7 +64,7 @@ sections:
           company_logo: rai
           location: Amsterdam, Noord-Holland, The Netherlands
           date_start: '2022-04-01'
-          # date_end:   '2023-07-01'
+          date_end:   '2023-07-01'
           # description: |2- 
           #     Projects : 
           #     -  Musigma - [mu-sigma.com](https://mu-sigma.com/)
