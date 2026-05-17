@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="150" viewBox="0 0 220 150" role="img" aria-labelledby="title desc">
+  <title id="title">Multi-robot sensemaking publication thumbnail</title>
+  <desc id="desc">Placeholder thumbnail for the multi-robot sensemaking paper.</desc>
+  <rect width="220" height="150" rx="8" fill="#eef6f1"/>
+  <rect x="14" y="18" width="192" height="36" rx="6" fill="#dbece4"/>
+  <rect x="14" y="64" width="92" height="72" rx="6" fill="#f1e7da"/>
+  <rect x="114" y="64" width="92" height="72" rx="6" fill="#dde8f6"/>
+  <text x="22" y="43" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#1f2937">Multi-Robot Ground Video</text>
+  <text x="22" y="124" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#374151">Sensemaking</text>
+</svg>
