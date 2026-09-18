@@ -10,80 +10,477 @@
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    } catch (e) {}
+  </script>
+
   <style>
     :root {
-      --text: #17202a;
-      --text-light: #687586;
-      --accent: #145c9e;
-      --accent-hover: #0d467a;
-      --border: #d8e1ea;
-      --bg: #f7f9fb;
-      --surface: #f5f8fb;
-      --tag-bg: #edf3f7;
-      --shadow: 0 2px 6px rgba(15, 23, 42, 0.01);
+      --text: #1a2230;
+      --text-light: #5b6778;
+      --muted: #8a95a4;
+      --accent: #1a5fa8;
+      --accent-hover: #11477f;
+      --border: #e4e9ef;
+      --bg: #ffffff;
+      --surface: #f7f9fb;
+      --tag-bg: #f1f5f9;
+      --badge-bg: #e9f1fb;
+      --badge-text: #1a5fa8;
+      --hl-bg: #fdf1dc;
+      --hl-text: #9a5700;
     }
-    
+
     [data-theme="dark"] {
       --text: #e6edf5;
-      --text-light: #a8b4c3;
+      --text-light: #a9b5c4;
+      --muted: #7c8898;
       --accent: #86bdf2;
-      --accent-hover: #a6cdf4;
-      --border: #364454;
-      --bg: #0f1722;
-      --surface: #182230;
-      --tag-bg: #233041;
-      --shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+      --accent-hover: #a9d0f6;
+      --border: #2a3645;
+      --bg: #0f1620;
+      --surface: #16202c;
+      --tag-bg: #1c2835;
+      --badge-bg: #1b2d44;
+      --badge-text: #9cc9f5;
+      --hl-bg: #3a2a10;
+      --hl-text: #f3c47a;
     }
-    
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'DM Sans', sans-serif;
-      font-size: 14.5px;
+      font-size: 15px;
       line-height: 1.65;
       color: var(--text);
-      background: linear-gradient(180deg, #fbfcfd 0%, var(--bg) 48%, #f0f5f9 100%);
-      padding: 38px 18px;
+      background: var(--bg);
+      padding: 64px 24px 40px;
+      -webkit-font-smoothing: antialiased;
     }
 
-    [data-theme="dark"] body {
-      background: var(--bg);
-    }
-    
     .container {
-      max-width: 1080px;
+      max-width: 1040px;
       margin: 0 auto;
     }
-    
+
     a {
       color: var(--accent);
       text-decoration: none;
     }
-    
+
     a:hover {
       color: var(--accent-hover);
       text-decoration: underline;
       text-underline-offset: 2px;
     }
 
-    strong {
-      font-weight: 600;
-    }
-    
+    strong { font-weight: 600; }
+
     .layout {
       display: grid;
-      grid-template-columns: 220px minmax(0, 1fr);
-      gap: 48px;
+      grid-template-columns: 230px minmax(0, 1fr);
+      gap: 64px;
       align-items: start;
     }
 
+    /* ---------- Sidebar ---------- */
     .sidebar {
       position: sticky;
-      top: 28px;
+      top: 40px;
     }
-    
+
+    .avatar {
+      width: 100%;
+      max-width: 168px;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .sidebar h1 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .role {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .role a { color: var(--text-light); }
+    .role a:hover { color: var(--accent-hover); }
+
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .profile-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      color: var(--text-light);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .profile-links a svg {
+      width: 16px;
+      height: 16px;
+      display: block;
+    }
+
+    .profile-links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+
+    .sidebar-nav {
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .sidebar-nav a {
+      color: var(--text-light);
+      font-size: 14px;
+      padding: 3px 0 3px 12px;
+      border-left: 2px solid transparent;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .sidebar-nav a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .sidebar-nav a.active {
+      color: var(--accent);
+      border-left-color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* ---------- Content ---------- */
+    .content-column { min-width: 0; }
+
+    section {
+      margin-bottom: 44px;
+      scroll-margin-top: 32px;
+    }
+
+    section h2 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .intro-block p {
+      font-size: 15.5px;
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+
+    .intro-block p:last-child { margin-bottom: 0; }
+
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .interests span {
+      background: var(--tag-bg);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    /* Year / date rows (news, awards, service) */
+    .news-item,
+    .row {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      gap: 16px;
+      padding: 5px 0;
+      font-size: 14px;
+    }
+
+    .news-date,
+    .row-label {
+      color: var(--muted);
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .row.wide { grid-template-columns: 88px minmax(0, 1fr); }
+
+    .news-item.older { display: none; }
+    #news.expanded .news-item.older { display: grid; }
+
+    .more-toggle {
+      margin-top: 8px;
+      background: none;
+      border: 0;
+      padding: 0;
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--accent);
+      cursor: pointer;
+    }
+
+    .more-toggle:hover { color: var(--accent-hover); text-decoration: underline; text-underline-offset: 2px; }
+
+    /* Publications */
+    .pub {
+      display: flex;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pub:first-of-type { padding-top: 4px; }
+
+    .pub-media {
+      width: 170px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .venue-badge {
+      display: block;
+      text-align: center;
+      color: #fff;
+      background: #1f3b5c;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 3px 0;
+      border-radius: 5px;
+    }
+
+    .venue-badge.emnlp { background: #1d6070; }
+    .venue-badge.cvpr { background: #3f6b47; }
+    .venue-badge.chi { background: #4d4575; }
+    .venue-badge.neurips { background: #24466e; }
+
+
+    .pub-img {
+      width: 100%;
+      height: 106px;
+      object-fit: cover;
+      border-radius: 6px;
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+    }
+
+    .pub-info h3 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 17.5px;
+      font-weight: 500;
+      margin-bottom: 5px;
+      line-height: 1.3;
+    }
+
+    .pub-info h3 a { color: var(--text); }
+    .pub-info h3 a:hover { color: var(--accent-hover); }
+
+    .pub-info .authors {
+      font-size: 13.5px;
+      color: var(--text-light);
+      margin-bottom: 7px;
+    }
+
+    .pub-info .authors strong { color: var(--text); }
+
+    .pub-info .venue {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    .pub-info .venue > strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .pub-btn {
+      display: inline-block;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--text-light);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 1px 9px;
+      cursor: pointer;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .pub-btn:hover,
+    .pub-btn[aria-expanded="true"] {
+      color: var(--accent);
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+
+    .bibtex {
+      position: relative;
+      margin-top: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .bibtex pre {
+      margin: 0;
+      padding: 10px 12px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11.5px;
+      line-height: 1.55;
+      color: var(--text);
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .bib-copy {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      font-family: inherit;
+      font-size: 11px;
+      color: var(--text-light);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0 7px;
+      cursor: pointer;
+    }
+
+    .bib-copy:hover { color: var(--accent); border-color: var(--accent); }
+
+    .spotlight {
+      display: inline-block;
+      background: var(--hl-bg);
+      color: var(--hl-text);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 1px 8px;
+      border-radius: 5px;
+    }
+
+    .pub-footnote {
+      margin-top: 14px;
+      font-size: 13.5px;
+      color: var(--text-light);
+    }
+
+    /* Education */
+    .edu-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .edu-item:first-of-type { padding-top: 0; }
+    .edu-item:last-child { border-bottom: 0; }
+
+    .edu-logo {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .edu-info h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 1px;
+    }
+
+    .edu-info p {
+      font-size: 13.5px;
+      color: var(--text-light);
+    }
+
+    /* Patents */
+    .patent h3 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 17.5px;
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .patent h3 a { color: var(--text); }
+    .patent h3 a:hover { color: var(--accent-hover); }
+
+    .patent p {
+      font-size: 13.5px;
+      color: var(--text-light);
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    footer a { color: var(--muted); }
+
+    /* Theme toggle */
     .top-bar {
       position: fixed;
       top: 18px;
@@ -91,280 +488,48 @@
       z-index: 20;
     }
 
-    .avatar {
-      width: 100%;
-      max-width: 150px;
-      height: auto;
-      aspect-ratio: 1 / 1;
-      border-radius: 8px;
-      object-fit: cover;
-      display: block;
-      margin-bottom: 18px;
-      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.02);
-      border: 1px solid var(--border);
-    }
-    
-    .sidebar h1 {
-      font-family: 'Newsreader', Georgia, serif;
-      font-size: 33px;
-      font-weight: 500;
-      line-height: 1.05;
-      margin-bottom: 8px;
-      letter-spacing: 0;
-    }
-    
-    .profile-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px 10px;
-      margin-bottom: 18px;
-    }
-
-    .profile-links a {
-      font-size: 12.5px;
-      white-space: nowrap;
-      text-decoration: none;
-      color: var(--accent);
-      opacity: 0.95;
-    }
-
-    .profile-links a:hover {
-      color: var(--accent-hover);
-    }
-
-    .sidebar-nav {
-      border-top: 1px solid var(--border);
-      padding-top: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .sidebar-nav a {
-      color: var(--text-light);
-      font-size: 14.5px;
-      transition: color 0.15s ease;
-    }
-
-    .sidebar-nav a:hover {
-      color: var(--accent-hover);
-      text-decoration: none;
-    }
-
-    .content-column {
-      min-width: 0;
-      padding-top: 8px;
-    }
-
-    .intro-block {
-      margin-bottom: 38px;
-      font-size: 14.5px;
-      line-height: 1.75;
-    }
-
-    .intro-block p {
-      margin-bottom: 12px;
-    }
-
-    .intro-block p:last-child {
-      margin-bottom: 0;
-    }
-    
-    section {
-      margin-bottom: 36px;
-    }
-    
-    section h2 {
-      font-family: 'Newsreader', Georgia, serif;
-      font-size: 24px;
-      font-weight: 500;
-      margin-bottom: 16px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--border);
-      letter-spacing: 0;
-    }
-
-    .interests {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .interests span {
-      background: var(--tag-bg);
-      padding: 2px 8px;
-      border-radius: 999px;
-      font-size: 12.5px;
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-    
-    .news-item {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 7px;
-      font-size: 13.5px;
-    }
-    
-    .news-date {
-      color: var(--text-light);
-      flex-shrink: 0;
-      width: 60px;
-      font-weight: 500;
-    }
-    
-    .pub {
-      display: flex;
-      gap: 14px;
-      margin-bottom: 18px;
-      padding: 12px 13px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--surface);
-      box-shadow: var(--shadow);
-    }
-    
-    .pub-img {
-      width: 92px;
-      height: 62px;
-      object-fit: cover;
-      border-radius: 6px;
-      flex-shrink: 0;
-      background: var(--tag-bg);
-      border: 1px solid var(--border);
-    }
-    
-    .pub-info h3 {
-      font-family: 'Newsreader', Georgia, serif;
-      font-size: 16px;
-      font-weight: 500;
-      margin-bottom: 4px;
-      line-height: 1.3;
-      letter-spacing: 0;
-    }
-    
-    .pub-info h3 a {
-      color: var(--text);
-    }
-    
-    .pub-info h3 a:hover {
-      color: var(--accent-hover);
-    }
-    
-    .pub-info .authors {
-      font-size: 13.5px;
-      color: var(--text-light);
-      margin-bottom: 3px;
-    }
-    
-    .pub-info .venue {
-      font-size: 13.5px;
-      color: var(--text);
-    }
-
-    .venue-inline {
-      display: inline;
-      margin-left: 8px;
-    }
-    
-    .spotlight {
-      color: #166534;
-      font-weight: 500;
-    }
-    
-    .edu-item {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 10px;
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .edu-item:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-    
-    .edu-logo {
-      width: 44px;
-      height: 44px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-    
-    .edu-info h3 {
-      font-size: 14.5px;
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-    
-    .edu-info p {
-      font-size: 13.5px;
-      color: var(--text-light);
-    }
-    
-    ul {
-      padding-left: 20px;
-    }
-    
-    li {
-      margin-bottom: 6px;
-      font-size: 13.5px;
-    }
-    
-    li strong {
-      font-weight: 500;
-    }
-    
-    footer {
-      margin-top: 34px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-      font-size: 11px;
-      color: var(--text-light);
-      text-align: center;
-    }
-    
     .theme-toggle {
-      background: var(--surface);
+      background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 999px;
-      padding: 3px 9px;
+      padding: 4px 10px;
       cursor: pointer;
       color: var(--text-light);
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
       font-family: inherit;
       font-size: 12px;
-      box-shadow: var(--shadow);
     }
-    
+
     .theme-toggle:hover {
       border-color: var(--accent);
       color: var(--accent);
     }
-    
-    .theme-toggle svg {
-      display: block;
-    }
-    
+
+    .theme-toggle svg { display: block; }
+    .icon-moon { display: none; }
+    [data-theme="dark"] .icon-sun { display: none; }
+    [data-theme="dark"] .icon-moon { display: block; }
+
     @media (max-width: 900px) {
-      .layout { grid-template-columns: 1fr; gap: 28px; }
+      body { padding-top: 56px; }
+      .layout { grid-template-columns: 1fr; gap: 36px; }
       .sidebar { position: static; }
-      .avatar { max-width: 180px; margin-bottom: 20px; }
-      .content-column { padding-top: 0; }
+      .sidebar-nav { flex-direction: row; flex-wrap: wrap; gap: 4px 14px; }
+      .sidebar-nav a { border-left: 0; padding: 0; }
     }
 
     @media (max-width: 600px) {
-      body { padding: 40px 20px; }
+      body { padding: 56px 16px 32px; }
       .top-bar { top: 12px; right: 14px; }
       .sidebar { text-align: center; }
       .avatar { margin-left: auto; margin-right: auto; }
-      .profile-links { justify-content: center; }
-      .sidebar-nav { align-items: center; }
-      .pub { flex-direction: column; }
-      .pub-img { width: 100%; height: auto; max-height: 160px; }
+      .profile-links, .sidebar-nav { justify-content: center; }
+      .pub { flex-direction: column; gap: 12px; }
+      .pub-media { width: 100%; }
+      .pub-img { height: auto; aspect-ratio: 16 / 9; }
+      .news-item, .row, .row.wide { grid-template-columns: 1fr; gap: 0; }
     }
   </style>
 </head>
@@ -372,7 +537,7 @@
   <div class="top-bar">
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
       <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-      <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       <span class="theme-text">Light</span>
     </button>
   </div>
@@ -381,13 +546,14 @@
       <aside class="sidebar">
         <img src="images/avatar.jpg" alt="Ali Asgarov" class="avatar">
         <h1>Ali Asgarov</h1>
+        <p class="role">Ph.D. Student in Computer Science<br><a href="https://www.vt.edu/">Virginia Tech</a></p>
         <div class="profile-links">
-          <a href="mailto:aliasgarov@vt.edu">Email</a>
+          <a href="mailto:aliasgarov@vt.edu" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
           <a href="data/resume_aa.pdf" style="display: none;">CV</a>
-          <a href="https://scholar.google.com/citations?user=IwsCoQwAAAAJ&hl">Scholar</a>
-          <a href="https://github.com/aliasgerovs/">GitHub</a>
-          <a href="https://www.linkedin.com/in/ali-asgarov/">LinkedIn</a>
-          <a href="https://twitter.com/aliasgerovs">X</a>
+          <a href="https://scholar.google.com/citations?user=IwsCoQwAAAAJ&hl" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
+          <a href="https://github.com/aliasgerovs/" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+          <a href="https://www.linkedin.com/in/ali-asgarov/" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.064 2.064 0 1 1 0-4.128 2.064 2.064 0 0 1 0 4.128zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://twitter.com/aliasgerovs" aria-label="X (Twitter)" title="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932zM17.61 20.644h2.039L6.486 3.24H4.298z"/></svg></a>
         </div>
         <nav class="sidebar-nav" aria-label="Section navigation">
           <a href="#about">About</a>
@@ -416,82 +582,161 @@
             <span>Information Extraction</span>
           </div>
         </section>
-        
+
         <section id="news">
           <h2>News</h2>
-          <div class="news-item"><span class="news-date">May '26</span><span>Joined <a href="https://www.amazon.science/">Amazon</a> as an Applied Scientist Intern</span></div>
+          <div class="news-item"><span class="news-date">Sep '26</span><span>Joined <a href="https://www.amazon.science/">Amazon</a> as a PhD Applied Scientist Intern (Fall 2026)</span></div>
+          <div class="news-item"><span class="news-date">Aug '26</span><span>2 papers (NEST, M<sup>3</sup>EC) accepted to <a href="https://2026.emnlp.org/">EMNLP 2026</a> (Main)</span></div>
+          <div class="news-item"><span class="news-date">May '26</span><span>Joined <a href="https://www.amazon.science/">Amazon</a> as a PhD Applied Scientist Intern (Summer 2026)</span></div>
           <div class="news-item"><span class="news-date">Apr '26</span><span>Received the <a href="https://cyberinitiative.org/innovation.html">Cyber Innovation Scholar Travel Grant</a></span></div>
           <div class="news-item"><span class="news-date">Feb '26</span><span>Lenses and CLAMP accepted to <a href="https://cvpr.thecvf.com/">CVPR 2026</a></span></div>
           <div class="news-item"><span class="news-date">Jan '26</span><span>1 paper accepted to <a href="https://chi2026.acm.org/">ACM CHI 2026</a></span></div>
-          <div class="news-item"><span class="news-date">Jan '26</span><span>1 paper under review at <a href="https://aclrollingreview.org/">ACL 2026</a></span></div>
-          <div class="news-item"><span class="news-date">Nov '25</span><span>2 papers (Lenses, CLAMP) under review at <a href="https://cvpr.thecvf.com/">CVPR 2026</a></span></div>
-          <div class="news-item"><span class="news-date">Oct '25</span><span>SIGMA accepted at <a href="https://sites.google.com/view/aaai-2026-lmreasoning">AAAI 2026 LMReasoning</a></span></div>
-          <div class="news-item"><span class="news-date">Sep '25</span><span>1 paper accepted at <a href="https://2025.emnlp.org/">EMNLP 2025</a> (Main)</span></div>
+          <div class="news-item older"><span class="news-date">Jan '26</span><span>1 paper under review at <a href="https://aclrollingreview.org/">ACL 2026</a></span></div>
+          <div class="news-item older"><span class="news-date">Nov '25</span><span>2 papers (Lenses, CLAMP) under review at <a href="https://cvpr.thecvf.com/">CVPR 2026</a></span></div>
+          <div class="news-item older"><span class="news-date">Oct '25</span><span>SIGMA accepted at <a href="https://sites.google.com/view/aaai-2026-lmreasoning">AAAI 2026 LMReasoning</a></span></div>
+          <div class="news-item older"><span class="news-date">Sep '25</span><span>1 paper accepted at <a href="https://2025.emnlp.org/">EMNLP 2025</a> (Main)</span></div>
+          <button class="more-toggle" type="button" onclick="toggleNews(this)" aria-expanded="false">Show older news</button>
         </section>
-        
+
         <section id="publications">
           <h2>Selected Publications</h2>
 
           <div class="pub">
-            <img src="images/nest.png" alt="NEST" class="pub-img">
+            <div class="pub-media">
+              <span class="venue-badge emnlp">EMNLP 2026</span>
+              <img src="images/nest.png" alt="NEST" class="pub-img">
+            </div>
             <div class="pub-info">
-              <h3>NEST: Narrative Event Structures in Time for Long Video Understanding</h3>
+              <h3><a href="https://arxiv.org/abs/2606.19706">NEST: Narrative Event Structures in Time for Long Video Understanding</a></h3>
               <p class="authors"><strong>Ali Asgarov</strong>, Kaushik Narasimhan, Najibul Haque Sarker, Hani Alomari, Chia-Wei Tang, et al.</p>
-              <p class="venue"><strong>EMNLP 2026</strong> · Under Review</p>
+              <p class="venue"><strong>EMNLP 2026</strong> (Main)</p>
+              <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2606.19706">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2606.19706">PDF</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
+              <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@inproceedings{asgarov2026nest,
+  title     = {NEST: Narrative Event Structures in Time for Long Video Understanding},
+  author    = {Asgarov, Ali and Narasimhan, Kaushik and Sarker, Najibul Haque and Alomari, Hani and Tang, Chia-Wei and Sivakumar, Anushka and Hakim, Zaber Ibn Abdul and Mallampati, Shaurya and Thomas, Chris},
+  booktitle = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year      = {2026}
+}</pre></div>
             </div>
           </div>
 
           <div class="pub">
-            <img src="images/lenses.png" alt="Lenses" class="pub-img">
+            <div class="pub-media">
+              <span class="venue-badge emnlp">EMNLP 2026</span>
+              <img src="images/m3ec.png" alt="M3EC" class="pub-img">
+            </div>
+            <div class="pub-info">
+              <h3>M<sup>3</sup>EC: A Multimodal Multidocument Benchmark for Event Extraction and Event Coreference Resolution</h3>
+              <p class="authors">Zaber Ibn Abdul Hakim, Najibul Haque Sarker, Aafiya Hussain, Hani Alomari, Alvi Md Ishmam, <strong>Ali Asgarov</strong>, et al.</p>
+              <p class="venue"><strong>EMNLP 2026</strong> (Main)</p>
+              <div class="pub-links"><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
+              <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@inproceedings{hakim2026m3ec,
+  title     = {M$^3$EC: A Multimodal Multidocument Benchmark for Event Extraction and Event Coreference Resolution},
+  author    = {Hakim, Zaber Ibn Abdul and Sarker, Najibul Haque and Hussain, Aafiya and Alomari, Hani and Ishmam, Alvi Md and Asgarov, Ali and Tang, Chia-Wei and Thomas, Chris},
+  booktitle = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year      = {2026}
+}</pre></div>
+            </div>
+          </div>
+
+          <div class="pub">
+            <div class="pub-media">
+              <span class="venue-badge cvpr">CVPR 2026</span>
+              <img src="images/lenses.png" alt="Lenses" class="pub-img">
+            </div>
             <div class="pub-info">
               <h3><a href="https://hanialomari.github.io/lenses/">Lenses: Toward Polysemous Vision-Language Understanding</a></h3>
               <p class="authors">Hani Alomari, <strong>Ali Asgarov</strong>, Chris Thomas</p>
               <p class="venue"><strong>CVPR 2026</strong> (Main)</p>
+              <div class="pub-links"><a class="pub-btn" href="https://openaccess.thecvf.com/content/CVPR2026/papers/Alomari_Lenses_Toward_Polysemous_Vision-Language_Understanding_CVPR_2026_paper.pdf">PDF</a><a class="pub-btn" href="https://openaccess.thecvf.com/content/CVPR2026/supplemental/Alomari_Lenses_Toward_Polysemous_CVPR_2026_supplemental.pdf">Supp</a><a class="pub-btn" href="https://hanialomari.github.io/lenses/">Project</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
+              <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@InProceedings{Alomari_2026_CVPR,
+    author    = {Alomari, Hani and Asgarov, Ali and Thomas, Chris},
+    title     = {Lenses: Toward Polysemous Vision-Language Understanding},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2026},
+    pages     = {37810-37820}
+}</pre></div>
             </div>
           </div>
 
           <div class="pub">
-            <img src="images/immun.png" alt="Immunizing Models" class="pub-img">
+            <div class="pub-media">
+              <span class="venue-badge cvpr">CVPR 2026</span>
+              <img src="images/immun.png" alt="Immunizing Models" class="pub-img">
+            </div>
             <div class="pub-info">
               <h3>Immunizing Models Against Harmful Long-Horizon Fine-Tuning via Contractive Optimization Dynamics</h3>
               <p class="authors">Najibul Haque Sarker, Zaber Ibn Abdul Hakim, <strong>Ali Asgarov</strong>, Chia-Wei Tang, Alvi Md Ishmam, et al.</p>
-              <p class="venue"><strong>CVPR 2026</strong> (Main)</p>
+              <p class="venue"><strong>CVPR 2026</strong> (Main) · <span class="spotlight">Highlight</span></p>
             </div>
           </div>
 
           <div class="pub">
-            <img src="images/chi.png" alt="Multi-robot ground video sensemaking" class="pub-img">
+            <div class="pub-media">
+              <span class="venue-badge chi">CHI 2026</span>
+              <img src="images/chi.png" alt="Multi-robot ground video sensemaking" class="pub-img">
+            </div>
             <div class="pub-info">
               <h3><a href="https://programs.sigchi.org/chi/2026/program/content/222747">Designing Multi-Robot Ground Video Sensemaking with Public Safety Professionals</a></h3>
               <p class="authors">Puqi Zhou, <strong>Ali Asgarov</strong>, Aafiya Hussain, Wonjoon Park, Amit Paudyal, et al.</p>
               <p class="venue"><strong>CHI 2026</strong> (Main)</p>
+              <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2602.08882">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2602.08882">PDF</a><a class="pub-btn" href="https://programs.sigchi.org/chi/2026/program/content/222747">Program</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
+              <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@inproceedings{zhou2026multirobot,
+  title     = {Designing Multi-Robot Ground Video Sensemaking with Public Safety Professionals},
+  author    = {Zhou, Puqi and Asgarov, Ali and Hussain, Aafiya and Park, Wonjoon and Paudyal, Amit and Shrestha, Sameep and Tang, Chia-wei and Lighthiser, Michael F. and Hieb, Michael R. and Xiao, Xuesu and Thomas, Chris and Hong, Sungsoo Ray},
+  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  year      = {2026}
+}</pre></div>
             </div>
           </div>
-          
+
           <div class="pub">
-            <img src="images/bias.png" alt="MCQA Bias" class="pub-img">
+            <div class="pub-media">
+              <span class="venue-badge emnlp">EMNLP 2025</span>
+              <img src="images/bias.png" alt="MCQA Bias" class="pub-img">
+            </div>
             <div class="pub-info">
               <h3><a href="https://arxiv.org/abs/2509.16805">Benchmarking and Mitigating MCQA Selection Bias of Large Vision-Language Models</a></h3>
               <p class="authors">MD Atabuzzaman, <strong>Ali Asgarov*</strong>, Chris Thomas</p>
-              <p class="venue"><strong>EMNLP 2025</strong> (Main) · *Proposed and implemented the bias mitigation method</p>
+              <p class="venue"><strong>EMNLP 2025</strong> (Main)</p>
+              <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2509.16805">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2509.16805">PDF</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
+              <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@inproceedings{atabuzzaman2025mcqa,
+  title     = {Benchmarking and Mitigating MCQA Selection Bias of Large Vision-Language Models},
+  author    = {Atabuzzaman, Md. and Asgarov, Ali and Thomas, Chris},
+  booktitle = {Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year      = {2025}
+}</pre></div>
             </div>
           </div>
-          
+
           <div class="pub">
-            <img src="images/enter_method.png" alt="ENTER" class="pub-img">
+            <div class="pub-media">
+              <span class="venue-badge neurips">NeurIPS 2024</span>
+              <img src="images/enter_method.png" alt="ENTER" class="pub-img">
+            </div>
             <div class="pub-info">
               <h3><a href="https://arxiv.org/abs/2501.14194">ENTER: Event Based Interpretable Reasoning for VideoQA</a></h3>
               <p class="authors">H. Ayyubi, J. Liu, <strong>Ali Asgarov</strong>, Z. Ibn Abdul Hakim, et al.</p>
               <p class="venue"><strong>NeurIPS 2024</strong> MAR Workshop · <span class="spotlight">Spotlight</span></p>
+              <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2501.14194">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2501.14194">PDF</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
+              <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@misc{ayyubi2026enter,
+  title         = {ENTER: Event Based Interpretable Reasoning for VideoQA},
+  author        = {Ayyubi, Hammad and Liu, Junzhang and Asgarov, Ali and Hakim, Zaber Ibn Abdul and Sarker, Najibul Haque and Wang, Zhecan and Tang, Chia-Wei and Alomari, Hani and Atabuzzaman, Md. and Lin, Xudong and Dyava, Naveen Reddy and Chang, Shih-Fu and Thomas, Chris},
+  year          = {2026},
+  eprint        = {2501.14194},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV}
+}</pre></div>
             </div>
           </div>
-          
-          <p style="font-size: 14px; color: var(--text-light);">See <a href="https://scholar.google.com/citations?user=IwsCoQwAAAAJ&hl">Google Scholar</a> for full list.</p>
+
+          <p class="pub-footnote">See <a href="https://scholar.google.com/citations?user=IwsCoQwAAAAJ&hl">Google Scholar</a> for the full list.</p>
         </section>
-        
+
         <section id="education">
           <h2>Education</h2>
-          
+
           <div class="edu-item">
             <img src="images/vt.png" alt="Virginia Tech" class="edu-logo">
             <div class="edu-info">
@@ -499,7 +744,7 @@
               <p>2024 – Present · GPA: 4.0 · Advisor: Dr. Chris Thomas</p>
             </div>
           </div>
-          
+
           <div class="edu-item">
             <img src="images/gwu.png" alt="George Washington University" class="edu-logo">
             <div class="edu-info">
@@ -508,75 +753,98 @@
             </div>
           </div>
         </section>
-        
+
         <section id="awards">
-          <h2>Honors & Awards</h2>
-          <ul>
-            <li><strong>2025:</strong> Pratt Fellowship, Virginia Tech</li>
-            <li><strong>2023:</strong> State Program Scholarship for Azerbaijani Youth Abroad</li>
-            <li><strong>2020–22:</strong> 3× 1st Place, National AI Competition in ML Applications</li>
-            <li><strong>2020:</strong> Top 15 at III World Robot Olympiad, Hungary</li>
-            <li><strong>2018:</strong> Presidential Scholarship for Academic Excellence</li>
-            <li><strong>2017:</strong> Golden Medal Graduate (Top 0.1% of 90,000 students)</li>
-          </ul>
+          <h2>Honors &amp; Awards</h2>
+          <div class="row"><span class="row-label">2025</span><span>Pratt Fellowship, Virginia Tech</span></div>
+          <div class="row"><span class="row-label">2023</span><span>State Program Scholarship for Azerbaijani Youth Abroad</span></div>
+          <div class="row"><span class="row-label">2020–22</span><span>3× 1st Place, National AI Competition in ML Applications</span></div>
+          <div class="row"><span class="row-label">2020</span><span>Top 15 at III World Robot Olympiad, Hungary</span></div>
+          <div class="row"><span class="row-label">2018</span><span>Presidential Scholarship for Academic Excellence</span></div>
+          <div class="row"><span class="row-label">2017</span><span>Golden Medal Graduate (Top 0.1% of 90,000 students)</span></div>
         </section>
-        
+
         <section id="patents">
           <h2>Patents</h2>
-          <div class="pub">
-            <div class="pub-info">
-              <h3><a href="https://patents.google.com/patent/US20250165444A1/en?q=(ali+asgarov)&oq=ali+asgarov">System and Method for Identifying and Determining a Content Source</a><span class="venue venue-inline"><strong><a href="https://patents.google.com/patent/US20250165444A1/en?q=(ali+asgarov)&oq=ali+asgarov">Google Patents</a></strong></span></h3>
-            </div>
+          <div class="patent">
+            <h3><a href="https://patents.google.com/patent/US20250165444A1/en?q=(ali+asgarov)&oq=ali+asgarov">System and Method for Identifying and Determining a Content Source</a></h3>
+            <p>US 2025/0165444 A1 · <a href="https://patents.google.com/patent/US20250165444A1/en?q=(ali+asgarov)&oq=ali+asgarov">Google Patents</a></p>
           </div>
         </section>
 
         <section id="service">
           <h2>Academic Service</h2>
-          <ul>
-            <li><strong>Teaching:</strong> CS3114 Data Structures & Algorithms (Spring 2025), CS5644 ML with Big Data (Fall 2024)</li>
-            <li><strong>Reviewer:</strong> <a href="https://dl.acm.org/journal/tist">ACM TIST 2025</a>, <a href="https://2025.emnlp.org/">EMNLP 2025</a>, <a href="https://wacv2026.thecvf.com/">WACV 2026</a>, <a href="https://cvpr.thecvf.com/">CVPR 2026</a>, <a href="https://neurips.cc/">NeurIPS 2026</a></li>
-          </ul>
+          <div class="row wide"><span class="row-label">Teaching</span><span>CS3114 Data Structures &amp; Algorithms (Spring 2025), CS5644 ML with Big Data (Fall 2024)</span></div>
+          <div class="row wide"><span class="row-label">Reviewer</span><span><a href="https://dl.acm.org/journal/tist">ACM TIST 2025</a>, <a href="https://2025.emnlp.org/">EMNLP 2025</a>, <a href="https://wacv2026.thecvf.com/">WACV 2026</a>, <a href="https://cvpr.thecvf.com/">CVPR 2026</a>, <a href="https://neurips.cc/">NeurIPS 2026</a></span></div>
         </section>
-        
+
         <div style="text-align: center; margin-top: 32px;">
           <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=280&t=tt&d=E65_C3AqYzF5qtdeKwiF1WHsSq7W1i-A8JFHQARNRXA"></script>
         </div>
 
         <footer>
-          Template inspired by <a href="https://jonbarron.info/">Jon Barron</a>
+          <span>© 2026 Ali Asgarov</span>
+          <span>Template inspired by <a href="https://jonbarron.info/">Jon Barron</a></span>
         </footer>
       </main>
     </div>
   </div>
-  
+
   <script>
+    function syncThemeLabel() {
+      const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      document.querySelector('.theme-text').textContent = dark ? 'Dark' : 'Light';
+    }
+
     function toggleTheme() {
       const html = document.documentElement;
-      const sun = document.querySelector('.icon-sun');
-      const moon = document.querySelector('.icon-moon');
-      const text = document.querySelector('.theme-text');
-      if (html.getAttribute('data-theme') === 'dark') {
+      const dark = html.getAttribute('data-theme') === 'dark';
+      if (dark) {
         html.removeAttribute('data-theme');
-        sun.style.display = 'block';
-        moon.style.display = 'none';
-        text.textContent = 'Light';
-        localStorage.setItem('theme', 'light');
       } else {
         html.setAttribute('data-theme', 'dark');
-        sun.style.display = 'none';
-        moon.style.display = 'block';
-        text.textContent = 'Dark';
-        localStorage.setItem('theme', 'dark');
       }
+      try { localStorage.setItem('theme', dark ? 'light' : 'dark'); } catch (e) {}
+      function toggleBib(btn) {
+      const box = btn.closest('.pub-info').querySelector('.bibtex');
+      box.hidden = !box.hidden;
+      btn.setAttribute('aria-expanded', !box.hidden);
     }
-    
-    // Load saved theme
-    if (localStorage.getItem('theme') === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      document.querySelector('.icon-sun').style.display = 'none';
-      document.querySelector('.icon-moon').style.display = 'block';
-      document.querySelector('.theme-text').textContent = 'Dark';
+
+    function copyBib(btn) {
+      const text = btn.nextElementSibling.textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'Copied';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
+      });
     }
+
+    syncThemeLabel();
+    }
+
+    function toggleNews(btn) {
+      const expanded = document.getElementById('news').classList.toggle('expanded');
+      btn.textContent = expanded ? 'Show less' : 'Show older news';
+      btn.setAttribute('aria-expanded', expanded);
+    }
+
+    syncThemeLabel();
+
+    // Highlight the current section in the sidebar
+    const navLinks = document.querySelectorAll('.sidebar-nav a');
+    const sections = [...navLinks].map(a => document.querySelector(a.getAttribute('href')));
+    function updateActive() {
+      let current = sections[0];
+      for (const s of sections) {
+        if (s.getBoundingClientRect().top <= 120) current = s;
+      }
+      if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) {
+        current = sections[sections.length - 1];
+      }
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current.id));
+    }
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
   </script>
   </body>
 </html>
