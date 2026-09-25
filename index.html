@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 
   <script>
     // Apply saved theme before paint to avoid a flash
@@ -62,6 +62,8 @@
       font-family: 'DM Sans', sans-serif;
       font-size: 15px;
       line-height: 1.65;
+      font-feature-settings: "tnum" 0, "kern" 1;
+      text-rendering: optimizeLegibility;
       color: var(--text);
       background: var(--bg);
       padding: 64px 24px 40px;
@@ -113,14 +115,16 @@
 
     .sidebar h1 {
       font-family: 'Newsreader', Georgia, serif;
-      font-size: 32px;
-      font-weight: 500;
-      line-height: 1.1;
-      margin-bottom: 6px;
+      font-size: 34px;
+      font-weight: 600;
+      line-height: 1.08;
+      letter-spacing: -0.015em;
+      margin-bottom: 7px;
     }
 
     .role {
       font-size: 14px;
+      font-weight: 500;
       color: var(--text-light);
       line-height: 1.5;
       margin-bottom: 16px;
@@ -163,29 +167,47 @@
 
     .sidebar-nav {
       border-top: 1px solid var(--border);
-      padding-top: 16px;
+      margin-top: 4px;
+      padding-top: 14px;
       display: flex;
       flex-direction: column;
       gap: 2px;
     }
 
     .sidebar-nav a {
+      position: relative;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
       color: var(--text-light);
       font-size: 14px;
-      padding: 3px 0 3px 12px;
-      border-left: 2px solid transparent;
-      transition: color 0.15s ease, border-color 0.15s ease;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: color 0.15s ease, background 0.15s ease;
     }
 
     .sidebar-nav a:hover {
       color: var(--text);
+      background: var(--tag-bg);
       text-decoration: none;
     }
 
     .sidebar-nav a.active {
       color: var(--accent);
-      border-left-color: var(--accent);
-      font-weight: 500;
+      background: var(--tag-bg);
+      font-weight: 600;
+    }
+
+    .sidebar-nav a.active::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      border-radius: 2px;
+      background: var(--accent);
     }
 
     /* ---------- Content ---------- */
@@ -199,7 +221,8 @@
     section h2 {
       font-family: 'Newsreader', Georgia, serif;
       font-size: 24px;
-      font-weight: 500;
+      font-weight: 600;
+      letter-spacing: -0.008em;
       margin-bottom: 16px;
       padding-bottom: 8px;
       border-bottom: 1px solid var(--border);
@@ -236,6 +259,38 @@
       gap: 16px;
       padding: 5px 0;
       font-size: 14px;
+      font-weight: 450;
+    }
+
+    .news-emoji {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      vertical-align: -3px;
+      margin-right: 7px;
+    }
+
+    .news-icon {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      vertical-align: -3px;
+      margin-right: 7px;
+      color: var(--accent);
+    }
+
+    .news-logo {
+      width: 15px;
+      height: 15px;
+      object-fit: contain;
+      vertical-align: -2px;
+      margin-right: 6px;
+    }
+
+    .news-date,
+    .row-label,
+    .edu-item .when {
+      font-variant-numeric: tabular-nums;
     }
 
     .news-date,
@@ -312,10 +367,11 @@
 
     .pub-info h3 {
       font-family: 'Newsreader', Georgia, serif;
-      font-size: 17.5px;
-      font-weight: 500;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.008em;
       margin-bottom: 5px;
-      line-height: 1.3;
+      line-height: 1.28;
     }
 
     .pub-info h3 a { color: var(--text); }
@@ -323,15 +379,29 @@
 
     .pub-info .authors {
       font-size: 13.5px;
+      font-weight: 450;
+      line-height: 1.5;
       color: var(--text-light);
-      margin-bottom: 7px;
+      margin-bottom: 6px;
+    }
+
+    .pub-info .authors strong {
+      color: var(--text);
+      font-weight: 600;
     }
 
     .pub-info .authors strong { color: var(--text); }
 
     .pub-info .venue {
-      font-size: 13px;
+      font-size: 13.5px;
+      font-weight: 500;
       color: var(--text-light);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .pub-info .venue > strong {
+      font-weight: 600;
+      color: var(--text);
     }
 
     .pub-info .venue > strong {
@@ -350,7 +420,7 @@
       display: inline-block;
       font-family: inherit;
       font-size: 12px;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 1.5;
       color: var(--text-light);
       background: var(--bg);
@@ -403,6 +473,16 @@
 
     .bib-copy:hover { color: var(--accent); border-color: var(--accent); }
 
+    .track {
+      display: inline-block;
+      background: var(--tag-bg);
+      color: var(--text-light);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 1px 8px;
+      border-radius: 5px;
+    }
+
     .spotlight {
       display: inline-block;
       background: var(--hl-bg);
@@ -441,12 +521,67 @@
     .edu-info h3 {
       font-size: 15px;
       font-weight: 600;
+      letter-spacing: -0.004em;
       margin-bottom: 1px;
     }
 
     .edu-info p {
       font-size: 13.5px;
       color: var(--text-light);
+    }
+
+    .edu-item .when {
+      margin-left: auto;
+      padding-left: 16px;
+      font-size: 13px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .term {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 0 6px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      vertical-align: 1px;
+    }
+
+    #experience .edu-item {
+      padding: 9px 10px;
+      margin: 0 -10px;
+      gap: 12px;
+      border-bottom: 0;
+      border-radius: 7px;
+      transition: background 0.15s ease;
+    }
+
+    #experience .edu-item:hover { background: var(--surface); }
+    #experience .edu-logo { width: 26px; height: 26px; border-radius: 5px; }
+    #experience .edu-info h3 { font-size: 14.5px; font-weight: 500; margin-bottom: 0; }
+    #experience .edu-info h3 a { font-weight: 600; }
+    #experience .when { font-size: 12.5px; }
+
+    .edu-mono {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border-radius: 6px;
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      color: var(--text-light);
+      font-size: 15px;
+      font-weight: 600;
     }
 
     /* Patents */
@@ -517,7 +652,7 @@
       .layout { grid-template-columns: 1fr; gap: 36px; }
       .sidebar { position: static; }
       .sidebar-nav { flex-direction: row; flex-wrap: wrap; gap: 4px 14px; }
-      .sidebar-nav a { border-left: 0; padding: 0; }
+      .sidebar-nav a { padding: 4px 8px; }
     }
 
     @media (max-width: 600px) {
@@ -546,7 +681,7 @@
       <aside class="sidebar">
         <img src="images/avatar.jpg" alt="Ali Asgarov" class="avatar">
         <h1>Ali Asgarov</h1>
-        <p class="role">Ph.D. Student in Computer Science<br><a href="https://www.vt.edu/">Virginia Tech</a></p>
+        <p class="role">Ph.D. Student in Computer Science, <a href="https://www.vt.edu/">Virginia Tech</a></p>
         <div class="profile-links">
           <a href="mailto:aliasgarov@vt.edu" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
           <a href="data/resume_aa.pdf" style="display: none;">CV</a>
@@ -560,6 +695,7 @@
           <a href="#research">Research</a>
           <a href="#news">News</a>
           <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
           <a href="#education">Education</a>
           <a href="#awards">Honors &amp; Awards</a>
           <a href="#patents">Patents</a>
@@ -570,7 +706,7 @@
       <main class="content-column">
         <section id="about" class="intro-block">
           <h2>About</h2>
-          <p>Ph.D. student in Computer Science at <a href="https://www.vt.edu/">Virginia Tech</a>, working with <a href="https://people.cs.vt.edu/chris/">Dr. Chris Thomas</a> on video-language understanding and cross-modal reasoning. Previously M.Sc. at <a href="https://gwu.edu/">George Washington University</a>.</p>
+          <p>Third-year Ph.D. student in Computer Science at <a href="https://www.vt.edu/">Virginia Tech</a>, working with <a href="https://people.cs.vt.edu/chris/">Dr. Chris Thomas</a> on video-language understanding and cross-modal reasoning. Previously M.Sc. at <a href="https://gwu.edu/">George Washington University</a>.</p>
         </section>
 
         <section id="research">
@@ -585,16 +721,16 @@
 
         <section id="news">
           <h2>News</h2>
-          <div class="news-item"><span class="news-date">Sep '26</span><span>Joined <a href="https://www.amazon.science/">Amazon</a> as a PhD Applied Scientist Intern (Fall 2026)</span></div>
-          <div class="news-item"><span class="news-date">Aug '26</span><span>2 papers (NEST, M<sup>3</sup>EC) accepted to <a href="https://2026.emnlp.org/">EMNLP 2026</a> (Main)</span></div>
-          <div class="news-item"><span class="news-date">May '26</span><span>Joined <a href="https://www.amazon.science/">Amazon</a> as a PhD Applied Scientist Intern (Summer 2026)</span></div>
-          <div class="news-item"><span class="news-date">Apr '26</span><span>Received the <a href="https://cyberinitiative.org/innovation.html">Cyber Innovation Scholar Travel Grant</a></span></div>
-          <div class="news-item"><span class="news-date">Feb '26</span><span>Lenses and CLAMP accepted to <a href="https://cvpr.thecvf.com/">CVPR 2026</a></span></div>
-          <div class="news-item"><span class="news-date">Jan '26</span><span>1 paper accepted to <a href="https://chi2026.acm.org/">ACM CHI 2026</a></span></div>
-          <div class="news-item older"><span class="news-date">Jan '26</span><span>1 paper under review at <a href="https://aclrollingreview.org/">ACL 2026</a></span></div>
-          <div class="news-item older"><span class="news-date">Nov '25</span><span>2 papers (Lenses, CLAMP) under review at <a href="https://cvpr.thecvf.com/">CVPR 2026</a></span></div>
-          <div class="news-item older"><span class="news-date">Oct '25</span><span>SIGMA accepted at <a href="https://sites.google.com/view/aaai-2026-lmreasoning">AAAI 2026 LMReasoning</a></span></div>
-          <div class="news-item older"><span class="news-date">Sep '25</span><span>1 paper accepted at <a href="https://2025.emnlp.org/">EMNLP 2025</a> (Main)</span></div>
+          <div class="news-item"><span class="news-date">Sep '26</span><span><img src="images/logos/amazon.png" alt="" class="news-logo">Joined <a href="https://www.amazon.science/">Amazon</a> as a PhD Applied Scientist Intern &middot; Fall 2026</span></div>
+          <div class="news-item"><span class="news-date">Aug '26</span><span><img src="images/emoji/1f389.svg" alt="" class="news-emoji">2 papers (NEST, M<sup>3</sup>EC) accepted to <a href="https://2026.emnlp.org/">EMNLP 2026 &middot; Main</a></span></div>
+          <div class="news-item"><span class="news-date">May '26</span><span><img src="images/logos/amazon.png" alt="" class="news-logo">Joined <a href="https://www.amazon.science/">Amazon</a> as a PhD Applied Scientist Intern &middot; Summer 2026</span></div>
+          <div class="news-item"><span class="news-date">Apr '26</span><span><svg class="news-icon" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M173.8 5.5c11-7.3 25.4-7.3 36.4 0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4 0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7l-9.6 19.1c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4 0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2 .8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 301c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4 0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.3 58.7l9.6-19.1c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1 .4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM1.3 441.8L44.4 339.3c.2 .1 .3 .2 .4 .4l9.6 19.1c11.7 23.2 36 37.3 62 35.8l21.3-1.3c.2 0 .5 0 .7 .2l17.8 11.8c5.1 3.3 10.5 5.9 16.1 7.7l-37.6 89.3c-2.3 5.5-7.4 9.2-13.3 9.7s-11.6-2.2-14.8-7.2L74.4 455.5l-56.1 8.3c-5.7 .8-11.4-1.5-15-6s-4.3-10.7-2.1-16zm248 60.4L211.7 413c5.6-1.8 11-4.3 16.1-7.7l17.8-11.8c.2-.1 .4-.2 .7-.2l21.3 1.3c26 1.5 50.3-12.6 62-35.8l9.6-19.1c.1-.2 .2-.3 .4-.4l43.2 102.5c2.2 5.3 1.4 11.4-2.1 16s-9.3 6.9-15 6l-56.1-8.3-32.2 49.2c-3.2 5-8.9 7.7-14.8 7.2s-11-4.3-13.3-9.7z"/></svg>Received the <a href="https://cyberinitiative.org/innovation.html">Cyber Innovation Scholar Travel Grant</a></span></div>
+          <div class="news-item"><span class="news-date">Feb '26</span><span><img src="images/emoji/1f389.svg" alt="" class="news-emoji">Lenses and CLAMP accepted to <a href="https://cvpr.thecvf.com/">CVPR 2026</a></span></div>
+          <div class="news-item"><span class="news-date">Jan '26</span><span><img src="images/emoji/1f389.svg" alt="" class="news-emoji">1 paper accepted to <a href="https://chi2026.acm.org/">ACM CHI 2026</a></span></div>
+          <div class="news-item older"><span class="news-date">Jan '26</span><span><img src="images/emoji/1f389.svg" alt="" class="news-emoji">1 paper under review at <a href="https://aclrollingreview.org/">ACL 2026</a></span></div>
+          <div class="news-item older"><span class="news-date">Nov '25</span><span><img src="images/emoji/1f389.svg" alt="" class="news-emoji">2 papers (Lenses, CLAMP) under review at <a href="https://cvpr.thecvf.com/">CVPR 2026</a></span></div>
+          <div class="news-item older"><span class="news-date">Oct '25</span><span><img src="images/emoji/1f389.svg" alt="" class="news-emoji">SIGMA accepted at <a href="https://sites.google.com/view/aaai-2026-lmreasoning">AAAI 2026 LMReasoning</a></span></div>
+          <div class="news-item older"><span class="news-date">Sep '25</span><span><img src="images/emoji/1f389.svg" alt="" class="news-emoji">1 paper accepted at <a href="https://2025.emnlp.org/">EMNLP 2025 &middot; Main</a></span></div>
           <button class="more-toggle" type="button" onclick="toggleNews(this)" aria-expanded="false">Show older news</button>
         </section>
 
@@ -609,7 +745,7 @@
             <div class="pub-info">
               <h3><a href="https://arxiv.org/abs/2606.19706">NEST: Narrative Event Structures in Time for Long Video Understanding</a></h3>
               <p class="authors"><strong>Ali Asgarov</strong>, Kaushik Narasimhan, Najibul Haque Sarker, Hani Alomari, Chia-Wei Tang, Anushka Sivakumar, Zaber Ibn Abdul Hakim, Shaurya Mallampati, Chris Thomas</p>
-              <p class="venue"><strong>EMNLP 2026</strong> (Main)</p>
+              <p class="venue"><strong>EMNLP 2026</strong> &middot; <span class="track">Main</span></p>
               <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2606.19706">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2606.19706">PDF</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
               <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@inproceedings{asgarov2026nest,
   title     = {NEST: Narrative Event Structures in Time for Long Video Understanding},
@@ -628,7 +764,7 @@
             <div class="pub-info">
               <h3>M<sup>3</sup>EC: A Multimodal Multidocument Benchmark for Event Extraction and Event Coreference Resolution</h3>
               <p class="authors">Zaber Ibn Abdul Hakim, Najibul Haque Sarker, Aafiya Hussain, Hani Alomari, Alvi Md Ishmam, <strong>Ali Asgarov</strong>, Chia-Wei Tang, Chris Thomas</p>
-              <p class="venue"><strong>EMNLP 2026</strong> (Main)</p>
+              <p class="venue"><strong>EMNLP 2026</strong> &middot; <span class="track">Main</span></p>
               <div class="pub-links"><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
               <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@inproceedings{hakim2026m3ec,
   title     = {M$^3$EC: A Multimodal Multidocument Benchmark for Event Extraction and Event Coreference Resolution},
@@ -647,7 +783,7 @@
             <div class="pub-info">
               <h3><a href="https://hanialomari.github.io/lenses/">Lenses: Toward Polysemous Vision-Language Understanding</a></h3>
               <p class="authors">Hani Alomari, <strong>Ali Asgarov</strong>, Chris Thomas</p>
-              <p class="venue"><strong>CVPR 2026</strong> (Main)</p>
+              <p class="venue"><strong>CVPR 2026</strong> &middot; <span class="track">Main</span></p>
               <div class="pub-links"><a class="pub-btn" href="https://openaccess.thecvf.com/content/CVPR2026/papers/Alomari_Lenses_Toward_Polysemous_Vision-Language_Understanding_CVPR_2026_paper.pdf">PDF</a><a class="pub-btn" href="https://openaccess.thecvf.com/content/CVPR2026/supplemental/Alomari_Lenses_Toward_Polysemous_CVPR_2026_supplemental.pdf">Supp</a><a class="pub-btn" href="https://hanialomari.github.io/lenses/">Project</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
               <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@InProceedings{Alomari_2026_CVPR,
     author    = {Alomari, Hani and Asgarov, Ali and Thomas, Chris},
@@ -668,7 +804,7 @@
             <div class="pub-info">
               <h3><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Sarker_Immunizing_Models_Against_Harmful_Long-Horizon_Fine-Tuning_via_Contractive_Optimization_Dynamics_CVPR_2026_paper.html">Immunizing Models Against Harmful Long-Horizon Fine-Tuning via Contractive Optimization Dynamics</a></h3>
               <p class="authors">Najibul Haque Sarker, Zaber Ibn Abdul Hakim, <strong>Ali Asgarov</strong>, Chia-Wei Tang, Alvi Md Ishmam, Chris Thomas</p>
-              <p class="venue"><strong>CVPR 2026</strong> (Main) · <span class="spotlight">Highlight</span></p>
+              <p class="venue"><strong>CVPR 2026</strong> &middot; <span class="track">Main</span> · <span class="spotlight">Highlight</span></p>
               <div class="pub-links"><a class="pub-btn" href="https://openaccess.thecvf.com/content/CVPR2026/papers/Sarker_Immunizing_Models_Against_Harmful_Long-Horizon_Fine-Tuning_via_Contractive_Optimization_Dynamics_CVPR_2026_paper.pdf">PDF</a><a class="pub-btn" href="https://openaccess.thecvf.com/content/CVPR2026/supplemental/Sarker_Immunizing_Models_Against_CVPR_2026_supplemental.pdf">Supp</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
               <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@InProceedings{Sarker_2026_CVPR,
     author    = {Sarker, Najibul Haque and Ibn Abdul Hakim, Zaber and Asgarov, Ali and Tang, Chia-Wei and Ishmam, Alvi Md and Thomas, Chris},
@@ -689,7 +825,7 @@
             <div class="pub-info">
               <h3><a href="https://programs.sigchi.org/chi/2026/program/content/222747">Designing Multi-Robot Ground Video Sensemaking with Public Safety Professionals</a></h3>
               <p class="authors">Puqi Zhou, <strong>Ali Asgarov</strong>, Aafiya Hussain, Wonjoon Park, Amit Paudyal, Sameep Shrestha, Chia-Wei Tang, Michael F. Lighthiser, Michael R. Hieb, Xuesu Xiao, Chris Thomas, Sungsoo Ray Hong</p>
-              <p class="venue"><strong>CHI 2026</strong> (Main)</p>
+              <p class="venue"><strong>CHI 2026</strong> &middot; <span class="track">Main</span></p>
               <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2602.08882">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2602.08882">PDF</a><a class="pub-btn" href="https://programs.sigchi.org/chi/2026/program/content/222747">Program</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
               <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@inproceedings{zhou2026multirobot,
   title     = {Designing Multi-Robot Ground Video Sensemaking with Public Safety Professionals},
@@ -708,7 +844,7 @@
             <div class="pub-info">
               <h3><a href="https://arxiv.org/abs/2509.16805">Benchmarking and Mitigating MCQA Selection Bias of Large Vision-Language Models</a></h3>
               <p class="authors">MD Atabuzzaman, <strong>Ali Asgarov*</strong>, Chris Thomas</p>
-              <p class="venue"><strong>EMNLP 2025</strong> (Main)</p>
+              <p class="venue"><strong>EMNLP 2025</strong> &middot; <span class="track">Main</span></p>
               <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2509.16805">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2509.16805">PDF</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
               <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@inproceedings{atabuzzaman2025mcqa,
   title     = {Benchmarking and Mitigating MCQA Selection Bias of Large Vision-Language Models},
@@ -741,6 +877,50 @@
           </div>
 
           <p class="pub-footnote">See <a href="https://scholar.google.com/citations?user=IwsCoQwAAAAJ&hl">Google Scholar</a> for the full list.</p>
+        </section>
+
+        <section id="experience">
+          <h2>Industry Experience</h2>
+
+          <div class="edu-item">
+            <img src="images/logos/amazon.png" alt="Amazon" class="edu-logo">
+            <div class="edu-info">
+              <h3><a href="https://www.amazon.science/">Amazon</a> · PhD Applied Scientist Intern <span class="term">Fall 2026</span></h3>
+            </div>
+            <p class="when">Sep 2026 – Present · WA, USA</p>
+          </div>
+
+          <div class="edu-item">
+            <img src="images/logos/amazon.png" alt="Amazon" class="edu-logo">
+            <div class="edu-info">
+              <h3><a href="https://www.amazon.science/">Amazon</a> · PhD Applied Scientist Intern <span class="term">Summer 2026</span></h3>
+            </div>
+            <p class="when">May 2026 – Aug 2026 · WA, USA</p>
+          </div>
+
+          <div class="edu-item">
+            <img src="images/logos/polygraf.svg" alt="Polygraf AI" class="edu-logo">
+            <div class="edu-info">
+              <h3><a href="https://polygraf.ai/">Polygraf AI</a> · Machine Learning Engineer</h3>
+            </div>
+            <p class="when">Dec 2023 – Aug 2024 · TX, USA</p>
+          </div>
+
+          <div class="edu-item">
+            <img src="images/logos/revenueai.png" alt="Revenue AI" class="edu-logo">
+            <div class="edu-info">
+              <h3><a href="https://revenue.ai/">Revenue AI</a> · Machine Learning Engineer</h3>
+            </div>
+            <p class="when">Feb 2022 – Aug 2022 · Amsterdam, NL</p>
+          </div>
+
+          <div class="edu-item">
+            <img src="images/logos/voiceloft.png" alt="Voiceloft AI" class="edu-logo">
+            <div class="edu-info">
+              <h3><a href="https://voiceloft.com/">Voiceloft AI</a> · Machine Learning Engineer</h3>
+            </div>
+            <p class="when">Jan 2021 – Feb 2022 · DE, USA</p>
+          </div>
         </section>
 
         <section id="education">
@@ -814,7 +994,10 @@
         html.setAttribute('data-theme', 'dark');
       }
       try { localStorage.setItem('theme', dark ? 'light' : 'dark'); } catch (e) {}
-      function toggleBib(btn) {
+      syncThemeLabel();
+    }
+
+    function toggleBib(btn) {
       const box = btn.closest('.pub-info').querySelector('.bibtex');
       box.hidden = !box.hidden;
       btn.setAttribute('aria-expanded', !box.hidden);
@@ -826,9 +1009,6 @@
         btn.textContent = 'Copied';
         setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
       });
-    }
-
-    syncThemeLabel();
     }
 
     function toggleNews(btn) {
