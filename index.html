@@ -260,6 +260,8 @@
       border: 1px solid var(--border);
     }
 
+    .pub { scroll-margin-top: 26px; }
+
     /* Year / date rows (news, awards, service) */
     .news-item,
     .row {
@@ -445,6 +447,20 @@
       border-color: var(--accent);
       text-decoration: none;
     }
+
+    .abstract {
+      margin-top: 10px;
+      padding: 11px 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--accent);
+      border-radius: 6px;
+      font-size: 13.5px;
+      line-height: 1.62;
+      color: var(--text-light);
+    }
+
+    .abstract p { margin: 0; }
 
     .bibtex {
       position: relative;
@@ -753,7 +769,8 @@
               <h3><a href="https://arxiv.org/abs/2606.19706">NEST: Narrative Event Structures in Time for Long Video Understanding</a></h3>
               <p class="authors"><strong>Ali Asgarov</strong>, Kaushik Narasimhan, Najibul Haque Sarker, Hani Alomari, Chia-Wei Tang, Anushka Sivakumar, Zaber Ibn Abdul Hakim, Shaurya Mallampati, Chris Thomas</p>
               <p class="venue"><strong>EMNLP 2026</strong> &middot; <span class="track">Main</span></p>
-              <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2606.19706">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2606.19706">PDF</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
+              <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2606.19706">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2606.19706">PDF</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button><button class="pub-btn" type="button" onclick="toggleAbs(this)" aria-expanded="false">Abstract</button></div>
+              <div class="abstract" hidden><p>Recent progress in vision-language models has enabled processing of increasingly long video sequences, but handling extended token streams does not translate to understanding complex narrative structure in long videos. Existing long-video benchmarks focus on needle-in-a-haystack retrieval rather than evaluating how low-level actions form events, interact across time, and drive narratives, for example whether a model can connect an early job loss to a later relationship breakup despite intervening scenes or flashbacks. We introduce NEST (Narrative Event Structures in Time for Long Video Understanding), a dataset of 1,005 full-length movies (avg. 98 minutes), each annotated with about 103 multimodal narrative events grounded in visual content, dialogue, and audio. NEST links these events through relations that reflect narrative structure, including explicit temporal ordering, hierarchical composition, and long-range dependencies. We introduce baselines for event trigger detection (ETD), event localization (EL), event argument extraction (EAE), and event relation extraction (ERE). The benchmark is highly challenging for grounded event discovery, with the best performance across evaluated zero-shot models on main evaluation subsets remaining below 8% for ETD, 6% for EL, and 11% for EAE. In contrast, ERE is more tractable once events are given, reaching 34.23% F1 zero-shot and 49.20% F1 after fine-tuning.</p></div>
               <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@inproceedings{asgarov2026nest,
   title     = {NEST: Narrative Event Structures in Time for Long Video Understanding},
   author    = {Asgarov, Ali and Narasimhan, Kaushik and Sarker, Najibul Haque and Alomari, Hani and Tang, Chia-Wei and Sivakumar, Anushka and Hakim, Zaber Ibn Abdul and Mallampati, Shaurya and Thomas, Chris},
@@ -791,7 +808,8 @@
               <h3><a href="https://hanialomari.github.io/lenses/">Lenses: Toward Polysemous Vision-Language Understanding</a></h3>
               <p class="authors">Hani Alomari, <strong>Ali Asgarov</strong>, Chris Thomas</p>
               <p class="venue"><strong>CVPR 2026</strong> &middot; <span class="track">Main</span></p>
-              <div class="pub-links"><a class="pub-btn" href="https://openaccess.thecvf.com/content/CVPR2026/papers/Alomari_Lenses_Toward_Polysemous_Vision-Language_Understanding_CVPR_2026_paper.pdf">PDF</a><a class="pub-btn" href="https://openaccess.thecvf.com/content/CVPR2026/supplemental/Alomari_Lenses_Toward_Polysemous_CVPR_2026_supplemental.pdf">Supp</a><a class="pub-btn" href="https://hanialomari.github.io/lenses/">Project</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
+              <div class="pub-links"><a class="pub-btn" href="https://openaccess.thecvf.com/content/CVPR2026/papers/Alomari_Lenses_Toward_Polysemous_Vision-Language_Understanding_CVPR_2026_paper.pdf">PDF</a><a class="pub-btn" href="https://openaccess.thecvf.com/content/CVPR2026/supplemental/Alomari_Lenses_Toward_Polysemous_CVPR_2026_supplemental.pdf">Supp</a><a class="pub-btn" href="https://hanialomari.github.io/lenses/">Project</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button><button class="pub-btn" type="button" onclick="toggleAbs(this)" aria-expanded="false">Abstract</button></div>
+              <div class="abstract" hidden><p>Most vision-language models assume images have a single literal meaning, even though images are inherently polysemous. We propose a retrieval paradigm that models many-to-many relationships between images and text using interpretive lenses and introduce Lenses, a multi-prompt embedding model and dataset for polysemous image-text retrieval. The Lenses dataset contains 105,669 images and 732,405 captions, with each image paired with multiple captions and image-side prompts annotated across five categories: Literal, Figurative, Abstract, Background, and Emotional. Building on a multimodal large language model, the Lenses model uses learned lens tokens to extract lens-specific embeddings for every image and caption and compares these using a lens-masking similarity function with a global fallback that prioritizes same-lens matches while retaining a global pathway. Training uses a category-aware multi-positive contrastive loss and intra-set diversity regularization to align corresponding perspectives while preventing semantic collapse across lenses. We further propose lens-aware evaluation protocols, including category-aware ranking, that better reflect how humans match images and text. Experiments on the Lenses dataset and public benchmarks show that our model outperforms baselines on literal and non-literal retrieval and reduces over-reliance on literal cues.</p></div>
               <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@InProceedings{Alomari_2026_CVPR,
     author    = {Alomari, Hani and Asgarov, Ali and Thomas, Chris},
     title     = {Lenses: Toward Polysemous Vision-Language Understanding},
@@ -812,7 +830,8 @@
               <h3><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Sarker_Immunizing_Models_Against_Harmful_Long-Horizon_Fine-Tuning_via_Contractive_Optimization_Dynamics_CVPR_2026_paper.html">Immunizing Models Against Harmful Long-Horizon Fine-Tuning via Contractive Optimization Dynamics</a></h3>
               <p class="authors">Najibul Haque Sarker, Zaber Ibn Abdul Hakim, <strong>Ali Asgarov</strong>, Chia-Wei Tang, Alvi Md Ishmam, Chris Thomas</p>
               <p class="venue"><strong>CVPR 2026</strong> &middot; <span class="track">Main</span> · <span class="spotlight">Highlight</span></p>
-              <div class="pub-links"><a class="pub-btn" href="https://openaccess.thecvf.com/content/CVPR2026/papers/Sarker_Immunizing_Models_Against_Harmful_Long-Horizon_Fine-Tuning_via_Contractive_Optimization_Dynamics_CVPR_2026_paper.pdf">PDF</a><a class="pub-btn" href="https://openaccess.thecvf.com/content/CVPR2026/supplemental/Sarker_Immunizing_Models_Against_CVPR_2026_supplemental.pdf">Supp</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
+              <div class="pub-links"><a class="pub-btn" href="https://openaccess.thecvf.com/content/CVPR2026/papers/Sarker_Immunizing_Models_Against_Harmful_Long-Horizon_Fine-Tuning_via_Contractive_Optimization_Dynamics_CVPR_2026_paper.pdf">PDF</a><a class="pub-btn" href="https://openaccess.thecvf.com/content/CVPR2026/supplemental/Sarker_Immunizing_Models_Against_CVPR_2026_supplemental.pdf">Supp</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button><button class="pub-btn" type="button" onclick="toggleAbs(this)" aria-expanded="false">Abstract</button></div>
+              <div class="abstract" hidden><p>Fine-tuning has become the default way to adapt powerful foundation models, but this also enables low-cost repurposing for harmful objectives. Existing immunization methods try to optimize local geometry or simulate short attacker horizons, and penalize observed loss drops. However, in practice, downstream tuners run thousands of updates and overcome these short-horizon defenses.In this paper, we propose CLAMP (Contractive Long-horizon Attacker Mitigation via Progress-bounding), an immunization method that traps harmful fine-tuning by shaping the attacker&#x27;s optimization dynamics rather than only the initial landscape. Our key idea is to make harmful training locally contractive, making each update smaller than the last. This yields a closed-form bound on the attacker&#x27;s training beyond the attacker&#x27;s simulated training steps. We also introduce a Hessian-free directional curvature penalty, to create adversarial landscapes along harmful descent directions. Our bi-level objective minimizes the attacker&#x27;s predicted improvement from train step zero to infinity. Experiments show our method withstands long-horizon fine-tuning across classification, generative, and autoregressive settings, substantially reduces harmful task adaptation, while preserving benign utility and fine-tuneability.</p></div>
               <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@InProceedings{Sarker_2026_CVPR,
     author    = {Sarker, Najibul Haque and Ibn Abdul Hakim, Zaber and Asgarov, Ali and Tang, Chia-Wei and Ishmam, Alvi Md and Thomas, Chris},
     title     = {Immunizing Models Against Harmful Long-Horizon Fine-Tuning via Contractive Optimization Dynamics},
@@ -833,7 +852,8 @@
               <h3><a href="https://programs.sigchi.org/chi/2026/program/content/222747">Designing Multi-Robot Ground Video Sensemaking with Public Safety Professionals</a></h3>
               <p class="authors">Puqi Zhou, <strong>Ali Asgarov</strong>, Aafiya Hussain, Wonjoon Park, Amit Paudyal, Sameep Shrestha, Chia-Wei Tang, Michael F. Lighthiser, Michael R. Hieb, Xuesu Xiao, Chris Thomas, Sungsoo Ray Hong</p>
               <p class="venue"><strong>CHI 2026</strong> &middot; <span class="track">Main</span></p>
-              <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2602.08882">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2602.08882">PDF</a><a class="pub-btn" href="https://programs.sigchi.org/chi/2026/program/content/222747">Program</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
+              <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2602.08882">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2602.08882">PDF</a><a class="pub-btn" href="https://programs.sigchi.org/chi/2026/program/content/222747">Program</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button><button class="pub-btn" type="button" onclick="toggleAbs(this)" aria-expanded="false">Abstract</button></div>
+              <div class="abstract" hidden><p>Videos from fleets of ground robots can advance public safety by providing scalable situational awareness and reducing professionals&#x27; burden. Yet little is known about how to design and integrate multi-robot videos into public safety workflows. Collaborating with six police agencies, we examined how such videos could be made practical. In Study 1, we presented the first testbed for multi-robot ground video sensemaking. The testbed includes 38 events-of-interest (EoI) relevant to public safety, a dataset of 20 robot patrol videos (10 day/night pairs) covering EoI types, and 6 design requirements aimed at improving current video sensemaking practices. In Study 2, we built MRVS, a tool that augments multi-robot patrol video streams with a prompt-engineered video understanding model. Participants reported reduced manual workload and greater confidence with LLM-based explanations, while noting concerns about false alarms and privacy. We conclude with implications for designing future multi-robot video sensemaking tools.</p></div>
               <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@inproceedings{zhou2026multirobot,
   title     = {Designing Multi-Robot Ground Video Sensemaking with Public Safety Professionals},
   author    = {Zhou, Puqi and Asgarov, Ali and Hussain, Aafiya and Park, Wonjoon and Paudyal, Amit and Shrestha, Sameep and Tang, Chia-wei and Lighthiser, Michael F. and Hieb, Michael R. and Xiao, Xuesu and Thomas, Chris and Hong, Sungsoo Ray},
@@ -852,7 +872,8 @@
               <h3><a href="https://arxiv.org/abs/2509.16805">Benchmarking and Mitigating MCQA Selection Bias of Large Vision-Language Models</a></h3>
               <p class="authors">MD Atabuzzaman, <strong>Ali Asgarov*</strong>, Chris Thomas</p>
               <p class="venue"><strong>EMNLP 2025</strong> &middot; <span class="track">Main</span></p>
-              <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2509.16805">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2509.16805">PDF</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
+              <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2509.16805">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2509.16805">PDF</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button><button class="pub-btn" type="button" onclick="toggleAbs(this)" aria-expanded="false">Abstract</button></div>
+              <div class="abstract" hidden><p>Large Vision-Language Models (LVLMs) have achieved strong performance on vision-language tasks, particularly Visual Question Answering (VQA). While prior work has explored unimodal biases in VQA, the problem of selection bias in Multiple-Choice Question Answering (MCQA), where models may favor specific option tokens (e.g., &quot;A&quot;) or positions, remains underexplored. In this paper, we investigate both the presence and nature of selection bias in LVLMs through fine-grained MCQA benchmarks spanning easy, medium, and hard difficulty levels, defined by the semantic similarity of the options. We further propose an inference-time logit-level debiasing method that estimates an ensemble bias vector from general and contextual prompts and applies confidence-adaptive corrections to the model&#x27;s output. Our method mitigates bias without retraining and is compatible with frozen LVLMs. Extensive experiments across several state-of-the-art models reveal consistent selection biases that intensify with task difficulty, and show that our mitigation approach significantly reduces bias while improving accuracy in challenging settings. This work offers new insights into the limitations of LVLMs in MCQA and presents a practical approach to improve their robustness in fine-grained visual reasoning. Datasets and code are available at: https://github.com/Atabuzzaman/Selection-Bias-of-LVLMs</p></div>
               <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@inproceedings{atabuzzaman2025mcqa,
   title     = {Benchmarking and Mitigating MCQA Selection Bias of Large Vision-Language Models},
   author    = {Atabuzzaman, Md. and Asgarov, Ali and Thomas, Chris},
@@ -871,7 +892,8 @@
               <h3><a href="https://arxiv.org/abs/2501.14194">ENTER: Event Based Interpretable Reasoning for VideoQA</a></h3>
               <p class="authors">Hammad Ayyubi, Junzhang Liu, <strong>Ali Asgarov</strong>, Zaber Ibn Abdul Hakim, Najibul Haque Sarker, Zhecan Wang, Chia-Wei Tang, Hani Alomari, Md. Atabuzzaman, Xudong Lin, Naveen Reddy Dyava, Shih-Fu Chang, Chris Thomas</p>
               <p class="venue"><strong>NeurIPS 2024</strong> MAR Workshop · <span class="spotlight">Spotlight</span></p>
-              <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2501.14194">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2501.14194">PDF</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button></div>
+              <div class="pub-links"><a class="pub-btn" href="https://arxiv.org/abs/2501.14194">arXiv</a><a class="pub-btn" href="https://arxiv.org/pdf/2501.14194">PDF</a><button class="pub-btn" type="button" onclick="toggleBib(this)">BibTeX</button><button class="pub-btn" type="button" onclick="toggleAbs(this)" aria-expanded="false">Abstract</button></div>
+              <div class="abstract" hidden><p>In this paper, we present ENTER, an interpretable Video Question Answering (VideoQA) system based on event graphs. Event graphs convert videos into graphical representations, where video events form the nodes and event-event relationships (temporal/causal/hierarchical) form the edges. This structured representation offers many benefits: 1) Interpretable VideoQA via generated code that parses event-graph; 2) Incorporation of contextual visual information in the reasoning process (code generation) via event graphs; 3) Robust VideoQA via Hierarchical Iterative Update of the event graphs. Existing interpretable VideoQA systems are often top-down, disregarding low-level visual information in the reasoning plan generation, and are brittle. While bottom-up approaches produce responses from visual data, they lack interpretability. Experimental results on NExT-QA, IntentQA, and EgoSchema demonstrate that not only does our method outperform existing top-down approaches while obtaining competitive performance against bottom-up approaches, but more importantly, offers superior interpretability and explainability in the reasoning process.</p></div>
               <div class="bibtex" hidden><button class="bib-copy" type="button" onclick="copyBib(this)">Copy</button><pre>@misc{ayyubi2026enter,
   title         = {ENTER: Event Based Interpretable Reasoning for VideoQA},
   author        = {Ayyubi, Hammad and Liu, Junzhang and Asgarov, Ali and Hakim, Zaber Ibn Abdul and Sarker, Najibul Haque and Wang, Zhecan and Tang, Chia-Wei and Alomari, Hani and Atabuzzaman, Md. and Lin, Xudong and Dyava, Naveen Reddy and Chang, Shih-Fu and Thomas, Chris},
@@ -892,7 +914,7 @@
           <div class="edu-item">
             <img src="images/logos/amazon.png" alt="Amazon" class="edu-logo">
             <div class="edu-info">
-              <h3><a href="https://www.amazon.science/">Amazon</a> · PhD Applied Scientist Intern <span class="term">Fall 2026</span></h3>
+              <h3><a href="https://www.amazon.science/">Amazon</a> · PhD Applied Scientist Intern</h3>
             </div>
             <p class="when">Sep 2026 – Present · WA, USA</p>
           </div>
@@ -900,7 +922,7 @@
           <div class="edu-item">
             <img src="images/logos/amazon.png" alt="Amazon" class="edu-logo">
             <div class="edu-info">
-              <h3><a href="https://www.amazon.science/">Amazon</a> · PhD Applied Scientist Intern <span class="term">Summer 2026</span></h3>
+              <h3><a href="https://www.amazon.science/">Amazon</a> · PhD Applied Scientist Intern</h3>
             </div>
             <p class="when">May 2026 – Aug 2026 · WA, USA</p>
           </div>
@@ -918,7 +940,7 @@
             <div class="edu-info">
               <h3><a href="https://revenue.ai/">Revenue AI</a> · Machine Learning Engineer</h3>
             </div>
-            <p class="when">Feb 2022 – Aug 2022 · Netherlands</p>
+            <p class="when">Feb 2022 – Aug 2022 · AMS, NL</p>
           </div>
 
           <div class="edu-item">
@@ -1004,6 +1026,12 @@
       syncThemeLabel();
     }
 
+    function toggleAbs(btn) {
+      const box = btn.closest('.pub-info').querySelector('.abstract');
+      box.hidden = !box.hidden;
+      btn.setAttribute('aria-expanded', !box.hidden);
+    }
+
     function toggleBib(btn) {
       const box = btn.closest('.pub-info').querySelector('.bibtex');
       box.hidden = !box.hidden;
@@ -1041,6 +1069,8 @@
     }
     window.addEventListener('scroll', updateActive, { passive: true });
     updateActive();
+
+
   </script>
   </body>
 </html>
