@@ -27,8 +27,10 @@
 
   <style>
     :root {
-      /* 15.5px on a phone, 17.5px on a wide desktop, smooth in between. */
-      --u: clamp(15.5px, 0.28vw + 14.1px, 17.5px);
+      /* 15px everywhere narrow, easing to 15.75px on a wide desktop. The
+         travel is deliberately small: the page should read the same size on
+         a laptop and a large monitor, not grow with the window. */
+      --u: clamp(15px, 0.08vw + 14.4px, 15.75px);
       --text: #1a2230;
       --text-light: #5b6778;
       --muted: #8a95a4;
