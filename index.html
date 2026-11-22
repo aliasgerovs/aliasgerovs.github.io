@@ -340,8 +340,10 @@
     .news-item,
     .row {
       display: grid;
-      grid-template-columns: 88px minmax(0, 1fr);
-      gap: 16px;
+      /* Just wide enough for the longest label ("Teaching"), so short labels
+         don't leave a wide gap before the text. */
+      grid-template-columns: calc(var(--u) * 4.3) minmax(0, 1fr);
+      gap: 12px;
       padding: 5px 0;
       font-size: calc(var(--u) * 0.9333);
       font-weight: 450;
@@ -361,14 +363,19 @@
       white-space: nowrap;
     }
 
-    /* A company's logo ahead of its news line, hung into the gap before the
-       text column so every news line still starts on the same edge. */
+    /* News dates are all short ("May '26"), so their column is narrower. */
+    .news-item { grid-template-columns: calc(var(--u) * 3.6) minmax(0, 1fr); }
+
+    /* Award years are all four digits, so theirs is narrower still. */
+    #awards .row { grid-template-columns: calc(var(--u) * 2.5) minmax(0, 1fr); }
+
+    /* A company's logo at the start of its news line. */
     .news-logo {
       width: 15px;
       height: 15px;
       object-fit: contain;
       vertical-align: -2px;
-      margin: 0 7px 0 -22px;
+      margin-right: 7px;
       border-radius: 3px;
     }
 
@@ -743,7 +750,6 @@
       .pub-media { width: 100%; }
       .pub-img { height: auto; aspect-ratio: 16 / 9; }
       .news-item, .row { grid-template-columns: 1fr; gap: 0; }
-      .news-logo { margin-left: 0; }
     }
   </style>
 </head>
@@ -1087,7 +1093,7 @@
           <h2>Honors &amp; Awards</h2>
           <div class="row"><span class="row-label">2025</span><span>Pratt Fellowship, Virginia Tech</span></div>
           <div class="row"><span class="row-label">2023</span><span>State Program Scholarship for Azerbaijani Youth Abroad</span></div>
-          <div class="row"><span class="row-label">2020–22</span><span>3× 1st Place, National AI Competition in ML Applications</span></div>
+          <div class="row"><span class="row-label">2022</span><span>3× 1st Place, National AI Competition in ML Applications</span></div>
           <div class="row"><span class="row-label">2020</span><span>Top 15 at III World Robot Olympiad, Hungary</span></div>
           <div class="row"><span class="row-label">2018</span><span>Presidential Scholarship for Academic Excellence</span></div>
           <div class="row"><span class="row-label">2017</span><span>Golden Medal Graduate (Top 0.1% of 90,000 students)</span></div>
