@@ -116,8 +116,8 @@
     strong { font-weight: 600; }
 
     /* ---------- Header ---------- */
-    /* Photo and text as one group, centred on the page; the name, role and
-       icons share one left edge beside the photo. The theme switch keeps the
+    /* Photo and text as one group, centred on the page, with the name, role
+       and icons centred on each other beside the photo. The theme switch keeps the
        right corner; equal padding on both sides keeps the group truly
        centred and clear of it. */
     .intro-header {
@@ -145,6 +145,7 @@
 
     .bio {
       min-width: 0;
+      text-align: center;
     }
 
     .bio h1 {
@@ -175,6 +176,7 @@
     .profile-links {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 6px 18px;
     }
 
