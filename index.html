@@ -116,41 +116,44 @@
     strong { font-weight: 600; }
 
     /* ---------- Header ---------- */
-    /* Photo on the left, name and links beside it, after pinzhenchen.github.io,
-       kept together as one group in the middle of the page; on a narrow
-       screen they stack. */
+    /* Photo and text as one group, centred on the page; the name, role and
+       icons share one left edge beside the photo. The theme switch keeps the
+       right corner; equal padding on both sides keeps the group truly
+       centred and clear of it. */
     .intro-header {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px 30px;
-      margin-bottom: 14px;
+      gap: 26px;
+      padding: 0 44px;
+      margin-bottom: 18px;
     }
 
+    /* A thin ring set off from the photo, as on the AcadHomepage avatar. */
     .avatar {
-      width: 112px;
-      height: 112px;
+      width: 118px;
+      height: 118px;
       flex: none;
-      margin: 0;
+      padding: 4px;
+      border: 1px solid var(--border);
       border-radius: 50%;
+      background: var(--bg);
       object-fit: cover;
       display: block;
-      border: 1px solid var(--border);
     }
 
     .bio {
-      text-align: center;
+      min-width: 0;
     }
 
     .bio h1 {
       font-family: 'Newsreader', Georgia, serif;
-      font-size: calc(var(--u) * 2.1);
+      font-size: calc(var(--u) * 2.2);
       font-weight: 600;
       line-height: 1.08;
       letter-spacing: -0.015em;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .role {
@@ -158,39 +161,46 @@
       font-weight: 500;
       color: var(--text-light);
       line-height: 1.5;
-      margin-bottom: 8px;
+      margin-bottom: 14px;
+      /* If it has to wrap, two even lines rather than a lone last word. */
+      text-wrap: balance;
     }
 
     .role a { color: var(--text-light); }
     .role a:hover { color: var(--accent-hover); }
 
-    /* Icon and label together, icons in the text colour and labels in the
-       link blue. */
+    /* Icons only, in the role line's grey, so the line under the name stays
+       quiet. Each keeps its name for screen readers (the hidden span) and as
+       a tooltip (the title). */
     .profile-links {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 4px 16px;
+      gap: 6px 18px;
     }
 
     .profile-links a {
       display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: calc(var(--u) * 0.9333);
-      font-weight: 500;
-      white-space: nowrap;
+      color: var(--text-light);
+      transition: color 0.15s ease;
     }
 
-    .profile-links a:hover { text-decoration: none; }
-    .profile-links a:hover span { text-decoration: underline; text-underline-offset: 2px; }
+    .profile-links a:hover,
+    .profile-links a:focus-visible { color: var(--accent); }
 
     .profile-links a svg {
-      width: 15px;
-      height: 15px;
-      flex: none;
+      width: 18px;
+      height: 18px;
       display: block;
-      color: var(--text);
+    }
+
+    .profile-links span,
+    .theme-text {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
     }
 
     .intro-header .theme-toggle {
@@ -700,15 +710,17 @@
       background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 999px;
-      padding: 4px 10px;
+      width: 30px;
+      height: 30px;
+      padding: 0;
       cursor: pointer;
       color: var(--text-light);
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-      font-family: inherit;
-      font-size: calc(var(--u) * 0.8);
+      justify-content: center;
     }
+
+    .theme-toggle svg { width: 14px; height: 14px; }
 
     .theme-toggle:hover {
       border-color: var(--accent);
@@ -724,9 +736,13 @@
       .pub { gap: 16px; }
     }
 
+    /* Narrow screens keep the side-by-side layout with a smaller photo. */
     @media (max-width: 720px) {
-      .intro-header { flex-direction: column; gap: 14px; }
-      .avatar { width: 96px; height: 96px; }
+      .intro-header { gap: 16px; padding: 0 34px 0 0; }
+      .avatar { width: 80px; height: 80px; padding: 3px; }
+      .bio h1 { font-size: calc(var(--u) * 1.8); }
+      .role { font-size: calc(var(--u) * 0.9333); margin-bottom: 10px; }
+      .profile-links { gap: 6px 14px; }
     }
 
     @media (max-width: 600px) {
@@ -759,7 +775,7 @@
           <a href="mailto:aliasgarov@vt.edu" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span>Email</span></a>
         </div>
       </div>
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Light / dark">
         <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
         <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <span class="theme-text">Light</span>
