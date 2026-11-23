@@ -267,11 +267,23 @@
 
     .tabs::-webkit-scrollbar { display: none; }
 
-    /* Fades the last visible tab while more are hidden off the right. */
-    .tabs.fade-end {
-      -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
-      mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+    /* Fades the last visible tab while more are hidden off the right. A
+       gradient laid over the row (pinned to its right edge) rather than a
+       mask, so the row's background stays solid and the page never shows
+       through it while the row is pinned. */
+    .tabs::after {
+      content: "";
+      position: sticky;
+      right: 0;
+      flex: none;
+      width: 32px;
+      margin-left: -32px;
+      background: linear-gradient(to right, transparent, var(--bg));
+      pointer-events: none;
+      opacity: 0;
     }
+
+    .tabs.fade-end::after { opacity: 1; }
 
     /* A zero basis with equal grow gives every tab the same width; the
        max-content floor stops a label wrapping once the row runs out. */
@@ -747,6 +759,27 @@
       .pub-media { width: 100%; }
       .pub-img { height: auto; aspect-ratio: 16 / 9; }
       .news-item, .row { grid-template-columns: 1fr; gap: 0; }
+      /* Award years are short enough to stay beside their text. */
+      #awards .row { gap: 10px; }
+      /* Industry: the dates drop under the role so the role isn't squeezed
+         into a narrow column; they line up with the role's text. */
+      #experience .edu-item { flex-wrap: wrap; }
+      #experience .edu-item .when {
+        flex-basis: 100%;
+        margin-left: 38px;
+        padding-left: 0;
+        text-align: left;
+      }
+      /* Slightly smaller interest blocks, so two fit on a line. */
+      .interests { gap: 6px; }
+      .interest { padding: 3px 9px; font-size: calc(var(--u) * 0.8333); }
+    }
+
+    /* Small phones: beside the photo the role and icons would wrap onto
+       extra lines, so the photo goes on top and the text centres below. */
+    @media (max-width: 370px) {
+      .intro-header { flex-direction: column; gap: 10px; padding: 0; }
+      .avatar { width: 76px; height: 76px; }
     }
   </style>
 </head>
